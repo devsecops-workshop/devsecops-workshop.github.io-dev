@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inner Loop on DevSecOps Workshop</title>
-    <link>https://devsecops-workshop.github.io/3-inner-loop/</link>
+    <link>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/3-inner-loop/</link>
     <description>Recent content in Inner Loop on DevSecOps Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://devsecops-workshop.github.io/3-inner-loop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/3-inner-loop/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,60 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://devsecops-workshop.github.io/1-intro/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/1-intro/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/2-prepare-cluster/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2-prepare-cluster/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/3-inner-loop/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/3-inner-loop/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/4-outer-loop/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/4-outer-loop/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/5-gitops/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/5-gitops/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/10-rhacs-setup/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/10-rhacs-setup/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/11-rhacs-warmup/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/11-rhacs-warmup/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/12-create-policy/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/12-create-policy/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/13-rhacs-pipeline/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/13-rhacs-pipeline/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/14-advanced-pipeline/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/14-advanced-pipeline/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/15-runtime-security/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/15-runtime-security/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/categories/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/categories/</loc>
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/tags/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/tags/</loc>
   </url>
   
 </urlset>
