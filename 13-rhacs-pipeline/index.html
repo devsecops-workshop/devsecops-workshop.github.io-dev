@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="A DevSecOps Workshop Day using openShift and ACS">
+<meta name="author" content="Götz, Daniel">
+
+    <link rel="icon" href="https://devsecops-workshop.github.io/images/favicon.png" type="image/png">
+
+    <title>Integrating ACS into the Pipeline :: DevSecOps Workshop</title>
+
+    
+    <link href="https://devsecops-workshop.github.io/css/nucleus.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/fontawesome-all.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/hybrid.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/featherlight.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/perfect-scrollbar.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/auto-complete.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/atom-one-dark-reasonable.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/theme.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/tabs.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/hugo-theme.css?1656351212" rel="stylesheet">
+    
+    <link href="https://devsecops-workshop.github.io/css/theme-red.css?1656351212" rel="stylesheet">
+    
+    
+
+    <script src="https://devsecops-workshop.github.io/js/jquery-3.3.1.min.js?1656351212"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/13-rhacs-pipeline/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://devsecops-workshop.github.io/">
+    <img src="https://devsecops-workshop.github.io/images/acs-logo.png">
+  </a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/lunr.min.js?1656351212"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/auto-complete.js?1656351212"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/devsecops-workshop.github.io\/";
+    
+</script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/search.js?1656351212"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='https://devsecops-workshop.github.io/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-intro/" title="The DevSecOps Workshop" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/1-intro/">
+          The DevSecOps Workshop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prepare-cluster/" title="Prepare Cluster" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/2-prepare-cluster/">
+          Prepare Cluster
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-inner-loop/" title="Inner Loop" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/3-inner-loop/">
+          Inner Loop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-outer-loop/" title="Outer Loop" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/4-outer-loop/">
+          Outer Loop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-gitops/" title="Configure GitOps" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/5-gitops/">
+          Configure GitOps
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-rhacs-setup/" title="Install and Configure ACS" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/10-rhacs-setup/">
+          Install and Configure ACS
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/11-rhacs-warmup/" title="Getting to know ACS" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/11-rhacs-warmup/">
+          Getting to know ACS
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/12-create-policy/" title="Create a Custom Security Policy" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/12-create-policy/">
+          Create a Custom Security Policy
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/13-rhacs-pipeline/" title="Integrating ACS into the Pipeline" class="dd-item
+        
+        active
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/13-rhacs-pipeline/">
+          Integrating ACS into the Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/14-advanced-pipeline/" title="Advanced ACS Pipeline" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/14-advanced-pipeline/">
+          Advanced ACS Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/15-runtime-security/" title="Securing Runtime Events" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/15-runtime-security/">
+          Securing Runtime Events
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://devsecops-workshop.github.io/"><i class='fas fa-home'></i> Homepage</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='https://devsecops-workshop.github.io/'></a> > Integrating ACS into the Pipeline
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#finally-putting-the-sec-in-devsecops">Finally: Putting the Sec in DevSecOps!</a></li>
+    <li><a href="#integrate-image-scan-into-the-pipeline">Integrate Image Scan into the Pipeline</a>
+      <ul>
+        <li><a href="#lets-go-prepare-roxctl">Let&rsquo;s go: Prepare <code>roxctl</code></a></li>
+        <li><a href="#create-the-roxctl-token">Create the <code>roxctl</code> token</a></li>
+        <li><a href="#create-ocp-secret-with-token">Create OCP secret with token</a></li>
+        <li><a href="#create-a-scan-task">Create a Scan Task</a></li>
+        <li><a href="#add-the-task-to-the-pipeline">Add the Task to the Pipeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#test-the-scan-task">Test the Scan Task</a></li>
+    <li><a href="#enforce-the-policy">Enforce the Policy</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Integrating ACS into the Pipeline
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="finally-putting-the-sec-in-devsecops">Finally: Putting the Sec in DevSecOps!</h2>
+
+<div class="notices tip" ><p>There are basically two ways to interface with ACS. The UI, which focuses on the needs of the security team, and a separate &ldquo;interface&rdquo; for developers to integrate into their existing toolset (CI/CD pipeline, consoles, ticketing systems etc): The <code>roxctl</code> commandline tool. This way ACS provides a familiar interface to understand and address issues that the security team considers important.</p>
+</div>
+
+<p>ACS policies can act during the CI/CD pipeline to identify security risk in images before they are run as a container.</p>
+<h2 id="integrate-image-scan-into-the-pipeline">Integrate Image Scan into the Pipeline</h2>
+<p>You should have created and build a custom policy in ACS and tested it for triggering violations. Now you will integrate it into the build pipeline.</p>
+<h3 id="lets-go-prepare-roxctl">Let&rsquo;s go: Prepare <code>roxctl</code></h3>
+<p>Build-time policies require the use of the <code>roxctl</code> command-line tool which is available for download from the ACS Central UI, in the upper right corner of the dashboard. <code>Roxctl</code> needs to authenticate to <strong>ACS Central</strong> to do anything. It can use either username and password API tokens to authenticate against Central. It&rsquo;s good practice to use a token so that&rsquo;s what we&rsquo;ll do.</p>
+<h3 id="create-the-roxctl-token">Create the <code>roxctl</code> token</h3>
+<p>In the <strong>ACS portal</strong>:</p>
+<ul>
+<li>Navigate to <strong>Platform Configure &gt; Integrations</strong>.</li>
+<li>Scroll down to the <strong>Authentication Tokens</strong> category, and select <strong>API Token</strong>.</li>
+<li>Click <strong>Generate Token</strong>. Enter the name <code>pipeline</code> for the token and select the role <strong>Admin</strong>.</li>
+<li>Select <strong>Generate</strong></li>
+<li>Save the contents of the token somewhere!</li>
+</ul>
+<h3 id="create-ocp-secret-with-token">Create OCP secret with token</h3>
+<p>Change to the <strong>OpenShift Web Console</strong> and create a secret with the API token in the project your pipeline lives in:</p>
+<ul>
+<li>In the UI switch to your Project</li>
+<li>Create a new key/value <code>Secret</code> named <strong>roxsecrets</strong></li>
+<li>Introduce these key/values into the secret:
+<ul>
+<li><strong>rox_central_endpoint</strong>: &lt;the URL to your <strong>ACS Portal</strong>&gt;
+<ul>
+<li>It should be something like central-stackrox.apps.cluster-psslb.psslb.sandbox555.opentlc.com:443</li>
+</ul>
+</li>
+<li><strong>rox_api_token</strong>: &lt;the API token you generated&gt;</li>
+</ul>
+</li>
+</ul>
+<h3 id="create-a-scan-task">Create a Scan Task</h3>
+<p>You are now ready to create a new pipeline task that will use <code>roxctl</code> to scan the image build in your pipeline before the deploy step:</p>
+<ul>
+<li>In the OCP UI, make sure you are still in the project with your pipeline and the secret <code>roxsecrets</code></li>
+<li>Go to <strong>Pipelines-&gt;Tasks</strong></li>
+<li>Click <strong>Create-&gt; ClusterTask</strong></li>
+<li>Replace the YAML displayed with this:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: tekton.dev/v1beta1
+<span style="color:#66d9ef">kind</span>: ClusterTask
+<span style="color:#66d9ef">metadata</span>:
+  <span style="color:#66d9ef">name</span>: rox-image-check
+<span style="color:#66d9ef">spec</span>:
+  <span style="color:#66d9ef">params</span>:
+    - <span style="color:#66d9ef">description</span>: &gt;<span style="color:#e6db74">-
+</span><span style="color:#e6db74">        Secret containing the address:port tuple for StackRox Central (example -</span>
+        rox.stackrox.io:<span style="color:#ae81ff">443</span>)
+      <span style="color:#66d9ef">name</span>: rox_central_endpoint
+      <span style="color:#66d9ef">type</span>: string
+    - <span style="color:#66d9ef">description</span>: Secret containing the StackRox API token with CI permissions
+      <span style="color:#66d9ef">name</span>: rox_api_token
+      <span style="color:#66d9ef">type</span>: string
+    - <span style="color:#66d9ef">description</span>: <span style="color:#e6db74">&#39;Full name of image to scan (example -- gcr.io/rox/sample:5.0-rc1)&#39;</span>
+      <span style="color:#66d9ef">name</span>: image
+      <span style="color:#66d9ef">type</span>: string
+    - <span style="color:#66d9ef">description</span>: Use image digest result from s2i-java build task
+      <span style="color:#66d9ef">name</span>: image_digest
+      <span style="color:#66d9ef">type</span>: string
+  <span style="color:#66d9ef">results</span>:
+    - <span style="color:#66d9ef">description</span>: Output of `roxctl image check`
+      <span style="color:#66d9ef">name</span>: check_output
+  <span style="color:#66d9ef">steps</span>:
+    - <span style="color:#66d9ef">env</span>:
+        - <span style="color:#66d9ef">name</span>: ROX_API_TOKEN
+          <span style="color:#66d9ef">valueFrom</span>:
+            <span style="color:#66d9ef">secretKeyRef</span>:
+              <span style="color:#66d9ef">key</span>: rox_api_token
+              <span style="color:#66d9ef">name</span>: $(params.rox_api_token)
+        - <span style="color:#66d9ef">name</span>: ROX_CENTRAL_ENDPOINT
+          <span style="color:#66d9ef">valueFrom</span>:
+            <span style="color:#66d9ef">secretKeyRef</span>:
+              <span style="color:#66d9ef">key</span>: rox_central_endpoint
+              <span style="color:#66d9ef">name</span>: $(params.rox_central_endpoint)
+      <span style="color:#66d9ef">image</span>: registry.access.redhat.com/ubi8/ubi-minimal:latest
+      <span style="color:#66d9ef">name</span>: rox-image-check
+      <span style="color:#66d9ef">resources</span>: {}
+      <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">        #!/usr/bin/env bash</span>
+
+        set +x
+
+        curl -k -L -H <span style="color:#e6db74">&#34;Authorization: Bearer $ROX_API_TOKEN&#34;</span>
+        https://$ROX_CENTRAL_ENDPOINT/api/cli/download/roxctl-linux --output
+        ./roxctl  &gt; /dev/<span style="color:#66d9ef">null</span>; echo <span style="color:#e6db74">&#34;Getting roxctl&#34;</span>
+
+        chmod +x ./roxctl  &gt; /dev/<span style="color:#66d9ef">null</span>
+
+        ./roxctl image check -c Workshop --insecure-skip-tls-verify -e $ROX_CENTRAL_ENDPOINT
+        --image $(params.image)@$(params.image_digest)
+</code></pre></div><p>Take your time to <strong>understand</strong> the Tekton task definition:</p>
+<ul>
+<li>First some parameters are defined, it&rsquo;s important to understand some of these are taken or depend on the build task that run before.</li>
+<li>The script action pulls the <code>roxctl</code> binary into the pipeline workspace so you&rsquo;ll always have a version compatible with your ACS version.</li>
+<li>The most important bit is the <code>roxctl</code> execution, of course.
+<ul>
+<li>it executes the <code>image check</code> command</li>
+<li>only checks against policies from category <strong>Workshop</strong> that was created above. This way you can check against a subset of policies!</li>
+<li>defines the image to check and it&rsquo;s digest</li>
+</ul>
+</li>
+</ul>
+<h3 id="add-the-task-to-the-pipeline">Add the Task to the Pipeline</h3>
+<ul>
+<li>Now add the <strong>rox-image-check</strong> task to your pipeline between the <strong>build</strong> and <strong>deploy</strong> steps.</li>
+</ul>
+<p>After you added it you have to fill in values for the parameters the task defines. Click the task, a form with the parameters will open, fill it in:</p>
+<ul>
+<li><strong>rox_central_endpoint</strong>: <code>roxsecrets</code></li>
+<li><strong>rox_api_token</strong>: <code>roxsecrets</code></li>
+<li><strong>image</strong>: <code>image-registry.openshift-image-registry.svc:5000/workshop-int/workshop</code>
+<ul>
+<li>Adapt the Project name if you changed it</li>
+</ul>
+</li>
+<li><strong>image_digest</strong>: $(tasks.build.results.IMAGE_DIGEST)
+<ul>
+<li>This variable takes the result of the <strong>build</strong> task and uses it in the scan task.</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+</ul>
+<figure>
+    <img src="../images/pipeline.png?width=30pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<h2 id="test-the-scan-task">Test the Scan Task</h2>
+<p>With our custom <strong>System Policy</strong> still not set to <code>enforce</code> we first are going to test the pipeline integration. Start the pipeline with Java <strong>Version</strong> <code>java-old-image</code></p>
+<ul>
+<li>Expected Result:
+<ul>
+<li>The <code>rox-image-check</code> task should succeed, but if you have a look at the output (click the task in the visual representation) you should see that the <strong>build violated our policy</strong>!</li>
+</ul>
+</li>
+</ul>
+<p>To test the fixed image, just start the task with the default (latest) Java version again.</p>
+<ul>
+<li>Expected Result:
+<ul>
+<li>The <code>rox-image-check</code> task should succeed, if you have a look at the output you should see <strong>no policy violation</strong>!</li>
+</ul>
+</li>
+</ul>
+<h2 id="enforce-the-policy">Enforce the Policy</h2>
+<p>The last step is to enforce the System Policy. If the policy is violated the pipeline should be stopped and the application should not be deployed.</p>
+<ul>
+<li>Edit the <strong>System Policy</strong> in <strong>ACS Portal</strong> and set enforcement to <strong>On</strong> for the stages <strong>Build</strong> and <strong>Deploy</strong></li>
+<li>Run the pipeline again, first with Java <strong>Version</strong> <code>java-old-image</code> and then with the latest default version.</li>
+<li>Expecte results:
+<ul>
+<li>We are sure you know by now what to expect!</li>
+<li>The pipeline should fail with the old Java image version and succeed with the latest image version!</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/12-create-policy/" title="Create a Custom Security Policy"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://devsecops-workshop.github.io/14-advanced-pipeline/" title="Advanced ACS Pipeline" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://devsecops-workshop.github.io/js/clipboard.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/perfect-scrollbar.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/perfect-scrollbar.jquery.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/jquery.sticky.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/featherlight.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/highlight.pack.js?1656351212"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://devsecops-workshop.github.io/js/modernizr.custom-3.6.0.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/learn.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/hugo-learn.js?1656351212"></script>
+    
+        
+            <script src="https://devsecops-workshop.github.io/mermaid/mermaid.js?1656351212"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

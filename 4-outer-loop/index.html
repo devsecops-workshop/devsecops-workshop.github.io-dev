@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="A DevSecOps Workshop Day using openShift and ACS">
+<meta name="author" content="Götz, Daniel">
+
+    <link rel="icon" href="https://devsecops-workshop.github.io/images/favicon.png" type="image/png">
+
+    <title>Outer Loop :: DevSecOps Workshop</title>
+
+    
+    <link href="https://devsecops-workshop.github.io/css/nucleus.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/fontawesome-all.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/hybrid.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/featherlight.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/perfect-scrollbar.min.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/auto-complete.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/atom-one-dark-reasonable.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/theme.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/tabs.css?1656351212" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/css/hugo-theme.css?1656351212" rel="stylesheet">
+    
+    <link href="https://devsecops-workshop.github.io/css/theme-red.css?1656351212" rel="stylesheet">
+    
+    
+
+    <script src="https://devsecops-workshop.github.io/js/jquery-3.3.1.min.js?1656351212"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/4-outer-loop/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://devsecops-workshop.github.io/">
+    <img src="https://devsecops-workshop.github.io/images/acs-logo.png">
+  </a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/lunr.min.js?1656351212"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/auto-complete.js?1656351212"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/devsecops-workshop.github.io\/";
+    
+</script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/js/search.js?1656351212"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='https://devsecops-workshop.github.io/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-intro/" title="The DevSecOps Workshop" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/1-intro/">
+          The DevSecOps Workshop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prepare-cluster/" title="Prepare Cluster" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/2-prepare-cluster/">
+          Prepare Cluster
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-inner-loop/" title="Inner Loop" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/3-inner-loop/">
+          Inner Loop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-outer-loop/" title="Outer Loop" class="dd-item
+        
+        active
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/4-outer-loop/">
+          Outer Loop
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-gitops/" title="Configure GitOps" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/5-gitops/">
+          Configure GitOps
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-rhacs-setup/" title="Install and Configure ACS" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/10-rhacs-setup/">
+          Install and Configure ACS
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/11-rhacs-warmup/" title="Getting to know ACS" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/11-rhacs-warmup/">
+          Getting to know ACS
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/12-create-policy/" title="Create a Custom Security Policy" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/12-create-policy/">
+          Create a Custom Security Policy
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/13-rhacs-pipeline/" title="Integrating ACS into the Pipeline" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/13-rhacs-pipeline/">
+          Integrating ACS into the Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/14-advanced-pipeline/" title="Advanced ACS Pipeline" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/14-advanced-pipeline/">
+          Advanced ACS Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/15-runtime-security/" title="Securing Runtime Events" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/15-runtime-security/">
+          Securing Runtime Events
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://devsecops-workshop.github.io/"><i class='fas fa-home'></i> Homepage</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='https://devsecops-workshop.github.io/'></a> > Outer Loop
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-openshift-pipelines">Install OpenShift Pipelines</a></li>
+    <li><a href="#create-app-deployment-and-build-pipeline">Create App Deployment and Build Pipeline</a></li>
+    <li><a href="#create-an-imagestream-tag-with-an-old-image-version">Create an ImageStream Tag with an Old Image Version</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Outer Loop
+            </h1>
+          
+
+        
+
+
+
+	<p>Now that you have seen how a developer can quickly start to code using modern cloud native tooling, it&rsquo;s time to learn how to proceed with the application towards production. The first step is to implement a CI/CD pipeline to automate new builds. Let&rsquo;s call this stage <code>int</code> for integration.</p>
+<h2 id="install-openshift-pipelines">Install OpenShift Pipelines</h2>
+<p>To create and run the build pipeline you&rsquo;ll use OpenShift Pipelines based on project Tekton. The first step is to install it:</p>
+<ul>
+<li>Install the <code>Red hat OpenShift Pipelines</code> Operator from OperatorHub with default settings
+
+<div class="notices warning" ><p>Since the Piplines assets are installed asynchronously it is possible that the <code>Pipline Templates</code> are not yet setup when proceeding immedately to the next step. So now is good time to grab a coffee.</p>
+</div>
+</li>
+</ul>
+<h2 id="create-app-deployment-and-build-pipeline">Create App Deployment and Build Pipeline</h2>
+<p>After installing the Operator create a new deployment of your game-changing application:</p>
+<ul>
+<li>Create a new OpenShift project <code>workshop-int</code></li>
+<li>Switch to the <strong>OpenShift Developer Console</strong></li>
+<li>Click the <strong>+Add</strong> menu entry to the left and choose <strong>Import from Git</strong></li>
+<li>As <strong>Git Repo URL</strong> enter the clone URL for the <code>quarkus-build-options</code> repo in your your <code>Gitea</code> instance (There might be a warning about the repo url that you can ignore)</li>
+<li>As <strong>Import Strategy</strong> select <strong>Builder Image</strong></li>
+<li>As <strong>Builder Image</strong> select <strong>Java</strong> and <strong>openjdk-11-el7</strong> /  <strong>Red Hat OpenJDK 11 (RHEL 7)</strong></li>
+<li>As <strong>Application Name</strong> enter <strong>workshop-app</strong></li>
+<li>As <strong>Name</strong> enter <strong>workshop</strong></li>
+<li>Check <strong>Add pipeline</strong></li>
+</ul>
+
+<div class="notices warning" ><p>If you don&rsquo;t have the checkbox <strong>Add pipeline</strong> and get the message <code>There are no pipeline templates available for Java and Deployment combination</code> in the next step then just give it few more minutes and reload the page.</p>
+</div>
+
+<ul>
+<li>Click <strong>Create</strong></li>
+<li>In the main menu left, click on <strong>Pipelines</strong> and observe how the Tekton Pipeline is created and run.</li>
+</ul>
+<h2 id="create-an-imagestream-tag-with-an-old-image-version">Create an ImageStream Tag with an Old Image Version</h2>
+<p>Now your build pipeline has been set up and is ready. There is one more step in preparation of the security part of this workshop. We need a way to build and deploy from an older image with some security issues in it. For this we will add another ImageStream <code>Tag</code> in the default <code>Java</code> ImageStream that points to an older version with a known issue in it.</p>
+<ul>
+<li>Using the <strong>Administrator</strong> view, switch to the project <code>openshift</code> and under <strong>Builds</strong> click on the <strong>ImageStreams</strong></li>
+<li>Search and open the <strong>ImageStream</strong> <code>java</code></li>
+<li>Switch to YAML view and add the following snippet to the <code>tags:</code> section.
+<ul>
+<li>Be careful to keep the needed indentation!</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    - <span style="color:#66d9ef">name</span>: java-old-image
+      <span style="color:#66d9ef">annotations</span>:
+        <span style="color:#66d9ef">description</span>: Build and run Java applications using Maven and OpenJDK <span style="color:#ae81ff">8</span>.
+        <span style="color:#66d9ef">iconClass</span>: icon-rh-openjdk
+        <span style="color:#66d9ef">openshift.io/display-name</span>: Red Hat OpenJDK <span style="color:#ae81ff">8</span> (UBI <span style="color:#ae81ff">8</span>)
+        <span style="color:#66d9ef">sampleContextDir</span>: undertow-servlet
+        <span style="color:#66d9ef">sampleRepo</span>: <span style="color:#e6db74">&#39;https://github.com/jboss-openshift/openshift-quickstarts&#39;</span>
+        <span style="color:#66d9ef">supports</span>: <span style="color:#e6db74">&#39;java:8,java&#39;</span>
+        <span style="color:#66d9ef">tags</span>: <span style="color:#e6db74">&#39;builder,java,openjdk&#39;</span>
+        <span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;8&#39;</span>
+      <span style="color:#66d9ef">from</span>:
+        <span style="color:#66d9ef">kind</span>: DockerImage
+        <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#39;registry.redhat.io/openjdk/openjdk-11-rhel7:1.10-1&#39;</span>
+      <span style="color:#66d9ef">generation</span>: <span style="color:#ae81ff">4</span>
+      <span style="color:#66d9ef">importPolicy</span>: {}
+      <span style="color:#66d9ef">referencePolicy</span>:
+        <span style="color:#66d9ef">type</span>: Local
+</code></pre></div><p>This will add a tag <code>java-old-image</code> that points to an older version of the RHEL Java image. The image and security vulnerabilities can be inspected in the Red Hat Software Catalog here:
+<a href="https://catalog.redhat.com/software/containers/openjdk/openjdk-11-rhel7/5bf57185dd19c775cddc4ce5?tag=1.10-1&amp;push_date=1629294893000&amp;container-tabs=security">https://catalog.redhat.com/software/containers/openjdk/openjdk-11-rhel7/5bf57185dd19c775cddc4ce5?tag=1.10-1&amp;push_date=1629294893000&amp;container-tabs=security</a></p>
+<ul>
+<li>Have a look at version <code>1.10-1</code></li>
+</ul>
+<p>We will use this tag to test our security setup in a later chapter.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/3-inner-loop/" title="Inner Loop"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://devsecops-workshop.github.io/5-gitops/" title="Configure GitOps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://devsecops-workshop.github.io/js/clipboard.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/perfect-scrollbar.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/perfect-scrollbar.jquery.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/jquery.sticky.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/featherlight.min.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/highlight.pack.js?1656351212"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://devsecops-workshop.github.io/js/modernizr.custom-3.6.0.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/learn.js?1656351212"></script>
+    <script src="https://devsecops-workshop.github.io/js/hugo-learn.js?1656351212"></script>
+    
+        
+            <script src="https://devsecops-workshop.github.io/mermaid/mermaid.js?1656351212"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
