@@ -12,22 +12,22 @@
     <title>Integrating ACS into the Pipeline :: DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656494783" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656513447" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656513447" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656513447" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656513447"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656494783"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656494783"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656513447"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656513447"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656494783"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656513447"></script>
 
     
   </div>
@@ -516,7 +516,7 @@
     - <span style="color:#66d9ef">description</span>: Secret containing the StackRox API token with CI permissions
       <span style="color:#66d9ef">name</span>: rox_api_token
       <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">description</span>: <span style="color:#e6db74">&#39;Full name of image to scan (example -- gcr.io/rox/sample:5.0-rc1)&#39;</span>
+    - <span style="color:#66d9ef">description</span>: <span style="color:#e6db74">&#34;Full name of image to scan (example -- gcr.io/rox/sample:5.0-rc1)&#34;</span>
       <span style="color:#66d9ef">name</span>: image
       <span style="color:#66d9ef">type</span>: string
     - <span style="color:#66d9ef">description</span>: Use image digest result from s2i-java build task
@@ -566,24 +566,48 @@
 </li>
 </ul>
 <h3 id="add-the-task-to-the-pipeline">Add the Task to the Pipeline</h3>
+<p>Now add the <strong>rox-image-check</strong> task to your pipeline between the <strong>build</strong> and <strong>deploy</strong> steps.</p>
 <ul>
-<li>Now add the <strong>rox-image-check</strong> task to your pipeline between the <strong>build</strong> and <strong>deploy</strong> steps.</li>
+<li>In the <strong>Pipelines</strong> view of your project click the three dots to the right and the <strong>Edit Pipeline</strong></li>
 </ul>
-<p>After you added it you have to fill in values for the parameters the task defines. Click the task, a form with the parameters will open, fill it in:</p>
+
+<div class="notices tip" ><p>Remember how we edited the pipeline directly in yaml before? OpenShift comes with a graphical Pipeline editor that we will use this time.</p>
+</div>
+
 <ul>
-<li><strong>rox_central_endpoint</strong>: <code>roxsecrets</code></li>
-<li><strong>rox_api_token</strong>: <code>roxsecrets</code></li>
-<li><strong>image</strong>: <code>image-registry.openshift-image-registry.svc:5000/workshop-int/workshop</code>
+<li>
+<p>Hover your mouse over <strong>build</strong> task and click the <strong>+</strong> at the right side side of it, to add a task</p>
+</li>
+<li>
+<p>This will open a task selector where you can choose to add your <strong>rox-image-check</strong></p>
+</li>
+<li>
+<p>To add the required parameters from the pipeline for the task, click the <strong>rox-image-check</strong> task.</p>
+</li>
+<li>
+<p>A form with the parameters will open, fill it in:</p>
+</li>
+<li>
+<p><strong>rox_central_endpoint</strong>: <code>roxsecrets</code></p>
+</li>
+<li>
+<p><strong>rox_api_token</strong>: <code>roxsecrets</code></p>
+</li>
+<li>
+<p><strong>image</strong>: <code>image-registry.openshift-image-registry.svc:5000/workshop-int/workshop</code></p>
 <ul>
 <li>Adapt the Project name if you changed it</li>
 </ul>
 </li>
-<li><strong>image_digest</strong>: $(tasks.build.results.IMAGE_DIGEST)
+<li>
+<p><strong>image_digest</strong>: $(tasks.build.results.IMAGE_DIGEST)</p>
 <ul>
 <li>This variable takes the result of the <strong>build</strong> task and uses it in the scan task.</li>
 </ul>
 </li>
-<li>Click <strong>Save</strong></li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
 </ul>
 <figure>
     <img src="../images/pipeline.png?width=30pc&amp;classes=border,shadow"/> <figcaption>
@@ -611,7 +635,7 @@
 <h2 id="enforce-the-policy">Enforce the Policy</h2>
 <p>The last step is to enforce the System Policy. If the policy is violated the pipeline should be stopped and the application should not be deployed.</p>
 <ul>
-<li>Edit your custom <strong>System Policy</strong> in <strong>ACS Portal</strong> and set enforcement to <strong>On</strong> for the stages <strong>Build</strong> and <strong>Deploy</strong></li>
+<li>Edit your custom <strong>System Policy</strong> in <strong>ACS Portal</strong> and set <strong>Response Method</strong> to <strong>Inform and enforce</strong> and then switch on <strong>Build</strong> and <strong>Deploy</strong> below.</li>
 <li>Run the pipeline again, first with Java <strong>Version</strong> <code>java-old-image</code> and then with the latest default version.</li>
 <li>Expecte results:
 <ul>
@@ -866,19 +890,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656513447"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656494783"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656513447"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656513447"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656494783"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656513447"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
