@@ -12,22 +12,22 @@
     <title>Advanced ACS Pipeline :: DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656515423" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656515423" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656516288" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656516288" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656515423" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656516288" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656515423"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656516288"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656515423"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656515423"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656516288"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656516288"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656515423"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656516288"></script>
 
     
   </div>
@@ -457,12 +457,12 @@
 
 
 	<h2 id="optimizing-our-devsecops-pipeline">Optimizing our DevSecOps Pipeline</h2>
-<p>In the chapter before we created a Pipeline which builds, checks and deploys our image, if the image passes all ACS checks. But what should happen, if the image doesn&rsquo;t pass the ACS check? It doesn&rsquo;t seems to be a good idea to save an unsafe image in the internal OpenShift registry.
-So lets modify our pipeline to an advanced one, which deletes an image, if it doesn&rsquo;t pass the ACS checks.</p>
+<p>In the chapter before we created a Pipeline which builds, checks and deploys our image, if the image passes all ACS checks. But what should happen, if the image doesn&rsquo;t pass the ACS check? It doesn&rsquo;t seems to be a good idea to keep an unsafe image in the internal OpenShift registry.
+So lets modify our pipeline to a more advanced one, which deletes an image, if it doesn&rsquo;t pass the ACS checks.</p>
 <h3 id="adding-a-package-level-vulnerability">Adding a Package Level Vulnerability</h3>
-<p>Before we adjust our pipeline let&rsquo;s add another vulnerability to our Deployment. So far we had a system library security issue but let&rsquo;s image a developer tried to add (hopefully by mistake) a vulnerable Java library to his/her application. How about we pick one of the most infamous current ones such as the <strong>Log4Shell</strong> vulnerability?  But don&rsquo;t worry ACS already ships with a policy for that and has your back.</p>
+<p>Before we adjust our pipeline let&rsquo;s add another vulnerability to our Deployment. So far we had a system library security issue but let&rsquo;s imagine a developer tried to add (hopefully by mistake) a vulnerable Java library to his/her application. How about we pick one of the most infamous current ones such as the <strong>Log4Shell</strong> vulnerability? But don&rsquo;t worry ACS already ships with a policy for that and has your back.</p>
 
-<div class="notices tip" ><p>Quarkus doesn&rsquo;t use the log4J library for logging so is not affected by it. Although it is a bit contrived we will still force it to include the library just to trigger our policy.  If you want to find out more about this particular vulnerability have look <a href="https://www.wired.com/story/log4j-log4shell/">here</a></p>
+<div class="notices tip" ><p>Quarkus doesn&rsquo;t use the log4J library for logging so is not affected by it. Although it is a bit contrived we will still force it to include the library just to trigger our policy. If you want to find out more about this particular vulnerability have look <a href="https://www.wired.com/story/log4j-log4shell/">here</a></p>
 </div>
 
 <p>To add this library to you Quarkus app</p>
@@ -542,7 +542,7 @@ So lets modify our pipeline to an advanced one, which deletes an image, if it do
     - <span style="color:#66d9ef">name</span>: delete-image
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag -d workshop-int/workshop:dev -n workshop-int&#39;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag -d workshop-int/workshop:dev -n workshop-int&#34;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">taskRef</span>:
@@ -609,7 +609,7 @@ So lets modify our pipeline to an advanced one, which deletes an image, if it do
         - <span style="color:#66d9ef">name</span>: revision
           <span style="color:#66d9ef">value</span>: $(params.GIT_REVISION)
         - <span style="color:#66d9ef">name</span>: deleteExisting
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;true&#39;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;true&#34;</span>
       <span style="color:#66d9ef">taskRef</span>:
         <span style="color:#66d9ef">kind</span>: ClusterTask
         <span style="color:#66d9ef">name</span>: git-clone
@@ -621,7 +621,7 @@ So lets modify our pipeline to an advanced one, which deletes an image, if it do
         - <span style="color:#66d9ef">name</span>: IMAGE
           <span style="color:#66d9ef">value</span>: $(params.IMAGE_NAME)
         - <span style="color:#66d9ef">name</span>: TLSVERIFY
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;false&#39;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;false&#34;</span>
         - <span style="color:#66d9ef">name</span>: PATH_CONTEXT
           <span style="color:#66d9ef">value</span>: $(params.PATH_CONTEXT)
         - <span style="color:#66d9ef">name</span>: VERSION
@@ -662,7 +662,7 @@ So lets modify our pipeline to an advanced one, which deletes an image, if it do
     - <span style="color:#66d9ef">name</span>: tag-checked-image
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag workshop:dev workshop:latest&#39;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag workshop:dev workshop:latest&#34;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">runAfter</span>:
@@ -673,7 +673,7 @@ So lets modify our pipeline to an advanced one, which deletes an image, if it do
     - <span style="color:#66d9ef">name</span>: remove-dev-tag
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag -d workshop:dev&#39;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag -d workshop:dev&#34;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">runAfter</span>:
@@ -972,19 +972,19 @@ Navigate to:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656515423"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656516288"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656515423"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656515423"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656516288"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656516288"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656515423"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656516288"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
