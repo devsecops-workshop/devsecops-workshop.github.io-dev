@@ -12,22 +12,22 @@
     <title>Install and Configure ACS :: DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656425741" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656425741" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1656494783" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1656494783" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656425741" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1656494783" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656425741"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1656494783"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656425741"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656425741"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1656494783"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1656494783"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656425741"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1656494783"></script>
 
     
   </div>
@@ -464,7 +464,7 @@
 <li>Approve the installation when asked</li>
 </ul>
 
-<div class="notices info" ><p>Red Hat recommends installing the Red Hat Advanced Cluster Security for Kubernetes Operator in the <strong>rhacs-operators</strong> namespace. This will happen by default..</p>
+<div class="notices info" ><p>Red Hat recommends installing the Red Hat Advanced Cluster Security for Kubernetes Operator in the <strong>rhacs-operator</strong> namespace. This will happen by default..</p>
 </div>
 
 <h3 id="install-the-main-component-central">Install the main component <strong>Central</strong></h3>
@@ -503,7 +503,7 @@
 </div>
 
 <ul>
-<li>Look up  and access the route <strong>central</strong> which was also generated automatically.</li>
+<li>Look up and access the route <strong>central</strong> which was also generated automatically.</li>
 </ul>
 <p>This will get you to the <strong>ACS Portal</strong>, accept the self-signed certificate and login as user <strong>admin</strong> with the password from the secret.</p>
 <p>Now you have a <strong>Central</strong> instance that provides the following services in an
@@ -513,7 +513,7 @@ RHACS setup:</p>
 <p>The application management interface and services. It handles data persistence, API interactions, and user interface access. You can use the same <strong>Central</strong> instance to <strong>secure multiple</strong> OpenShift or Kubernetes clusters.</p>
 </li>
 <li>
-<p>Scanner, which is a vulnerability scanner for  scanning container images. It analyzes all image layers to check known vulnerabilities from the Common Vulnerabilities and Exposures (CVEs) list. Scanner also identifies vulnerabilities in packages installed by package managers and in dependencies for multiple programming languages.</p>
+<p>Scanner, which is a vulnerability scanner for scanning container images. It analyzes all image layers to check known vulnerabilities from the Common Vulnerabilities and Exposures (CVEs) list. Scanner also identifies vulnerabilities in packages installed by package managers and in dependencies for multiple programming languages.</p>
 </li>
 </ul>
 <p>To actually do and see anything you need to add a <strong>SecuredCluster</strong> (be it the same or another OpenShift cluster). For effect go to the <strong>ACS Portal</strong>, the Dashboard should by pretty empty, click on the <strong>Compliance</strong> link in the menu to the left, lots of zero&rsquo;s and empty panels, too.</p>
@@ -551,14 +551,14 @@ secret/admission-control-tls created
 <li>In the <strong>OpenShift Web Console</strong> go to the <strong>ACS Operator</strong> in <strong>Operators-&gt;Installed Operators</strong></li>
 <li>Using the Operator create an instance of the <strong>Secured Cluster</strong> type <strong>in the Project you created</strong> (should be stackrox)</li>
 <li>Change the <strong>Cluster Name</strong> for the cluster if you want, it&rsquo;ll appear under this name in the <strong>ACS Portal</strong></li>
-<li>And most importantly for <strong>Central Endpoint</strong>  enter the address and port number of your <strong>Central</strong> instance, this is the same as the <strong>ACS Portal</strong>.
+<li>And most importantly for <strong>Central Endpoint</strong> enter the address and port number of your <strong>Central</strong> instance, this is the same as the <strong>ACS Portal</strong>.
 <ul>
 <li>If the <strong>ACS Portal</strong> is available at <code>https://central-stackrox.apps.cluster-65h4j.65h4j.sandbox1803.opentlc.com/</code> the endpoint is <code>central-stackrox.apps.cluster-65h4j.65h4j.sandbox1803.opentlc.com:443</code>.</li>
 </ul>
 </li>
 <li>Under <strong>Admission Control Settings</strong> make sure
 <ul>
-<li><strong>listenOnCreates</strong>, <strong>listenOnUpdates</strong> and <strong>Listen On Events</strong> is enabled</li>
+<li><strong>listenOnCreates</strong>, <strong>listenOnUpdates</strong> and <strong>ListenOnEvents</strong> is enabled</li>
 <li>Set <strong>Contact Image Scanners</strong> to <strong>ScanIfMissing</strong></li>
 </ul>
 </li>
@@ -846,19 +846,19 @@ secret/admission-control-tls created
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656425741"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1656494783"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656425741"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656425741"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1656494783"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1656494783"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656425741"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1656494783"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
