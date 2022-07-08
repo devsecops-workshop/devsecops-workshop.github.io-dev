@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Outer Loop on DevSecOps Workshop</title>
+    <title>Outer Loop on DRAFT : DevSecOps Workshop</title>
     <link>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/4-outer-loop/</link>
-    <description>Recent content in Outer Loop on DevSecOps Workshop</description>
+    <description>Recent content in Outer Loop on DRAFT : DevSecOps Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	<atom:link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/4-outer-loop/index.xml" rel="self" type="application/rss+xml" />
