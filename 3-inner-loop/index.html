@@ -12,22 +12,22 @@
     <title>Inner Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1657273936" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1657273936" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1660580712" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1660580712" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1657273936" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1660580712" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1657273936"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1660580712"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1657273936"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1657273936"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1660580712"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1660580712"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1657273936"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1660580712"></script>
 
     
   </div>
@@ -419,7 +419,6 @@
 <nav id="TableOfContents">
   <ul>
     <li><a href="#clone-the-quarkus-application-code">Clone the Quarkus Application Code</a></li>
-    <li><a href="#install-odo">Install odo</a></li>
     <li><a href="#login-to-openshift-and-create-the-development-stage-project">Login to OpenShift and Create the Development Stage Project</a></li>
     <li><a href="#use-odo-to-deploy-and-update-our-application">Use odo to Deploy and Update our Application</a></li>
   </ul>
@@ -457,34 +456,19 @@
 
 <p>Let&rsquo;s clone our project into our workspace :</p>
 <ul>
-<li>Bring up your <code>CodeReady Workspaces</code> in your browser</li>
+<li>Bring up your <code>OpenShift Dev Spaces</code> in your browser</li>
 <li>In the bottom left click on <strong>Clone Repository</strong> and then enter the <code>Git URL</code> to your <code>Gitea</code> Repo (You can copy the URL by clicking on the clipboard icon)</li>
-<li>Press enter and select the default location.</li>
+<li>Press enter and then select <strong>Select Repository Location</strong>.</li>
+<li>in the bottom right corner your will see a notice <code>Would you like to open the cloned repository?</code>. Click <strong>Open</strong></li>
+<li>The windows will briefly reload and then you will be in the cloned project folder</li>
 </ul>
 <p>You should be greeted by the <code>README.md</code> file.</p>
-<h2 id="install-odo">Install odo</h2>
-<p><strong>odo</strong> or &lsquo;OpenShift do&rsquo; is a cli that enables developers to get started quickly with cloud native app development without being a Kubernetes expert. It offers support for multiple runtimes and you can easily setup microservice components, push code changes into running containers and debug remotely with just a few simple commands. To find out more, have look <a href="https://odo.dev/">here</a></p>
-<p>To install the <code>odo</code> cli into your workspace, run the following steps:</p>
-<ul>
-<li>From the CRW shortcuts menu to the right (the &ldquo;cube icon&rdquo;) run <code>install odo</code></li>
-</ul>
-<!-- ![Install odo](../images/crw2.png?width=75pc) -->
-<figure>
-    <img src="../images/crw2.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-
-<ul>
-<li><code>odo</code> cli will be downloaded and unpacked in your project folder, you can safely ignore the warning about file or directory not found</li>
-<li>Close the <code>install odo</code> terminal tab the installation opened</li>
-</ul>
 <h2 id="login-to-openshift-and-create-the-development-stage-project">Login to OpenShift and Create the Development Stage Project</h2>
 <p>Now we want to create a new OpenShift project for our app:</p>
 <ul>
 <li>Open a <code>terminal</code>
 <ul>
-<li>In <strong>My Workspace</strong> (cube icon) to the right click <code>New Terminal</code></li>
+<li>In <strong>My Workspace</strong> (cube icon) to the right click <code>tools &gt; New Terminal</code></li>
 </ul>
 </li>
 <li>Copy the <code>oc login</code> command from your OpenShift cluster (At the top right <strong>Username &gt; Copy login command</strong>) and execute in the <code>terminal</code> to log into the OpenShift cluster</li>
@@ -492,6 +476,7 @@
 </ul>
 <pre><code>oc new-project workshop-dev
 </code></pre><h2 id="use-odo-to-deploy-and-update-our-application">Use odo to Deploy and Update our Application</h2>
+<p><strong>odo</strong> or &lsquo;OpenShift do&rsquo; is a cli that enables developers to get started quickly with cloud native app development without being a Kubernetes expert. It offers support for multiple runtimes and you can easily setup microservice components, push code changes into running containers and debug remotely with just a few simple commands. To find out more, have look <a href="https://odo.dev/">here</a></p>
 <p>First use <code>odo</code> (&ldquo;OpenShift Do&rdquo;) to list the programming languages/frameworks it supports</p>
 <pre><code>./odo catalog list components
 </code></pre><p>Now initialize a new Quarkus application</p>
@@ -754,19 +739,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1657273936"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1660580712"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1657273936"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1657273936"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1660580712"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1660580712"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1657273936"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1660580712"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
