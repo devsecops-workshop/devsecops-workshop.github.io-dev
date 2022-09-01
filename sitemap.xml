@@ -47,6 +47,10 @@
   </url>
   
   <url>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/16-appendix/</loc>
+  </url>
+  
+  <url>
     <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/</loc>
     <priority>0</priority>
   </url>

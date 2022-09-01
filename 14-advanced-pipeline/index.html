@@ -12,22 +12,22 @@
     <title>Advanced ACS Pipeline :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1660749863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1660749863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1662023717" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1662023717" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1660749863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1662023717" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1660749863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1662023717"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1660749863"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1660749863"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1662023717"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1662023717"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1660749863"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1662023717"></script>
 
     
   </div>
@@ -350,6 +350,30 @@
  
 
           
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/16-appendix/" title="Appendix" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/16-appendix/">
+          Appendix
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
         
     </ul>
 
@@ -536,15 +560,32 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: tekton.dev/v1beta1
 <span style="color:#66d9ef">kind</span>: Pipeline
 <span style="color:#66d9ef">metadata</span>:
-  <span style="color:#66d9ef">labels</span>:
+  <span style="color:#66d9ef">creationTimestamp</span>: <span style="color:#e6db74">&#39;2022-08-31T16:00:10Z&#39;</span>
+  <span style="color:#66d9ef">generation</span>: <span style="color:#ae81ff">2</span>
+  <span style="color:#66d9ef">managedFields</span>:
+    - <span style="color:#66d9ef">apiVersion</span>: tekton.dev/v1beta1
+      <span style="color:#66d9ef">fieldsType</span>: FieldsV1
+      <span style="color:#66d9ef">fieldsV1</span>:
+        <span style="color:#66d9ef">&#39;f:spec&#39;</span>:
+          <span style="color:#66d9ef">.</span>: {}
+          <span style="color:#66d9ef">&#39;f:finally&#39;</span>: {}
+          <span style="color:#66d9ef">&#39;f:params&#39;</span>: {}
+          <span style="color:#66d9ef">&#39;f:resources&#39;</span>: {}
+          <span style="color:#66d9ef">&#39;f:tasks&#39;</span>: {}
+          <span style="color:#66d9ef">&#39;f:workspaces&#39;</span>: {}
+      <span style="color:#66d9ef">manager</span>: Mozilla
+      <span style="color:#66d9ef">operation</span>: Update
+      <span style="color:#66d9ef">time</span>: <span style="color:#e6db74">&#39;2022-08-31T16:02:01Z&#39;</span>
   <span style="color:#66d9ef">name</span>: workshop-advanced
   <span style="color:#66d9ef">namespace</span>: workshop-int
+  <span style="color:#66d9ef">resourceVersion</span>: <span style="color:#e6db74">&#39;6596919&#39;</span>
+  <span style="color:#66d9ef">uid</span>: 9042ab28-54b1-4eb6-9b5f-24e6d3435ea2
 <span style="color:#66d9ef">spec</span>:
   <span style="color:#66d9ef">finally</span>:
     - <span style="color:#66d9ef">name</span>: delete-image
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag -d workshop-int/workshop:dev -n workshop-int&#34;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag -d workshop-int/workshop:dev -n workshop-int&#39;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">taskRef</span>:
@@ -560,14 +601,14 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
       <span style="color:#66d9ef">name</span>: APP_NAME
       <span style="color:#66d9ef">type</span>: string
     - <span style="color:#66d9ef">default</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">        https://repository-git.apps.{YOUR_CLUSTER_HOSTNAME}/gitea/quarkus-build-options.git</span>
+</span><span style="color:#e6db74">        https://repository-git.apps.cluster-c8xnn.c8xnn.sandbox1811.opentlc.com/gitea/quarkus-build-options.git</span>
       <span style="color:#66d9ef">name</span>: GIT_REPO
       <span style="color:#66d9ef">type</span>: string
     - <span style="color:#66d9ef">default</span>: master
       <span style="color:#66d9ef">name</span>: GIT_REVISION
       <span style="color:#66d9ef">type</span>: string
     - <span style="color:#66d9ef">default</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">        image-registry.openshift-image-registry.svc:5000/workshop-int/workshop:dev</span>
+</span><span style="color:#e6db74">        quay-quay-quay.apps.cluster-c8xnn.c8xnn.sandbox1811.opentlc.com/openshift_workshop-int/workshop:dev</span>
       <span style="color:#66d9ef">name</span>: IMAGE_NAME
       <span style="color:#66d9ef">type</span>: string
     - <span style="color:#66d9ef">default</span>: .
@@ -577,33 +618,6 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
       <span style="color:#66d9ef">name</span>: VERSION
       <span style="color:#66d9ef">type</span>: string
   <span style="color:#66d9ef">tasks</span>:
-    - <span style="color:#66d9ef">name</span>: git-update-deployment
-      <span style="color:#66d9ef">params</span>:
-        - <span style="color:#66d9ef">name</span>: GIT_REPOSITORY
-          <span style="color:#66d9ef">value</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">            https://repository-git.apps.{YOUR_CLUSTER_HOSTNAME}/gitea/openshift-gitops-getting-started.git</span>
-        - <span style="color:#66d9ef">name</span>: GIT_USERNAME
-          <span style="color:#66d9ef">value</span>: gitea
-        - <span style="color:#66d9ef">name</span>: GIT_PASSWORD
-          <span style="color:#66d9ef">value</span>: gitea
-        - <span style="color:#66d9ef">name</span>: CURRENT_IMAGE
-          <span style="color:#66d9ef">value</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">            image-registry.openshift-image-registry.svc:5000/workshop-int/workshop:latest</span>
-        - <span style="color:#66d9ef">name</span>: NEW_IMAGE
-          <span style="color:#66d9ef">value</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">            image-registry.openshift-image-registry.svc:5000/workshop-int/workshop</span>
-        - <span style="color:#66d9ef">name</span>: NEW_DIGEST
-          <span style="color:#66d9ef">value</span>: $(tasks.build.results.IMAGE_DIGEST)
-        - <span style="color:#66d9ef">name</span>: KUSTOMIZATION_PATH
-          <span style="color:#66d9ef">value</span>: environments/dev
-      <span style="color:#66d9ef">runAfter</span>:
-        - remove-dev-tag
-      <span style="color:#66d9ef">taskRef</span>:
-        <span style="color:#66d9ef">kind</span>: Task
-        <span style="color:#66d9ef">name</span>: git-update-deployment
-      <span style="color:#66d9ef">workspaces</span>:
-        - <span style="color:#66d9ef">name</span>: workspace
-          <span style="color:#66d9ef">workspace</span>: workspace
     - <span style="color:#66d9ef">name</span>: fetch-repository
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: url
@@ -611,7 +625,7 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
         - <span style="color:#66d9ef">name</span>: revision
           <span style="color:#66d9ef">value</span>: $(params.GIT_REVISION)
         - <span style="color:#66d9ef">name</span>: deleteExisting
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;true&#34;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;true&#39;</span>
       <span style="color:#66d9ef">taskRef</span>:
         <span style="color:#66d9ef">kind</span>: ClusterTask
         <span style="color:#66d9ef">name</span>: git-clone
@@ -623,7 +637,7 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
         - <span style="color:#66d9ef">name</span>: IMAGE
           <span style="color:#66d9ef">value</span>: $(params.IMAGE_NAME)
         - <span style="color:#66d9ef">name</span>: TLSVERIFY
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;false&#34;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;false&#39;</span>
         - <span style="color:#66d9ef">name</span>: PATH_CONTEXT
           <span style="color:#66d9ef">value</span>: $(params.PATH_CONTEXT)
         - <span style="color:#66d9ef">name</span>: VERSION
@@ -653,7 +667,7 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
           <span style="color:#66d9ef">value</span>: roxsecrets
         - <span style="color:#66d9ef">name</span>: image
           <span style="color:#66d9ef">value</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">            image-registry.openshift-image-registry.svc:5000/workshop-int/workshop</span>
+</span><span style="color:#e6db74">            quay-quay-quay.apps.cluster-c8xnn.c8xnn.sandbox1811.opentlc.com/openshift_workshop-int/workshop</span>
         - <span style="color:#66d9ef">name</span>: image_digest
           <span style="color:#66d9ef">value</span>: $(tasks.build.results.IMAGE_DIGEST)
       <span style="color:#66d9ef">runAfter</span>:
@@ -664,7 +678,7 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
     - <span style="color:#66d9ef">name</span>: tag-checked-image
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag workshop:dev workshop:latest&#34;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag workshop:dev workshop:latest&#39;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">runAfter</span>:
@@ -675,7 +689,7 @@ So lets modify our pipeline to a more advanced one, which deletes an image, if i
     - <span style="color:#66d9ef">name</span>: remove-dev-tag
       <span style="color:#66d9ef">params</span>:
         - <span style="color:#66d9ef">name</span>: SCRIPT
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;oc tag -d workshop:dev&#34;</span>
+          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;oc tag -d workshop:dev&#39;</span>
         - <span style="color:#66d9ef">name</span>: VERSION
           <span style="color:#66d9ef">value</span>: latest
       <span style="color:#66d9ef">runAfter</span>:
@@ -952,6 +966,22 @@ Navigate to:</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
 
@@ -974,19 +1004,19 @@ Navigate to:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1660749863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1662023717"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1660749863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1660749863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1662023717"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1662023717"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1660749863"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1662023717"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
