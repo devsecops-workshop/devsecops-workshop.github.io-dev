@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1662377780" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1662377780" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1662378192" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1662378192" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1662377780" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1662378192" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1662377780"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1662378192"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1662377780"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1662377780"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1662378192"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1662378192"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1662377780"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1662378192"></script>
 
     
   </div>
@@ -530,7 +530,7 @@
 <li>Make sure you are in the <code>quay</code> project</li>
 <li>Change the name to <code>quay</code></li>
 <li>Click <strong>Create</strong></li>
-<li>Click the new registry, scroll down to <strong>Conditions</strong> and wait until the <strong>Available</strong> type changes to <code>True</code>
+<li>Click the new Quayregistry, scroll down to <strong>Conditions</strong> and wait until the <strong>Available</strong> type changes to <code>True</code>
 <figure>
     <img src="../images/quay-available.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
@@ -565,7 +565,7 @@
 </figure>
 
 <h2 id="integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</h2>
-<p>To replace the internal default OpenShift Registry with the Quay Registry, <strong>Quay Bridge</strong> is used.</p>
+<p>To synchronize the internal default OpenShift Registry with the Quay Registry, <strong>Quay Bridge</strong> is used.</p>
 <ul>
 <li>In the OperatorHub of your cluster, search for the <strong>Quay Bridge</strong> Operator</li>
 <li>Install it with default settings</li>
@@ -581,7 +581,7 @@
 </ul>
 </li>
 </ul>
-<p>We need an Oauth Application in Quay for the integration:</p>
+<p>We need an OAuth Application in Quay for the integration:</p>
 <ul>
 <li>In the Quay Portal, click the <strong>Applications</strong> icon in the menubar to the left</li>
 <li>Click <strong>Create New Application</strong> at the upper right
@@ -652,10 +652,11 @@
 <p>The first thing is to create a new source-to-image Task by copying and modifying the default <code>s2i-java</code> task to automatically update the <strong>ImageStream</strong> to point to Quay:</p>
 <ul>
 <li>Switch to the <strong>Administrator</strong> console</li>
-<li>Still int the <code>workshop-int</code> Project go to <strong>Pipelines</strong>-&gt;<strong>Tasks</strong>-&gt;<strong>ClusterTasks</strong></li>
+<li>Switch to the <code>workshop-int</code> Project</li>
+<li>Go to <strong>Pipelines</strong>-&gt;<strong>Tasks</strong>-&gt;<strong>ClusterTasks</strong></li>
 <li>Search for the <code>s2i-java</code> ClusterTask and open it</li>
 <li>Switch to the YAML view and copy the content</li>
-<li>Go back to the <strong>Tasks</strong> view, click the <strong>Create</strong> drop-down and choose <strong>ClusterTask</strong></li>
+<li>Go back to the <strong>Tasks</strong> view, click the <strong>Create</strong> drop-down and choose <strong>Task</strong></li>
 <li>Replace the YAML content with the content you just copied</li>
 <li>Change the <code>name:</code> to <code>s2i-java-workshop</code></li>
 </ul>
@@ -664,30 +665,30 @@
 <li>In the <code>params</code> section add two new parameters (take care of the indentation):</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">default</span>: <span style="color:#e6db74">&#39;&#39;</span>
-      <span style="color:#66d9ef">description</span>: The name of the ImageStream which should be updated
-      <span style="color:#66d9ef">name</span>: IMAGESTREAM
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">default</span>: <span style="color:#e6db74">&#39;&#39;</span>
-      <span style="color:#66d9ef">description</span>: The Tag of the ImageStream which should be updated
-      <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
-      <span style="color:#66d9ef">type</span>: string
+    <span style="color:#66d9ef">description</span>: The name of the ImageStream which should be updated
+    <span style="color:#66d9ef">name</span>: IMAGESTREAM
+    <span style="color:#66d9ef">type</span>: string
+- <span style="color:#66d9ef">default</span>: <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#66d9ef">description</span>: The Tag of the ImageStream which should be updated
+    <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
+    <span style="color:#66d9ef">type</span>: string
 </code></pre></div><ul>
 <li>At the end of the <code>steps</code> section before <code>volumes</code> starts, add the following, this will actually do the magic of tagging the image:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">env</span>:
-        - <span style="color:#66d9ef">name</span>: HOME
-          <span style="color:#66d9ef">value</span>: /tekton/home
-      <span style="color:#66d9ef">image</span>: <span style="color:#e6db74">&#39;image-registry.openshift-image-registry.svc:5000/openshift/cli:latest&#39;</span>
-      <span style="color:#66d9ef">name</span>: update-image-stream
-      <span style="color:#66d9ef">resources</span>: {}
-      <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">        #!/usr/bin/env bash</span>
+    - <span style="color:#66d9ef">name</span>: HOME
+      <span style="color:#66d9ef">value</span>: /tekton/home
+    <span style="color:#66d9ef">image</span>: <span style="color:#e6db74">&#39;image-registry.openshift-image-registry.svc:5000/openshift/cli:latest&#39;</span>
+    <span style="color:#66d9ef">name</span>: update-image-stream
+    <span style="color:#66d9ef">resources</span>: {}
+    <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">      #!/usr/bin/env bash</span>
 
-        oc tag --source=docker $(params.IMAGE)
-        $(params.IMAGESTREAM):$(params.IMAGESTREAMTAG) --insecure
-      <span style="color:#66d9ef">securityContext</span>:
-        <span style="color:#66d9ef">runAsNonRoot</span>: <span style="color:#66d9ef">true</span>
-        <span style="color:#66d9ef">runAsUser</span>: <span style="color:#ae81ff">65532</span>
+      oc tag --source=docker $(params.IMAGE)
+      $(params.IMAGESTREAM):$(params.IMAGESTREAMTAG) --insecure
+    <span style="color:#66d9ef">securityContext</span>:
+      <span style="color:#66d9ef">runAsNonRoot</span>: <span style="color:#66d9ef">true</span>
+      <span style="color:#66d9ef">runAsUser</span>: <span style="color:#ae81ff">65532</span>
 </code></pre></div><ul>
 <li>Click <strong>Save</strong></li>
 </ul>
@@ -698,17 +699,17 @@
 <li>Click the <code>workshop</code> Pipeline and switch to YAML</li>
 <li>Add the following to the <code>params</code> section:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    - <span style="color:#66d9ef">default</span>: workshop
-      <span style="color:#66d9ef">name</span>: IMAGESTREAM
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">default</span>: latest
-      <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
-      <span style="color:#66d9ef">type</span>: string
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">default</span>: workshop
+  <span style="color:#66d9ef">name</span>: IMAGESTREAM
+  <span style="color:#66d9ef">type</span>: string
+- <span style="color:#66d9ef">default</span>: latest
+  <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
+  <span style="color:#66d9ef">type</span>: string
 </code></pre></div><ul>
 <li>Modify the existing parameter <strong>IMAGE_NAME</strong> that points to your local registry. <strong>Replace</strong> <code>&lt;DOMAIN_NAME&gt;</code> with the value of your Quay repository URL:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">   - <span style="color:#66d9ef">default</span>: &gt;<span style="color:#e6db74">-
-</span><span style="color:#e6db74">        quay-quay-quay.apps.&lt;DOMAIN&gt;.opentlc.com/openshift_workshop-int/workshop</span>
+</span><span style="color:#e6db74">        quay-quay-quay.apps.&lt;DOMAIN&gt;/openshift_workshop-int/workshop</span>
       <span style="color:#66d9ef">name</span>: IMAGE_NAME
       <span style="color:#66d9ef">type</span>: string
 </code></pre></div><p>And finally modify the <code>build</code> task:</p>
@@ -726,9 +727,9 @@
 </code></pre></div><ul>
 <li>Still in the <code>build</code> task change the name of the <code>taskRef</code> to <code>s2i-java-workshop</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">     <span style="color:#66d9ef">taskRef</span>:
-        <span style="color:#66d9ef">kind</span>: ClusterTask
-        <span style="color:#66d9ef">name</span>: s2i-java-workshop
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">taskRef</span>:
+  <span style="color:#66d9ef">kind</span>: ClusterTask
+  <span style="color:#66d9ef">name</span>: s2i-java-workshop
 </code></pre></div><ul>
 <li>Click <strong>Save</strong></li>
 </ul>
@@ -1063,19 +1064,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1662377780"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1662378192"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1662377780"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1662377780"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1662378192"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1662378192"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1662377780"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1662378192"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
