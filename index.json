@@ -88,7 +88,7 @@
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": "DevSecOps Workshop What is it about This workshop will introduce you to the application development cycle leveraging OpenShift\u0026rsquo;s tooling \u0026amp; features with a special focus on securing your environment using Advanced Cluster Security for Kubernetes (ACS). You will get a brief introduction in several OpenShift features like OpenShift Pipelines, OpenShift GitOps, OpenShift CodeReadyWorkspaces. And all in a fun way.\nArchitecture overview   Click image to enlarge   Collaboration This workshop was created by Daniel Brintzinger, Goetz Rieger and Sebastian Dehn. Feel free to create a pull request or an issue in GitHub\n"
+	"content": "DevSecOps Workshop What is it about This workshop will introduce you to the application development cycle leveraging OpenShift\u0026rsquo;s tooling \u0026amp; features with a special focus on securing your environment using Advanced Cluster Security for Kubernetes (ACS). You will get a brief introduction in several OpenShift features like OpenShift Pipelines, OpenShift GitOps, OpenShift DevSpaces. And all in a fun way.\nArchitecture overview   Click image to enlarge   Collaboration This workshop was created by Daniel Brintzinger, Goetz Rieger and Sebastian Dehn. Feel free to create a pull request or an issue in GitHub\n"
 },
 {
 	"uri": "https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/categories/",
