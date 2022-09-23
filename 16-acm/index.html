@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/images/favicon.png" type="image/png">
 
-    <title>Securing Runtime Events :: DRAFT : DevSecOps Workshop</title>
+    <title>Advanced Cluster Management :: DRAFT : DevSecOps Workshop</title>
 
     
     <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1663930824" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/custom.js"></script>
   </head>
-  <body class="" data-url="/15-runtime-security/">
+  <body class="" data-url="/16-acm/">
     <nav id="sidebar" class="">
 
 
@@ -337,7 +337,7 @@
     
     <li data-nav-id="/15-runtime-security/" title="Securing Runtime Events" class="dd-item
         
-        active
+        
         
         ">
       <a href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/15-runtime-security/">
@@ -361,7 +361,7 @@
     
     <li data-nav-id="/16-acm/" title="Advanced Cluster Management" class="dd-item
         
-        
+        active
         
         ">
       <a href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/16-acm/">
@@ -454,7 +454,7 @@
             
           
           
-            <a href='https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/'></a> > Securing Runtime Events
+            <a href='https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/'></a> > Advanced Cluster Management
           
         
           
@@ -467,10 +467,18 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#handling-security-issues-at-runtime">Handling Security Issues at Runtime</a></li>
-    <li><a href="#test-the-runtime-policy">Test the Runtime Policy</a></li>
-    <li><a href="#enforce-runtime-protection">Enforce Runtime Protection</a></li>
-    <li><a href="#architecture-recap">Architecture recap</a></li>
+    <li><a href="#advanced-cluster-management-overview">Advanced Cluster Management Overview</a></li>
+    <li><a href="#install-advanced-cluster-managagement">Install Advanced Cluster Managagement</a></li>
+    <li><a href="#a-first-look-at-advanced-cluster-management">A first look at Advanced Cluster Management</a></li>
+    <li><a href="#manage-cluster-lifecycle">Manage Cluster Lifecycle</a></li>
+    <li><a href="#deploy-a-single-node-openshift">Deploy a Single Node OpenShift</a>
+      <ul>
+        <li><a href="#create-cloud-credentials">Create Cloud Credentials</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy-single-node-openshift">Deploy Single Node OpenShift</a></li>
+    <li><a href="#application-lifecycle-management">Application Lifecycle Management</a></li>
+    <li><a href="#creating-a-simple-application-with-acm">Creating a Simple Application with ACM</a></li>
   </ul>
 </nav>
     </div>
@@ -488,7 +496,7 @@
           
             <h1>
               
-              Securing Runtime Events
+              Advanced Cluster Management
             </h1>
           
 
@@ -496,67 +504,216 @@
 
 
 
-	<p>So far you&rsquo;ve seen how ACS can handle security issues concerning <strong>Build</strong> and <strong>Deploy</strong> stages. But ACS is also able to detect and secure container runtime behaviour. Let&rsquo;s have a look&hellip;</p>
-<h2 id="handling-security-issues-at-runtime">Handling Security Issues at Runtime</h2>
-<p>As a scenario let&rsquo;s assume you want to protect container workloads against attackers who are trying to install software. ACS comes with pre-configured policies for Ubuntu and Red Hat-based containers to detect if a package management tool is installed, this can be used in the <strong>Build</strong> and <strong>Deploy</strong> stages:</p>
+	<h2 id="advanced-cluster-management-overview">Advanced Cluster Management Overview</h2>
+<p>Red Hat Advanced Cluster Management for Kubernetes (ACM) provides management, visibility and control for your OpenShift and Kubernetes environments. It provides management capabilities for:</p>
 <ul>
-<li><strong>Red Hat Package Manager in Image</strong></li>
+<li>cluster creation</li>
+<li>application lifecycle</li>
+<li>security and compliance</li>
 </ul>
-<p>And, more important for this section about runtime security, a policy to detect the execution of a package manager as a runtime violation, using Kernel instrumentation:</p>
+<p>All across hybrid cloud environments.</p>
+<p>Clusters and applications are visible and managed from a single console, with built-in security policies. Run your operations from anywhere that Red Hat OpenShift runs, and manage any Kubernetes cluster in your fleet.</p>
+<h2 id="install-advanced-cluster-managagement">Install Advanced Cluster Managagement</h2>
+<p>Before you can start using ACM, you have to install it using an Operator on your OpenShift cluster.</p>
 <ul>
-<li><strong>Red Hat Package Manager Execution</strong></li>
+<li>Login to the OpenShift Webconsole with you cluster admin credentials</li>
+<li>In the Web Console, go to <strong>Operators &gt; OperatorHub</strong> and search for the <code>Advanced Cluster Management for Kubernetes</code> operator.</li>
+<li>Install the operator with default settings</li>
+<li>It will install into a new <strong>Project</strong> <code>open-cluster-management</code> by default.</li>
 </ul>
-<p>In the <strong>ACS Portal</strong>, go to <strong>Platform Configuration-&gt;Policy Management</strong>, search for the policies by e.g. typing <code>policy</code> and then <code>red hat</code> into the filter. Open the policy detail view by clicking it and have a look at what they do.</p>
-
-<div class="notices tip" ><p>You can use the included policies as they are but you can always e.g. clone and adapt them to your needs or write completely new ones.</p>
-</div>
-
-<p>As you can see the <strong>Red Hat Package Manager Execution</strong> policy will alert as soon as a process <strong>rpm or dnf or yum</strong> is executed.</p>
-
-<div class="notices tip" ><p>Like with most included policies it is not set to enforce!</p>
-</div>
-
-<h2 id="test-the-runtime-policy">Test the Runtime Policy</h2>
-<p>To see how the alert would look like, we have to trigger the condition:</p>
-<ul>
-<li>You should have a namespace with your Quarkus application runnning</li>
-<li>In the <strong>OpenShift Web Console</strong> navigate to the pod and open a terminal into the container</li>
-<li>Run <code>yum search test</code></li>
-<li>Go to the <strong>Violations</strong> view in the <strong>ACS Portal</strong>.</li>
-<li>You should see a violation of the policy, if you click it, you&rsquo;ll get the details.</li>
-<li>Run several <code>yum</code> commands in the terminal and check back with the <strong>Violations</strong> view:
-<ul>
-<li>As long as you stay in the same <strong>deployment</strong>, there won&rsquo;t be a new violation</li>
-<li>but you will see the details for every new violation of the same type in the details.</li>
-</ul>
-</li>
-</ul>
-<h2 id="enforce-runtime-protection">Enforce Runtime Protection</h2>
-<p>But the real fun starts when you enforce the policy. Using the included policy, it&rsquo;s easy to just &ldquo;switch it on&rdquo;:</p>
-<ul>
-<li>In the <strong>ACS Portal</strong> bring up the <strong>Red Hat Package Manager Execution</strong> Policy again.</li>
-<li>Click the <strong>Edit Policy</strong> button in the <strong>Actions</strong> drop-down to the upper right.</li>
-<li>Click <strong>Next</strong> until you arrive at the <strong>Policy behaviour</strong> page.</li>
-<li>Under <strong>Response Method</strong> select <strong>Inform and enforce</strong></li>
-<li>Set <strong>Configure enforcement behaviour</strong> for <strong>Runtime</strong> to <strong>Enforce on Runtime</strong></li>
-<li>Click <strong>Next</strong> until you arrive at the last page and click <strong>Save</strong></li>
-</ul>
-<p>Now trigger the policy again by opening a terminal into the pod in the <strong>OpenShift Web Console</strong> and executing <code>yum</code>. See what happens:</p>
-<ul>
-<li>Runtime enforcement will kill the pod immediately (via k8s).</li>
-<li>OpenShift will scale it up again automatically
-<ul>
-<li>This is to be expected and allows to contain a potential compromise while not causing a production outage.</li>
-</ul>
-</li>
-</ul>
-<h2 id="architecture-recap">Architecture recap</h2>
+<p>After the operator has been installed it will inform you to create a <code>MultiClusterHub</code>, the central component of ACM.</p>
 <figure>
-    <img src="../images/workshop_architecture_full.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+    <img src="../images/acm-install1.png?width=30pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
         </figcaption>
 </figure>
 
+<p>Click the <strong>Create MultiClusterHub</strong> button and have a look at the available installation parameters, but don&rsquo;t change anything.</p>
+
+<div class="notices tip" ><p>Take note of the <code>Disable Hub Self Management</code> option. Leaving this set to <code>false</code> will add the cluster ACM is installed on as a managed cluster to ACM. You might not want this if you have a dedicated management cluster, for this lab leave as is.</p>
+</div>
+
+<p>Click <strong>Create</strong>.</p>
+<p>At some point you will be asked to refresh the web console. Do this, you&rsquo;ll notice a new drop-down menu at the top of the left menu bar. If left set to <code>local-cluster</code> you get the standard console view, switching to <code>All Clusters</code> takes you to a view provided by ACM covering all your clusters.</p>
+<p>Okay, right now you&rsquo;ll only see one, your <code>local-cluster</code> listend here.</p>
+<h2 id="a-first-look-at-advanced-cluster-management">A first look at Advanced Cluster Management</h2>
+<p>Now let&rsquo;s change to the full ACM console:</p>
+<ul>
+<li>Switch back to the <code>local-clusters</code> view</li>
+<li>Go to <strong>Operators</strong>-&gt;<strong>Installed operators</strong> and click the <strong>Advanced Cluster Management for Kubernetes</strong> operator</li>
+<li>In the operator overview page choose the <strong>MultiClusterHub</strong> tab.</li>
+<li>The <code>multiclusterhub</code> instance you deployed should be in <strong>Status</strong> <code>Running</code> by now.</li>
+<li>Look up the route for the <code>multicloud-console</code> and access it.</li>
+<li>Click the <strong>Log in with OpenShift</strong> button and login with your OpenShift account.</li>
+</ul>
+<p>You are now in your ACM dashboard!</p>
+<figure>
+    <img src="../images/acm-dashboard.png?width=70pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<p>Have a look around:</p>
+<ul>
+<li>Go to <strong>Infrastructure</strong>-&gt;<strong>Clusters</strong></li>
+<li>You&rsquo;ll see your lab OpenShift cluster here, the infrastructure it&rsquo;s running on and the version.
+<ul>
+<li>There might be a version update available, don&rsquo;t run it please&hellip; ;)</li>
+</ul>
+</li>
+<li>If you click the cluster name, you&rsquo;ll get even more information, explore!</li>
+</ul>
+<h2 id="manage-cluster-lifecycle">Manage Cluster Lifecycle</h2>
+<p>One of the main features of Advanced Cluster Management is cluster lifecycle management. ACM can help to:</p>
+<ul>
+<li>manage credentials</li>
+<li>deploy clusters to different cloud providers and on-premise</li>
+<li>import existing clusters</li>
+<li>use labels on clusters for management purposes</li>
+</ul>
+<p>Let&rsquo;s give this a try!</p>
+<h2 id="deploy-a-single-node-openshift">Deploy a Single Node OpenShift</h2>
+<p>To not overstress our cloud ressources and for the fun of it we&rsquo;ll deploy a Single Node OpenShift to the same AWS account your lab cluster is running in.</p>
+<h3 id="create-cloud-credentials">Create Cloud Credentials</h3>
+<p>The first step is to create credentials in ACM to deploy to the Amazon Web Services account.</p>
+
+<div class="notices tip" ><p>You&rsquo;ll get the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> needed to deploy to AWS from your facilitators.</p>
+</div>
+
+<ul>
+<li>On your OpenShift cluster, create a new namespace <code>sno</code></li>
+<li>In the ACM web console, navigate to <strong>Credentials</strong> and click <strong>Add credential</strong>:
+<ul>
+<li>As <strong>Credential type</strong> select <code>AWS</code></li>
+<li><strong>Credential name</strong>: sno</li>
+<li><strong>Namespace</strong>: Choose the <code>sno</code> namespace</li>
+<li><strong>Base DNS domain</strong>: <code>sandbox&lt;NNNN&gt;.opentlc.com</code>, replace <code>&lt;NNNN&gt;</code> with your id, you can find it e.g. in the URL</li>
+<li>Click <strong>Next</strong></li>
+<li>Now you need to enter the AWS credentials, enter the <code>Access key ID</code> and <code>Secret access key</code> as provided.</li>
+<li>Click <strong>Next</strong></li>
+<li>Click <strong>Next</strong> again for proxy settings</li>
+<li>Now you need to enter an OpenShift Pull Secret, copy it from your OCP cluster:
+<ul>
+<li>Switch to the project <code>openshift-config</code> and copy the content of the secret <code>pull-secret</code></li>
+</ul>
+</li>
+<li>To connect to the managed SNO you need to enter a SSH private key (<code>$HOME/.ssh/&lt;LABID&gt;key.pem</code>) and public key (<code>$HOME/.ssh/&lt;LABID&gt;key.pub</code>).
+<ul>
+<li>Use the respective keys from your lab environments bastion host, the access details will be provided.</li>
+<li>The <code>&lt;LABID&gt;</code> can be found in the URL, e.g. multicloud-console.apps.cluster-<strong>z48z9</strong>.z48z9.sandbox910.opentlc.com</li>
+</ul>
+</li>
+<li>Click <strong>Next</strong></li>
+<li>Click <strong>Add</strong></li>
+</ul>
+</li>
+</ul>
+<p>You have created a new set of credentials to deploy to the AWS account you are using.</p>
+<h2 id="deploy-single-node-openshift">Deploy Single Node OpenShift</h2>
+<p>Now you&rsquo;ll deploy a new OpenShift instance:</p>
+<ul>
+<li>In the ACM console, navigate to <strong>Infrastructure</strong> -&gt; <strong>Clusters</strong> and click <strong>Create cluster</strong>.</li>
+<li>As provider choose <strong>Amazon Web Services</strong></li>
+<li><strong>Infrastructure provider credential</strong>: Select the <code>sno</code> credential you created.</li>
+<li><strong>Cluster name</strong>: aws-sno</li>
+<li><strong>Cluster set</strong>: none</li>
+<li><strong>Base DNS Domain</strong>: Set automatically from the credentials</li>
+<li><strong>Release name</strong>: Use the latest release available</li>
+<li><strong>Additional Label</strong>: sno=true</li>
+<li>Click <strong>Next</strong></li>
+<li>On the Node pools view leave the <strong>Region</strong> set to <code>us-east-1</code></li>
+<li><strong>Architecture</strong>: amd64</li>
+<li>Expand <strong>Control plane pool</strong>
+<ul>
+<li>read the information for <strong>Zones</strong> (and leave the setting empty)</li>
+<li>change <strong>Instance Type</strong> to <code>m5.2xlarge</code>.</li>
+</ul>
+</li>
+<li>Expand <strong>Worker pool 1</strong>:
+<ul>
+<li>Set <strong>Node count</strong> to <code>0</code> (we want a single node OCP&hellip;).</li>
+</ul>
+</li>
+<li>Click <strong>Next</strong></li>
+<li>Have a look at the network screen but don&rsquo;t change anything</li>
+</ul>
+<p>Now click <strong>Next</strong> until you arrive at the <strong>Review</strong>. Do the following:</p>
+<ul>
+<li>Set <code>YAML: On</code></li>
+<li>In the <strong>cluster YAML</strong> editor select the <strong>install-config</strong></li>
+<li>In the <code>controlPlane</code> section change the <code>replicas</code> field to <code>1</code>.</li>
+</ul>
+<p>It&rsquo;s time to deploy your cluster, click <strong>Create</strong>!</p>
+<p>ACM monitors the installation of the new cluster and finally imports it. Click <strong>View logs</strong> under <strong>Cluster install</strong> to follow the installation log.</p>
+
+<div class="notices tip" ><p>Installation of a SNO take around 30 minutes in our lab environment.</p>
+</div>
+
+<p>After installation has finished, access the <strong>Clusters</strong> section in the ACM portal again.</p>
+<figure>
+    <img src="../images/acm-clusters.png?width=70pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<p>Explore the information ACM is providing, including the Console URL and the access credentials of your shiny new SNO instance. Use them to login to the SNO console.</p>
+<h2 id="application-lifecycle-management">Application Lifecycle Management</h2>
+<p>In the previous lab, you explored the Cluster Lifecycle functionality of RHACM by deploying a new OpenShift single-node instance to AWS. Now let&rsquo;s have a look at another capability, Application Lifecycle management.</p>
+<p>Application Lifecycle management is used to manage applications on your clusters. This allows you to define a single or multi-cluster application using Kubernetes specifications, but with additional automation of the deployment and lifecycle management of resources to individual clusters. An application designed to run on a single cluster is straightforward and something you ought to be familiar with from working with OpenShift fundamentals. A multi-cluster application allows you to orchestrate the deployment of these same resources to multiple clusters, based on a set of rules you define for which clusters run the application components.</p>
+<p>The naming of the different components of the Application Lifecycle model in RHACM is as follows:</p>
+<ul>
+<li><strong>Channel</strong>: Defines a place where deployable resources are stored, such as an object store, Kubernetes namespace, Helm repository, or GitHub repository.</li>
+<li><strong>Subscription</strong>: Definitions that identify deployable resources available in a Channel resource that are to be deployed to a target cluster.</li>
+<li><strong>PlacementRule</strong>: Defines the target clusters where subscriptions deploy and maintain the application. It is composed of Kubernetes resources identified by the Subscription resource and pulled from the location defined in the Channel resource.</li>
+<li><strong>Application</strong>: A way to group the components here into a more easily viewable single resource. An Application resource typically references a Subscription resource.</li>
+</ul>
+<h2 id="creating-a-simple-application-with-acm">Creating a Simple Application with ACM</h2>
+<p>Start with adding labels to your two OpenShift clusters in your ACM console:</p>
+<ul>
+<li>On the local cluster add a label: <code>environment=prod</code></li>
+<li>On the new SNO deployment add label: <code>environment=dev</code></li>
+</ul>
+<figure>
+    <img src="../images/acm-application1.png?width=60pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<p>Now it&rsquo;s time to actually deploy the application. But first have a look at the manifest definitions ACM will use as deployables at <a href="https://github.com/devsecops-workshop/book-import/tree/master/book-import">https://github.com/devsecops-workshop/book-import/tree/master/book-import</a>.</p>
+<p>Then in the ACM console navigate to <strong>Applications</strong>:</p>
+<ul>
+<li>Click <strong>Create application</strong>, select  <strong>Subscription</strong></li>
+<li>Make sure the view is set to YAML</li>
+<li><strong>Name</strong>: book-import</li>
+<li><strong>Namespace</strong>: book-import</li>
+<li>Under <strong>Repository location for resources</strong> -&gt; <strong>Repository types</strong>, select <code>GIT</code></li>
+<li><strong>URL</strong>:  <a href="https://github.com/devsecops-workshop/book-import.git">https://github.com/devsecops-workshop/book-import.git</a></li>
+<li><strong>Branch</strong>:  master</li>
+<li><strong>Path</strong>:  book-import</li>
+<li>Select <strong>Deploy application resources only on clusters matching specified labels</strong></li>
+<li><strong>Label</strong>: environment</li>
+<li><strong>Value</strong>: dev</li>
+</ul>
+<figure>
+    <img src="../images/acm-application2.png?width=20pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<p>Click <strong>Create</strong>, after a few minutes you will see the application available in ACM. Click the application and have a look at the topology view:</p>
+<figure>
+    <img src="../images/acm-application3.png?width=20pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Select <strong>Cluster</strong>, the application should have been deployed to the SNO cluster because of the label <code>environment=dev</code></li>
+<li>Select the <strong>Route</strong> and click on the URL, this should take you to the Book Import application</li>
+<li>Explore the other objects</li>
+</ul>
+<p>Now edit the application in the ACM console and change the label to <code>environment=prod</code>. What happens?</p>
+<p>In this simple example you have seen how to deploy an application to an OpenShift cluster using ACM. All manifests defining the application where kept in a Git repo, ACM then used the manifests to deploy the required objects into the target cluster.</p>
 
 
 
@@ -760,6 +917,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -779,22 +952,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -816,10 +973,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/14-advanced-pipeline/" title="Advanced ACS Pipeline"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/15-runtime-security/" title="Securing Runtime Events"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/16-acm/" title="Advanced Cluster Management" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/20-appendix/" title="Appendix" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
