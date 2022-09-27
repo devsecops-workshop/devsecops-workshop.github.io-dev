@@ -12,22 +12,22 @@
     <title>Install and Configure ACS :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664202596" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664296304" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664202596" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664296304" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664296304"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664202596"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664202596"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664296304"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664296304"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664202596"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664296304"></script>
 
     
   </div>
@@ -476,6 +476,7 @@
         <li><a href="#add-the-cluster-as-securedcluster-to-acs-central">Add the Cluster as <strong>SecuredCluster</strong> to <strong>ACS Central</strong></a></li>
       </ul>
     </li>
+    <li><a href="#configure-quay-integrations-in-acs">Configure Quay Integrations in ACS</a></li>
     <li><a href="#architecture-recap">Architecture recap</a></li>
   </ul>
 </nav>
@@ -602,7 +603,7 @@ secret/admission-control-tls created
 <li>Change the <strong>Cluster Name</strong> for the cluster if you want, it&rsquo;ll appear under this name in the <strong>ACS Portal</strong></li>
 <li>And most importantly for <strong>Central Endpoint</strong> enter the address and port number of your <strong>Central</strong> instance, this is the same as the <strong>ACS Portal</strong>.
 <ul>
-<li>If the <strong>ACS Portal</strong> is available at <code>https://central-stackrox.apps.cluster-65h4j.65h4j.sandbox1803.opentlc.com/</code> the endpoint is <code>central-stackrox.apps.cluster-65h4j.65h4j.sandbox1803.opentlc.com:443</code>.</li>
+<li>If your <strong>ACS Portal</strong> is available at <code>https://central-stackrox.apps.&lt;DOMAIN&gt;</code> the endpoint is <code>central-stackrox.apps.&lt;DOMAIN&gt;:443</code>.</li>
 </ul>
 </li>
 <li>Under <strong>Admission Control Settings</strong> make sure
@@ -611,10 +612,25 @@ secret/admission-control-tls created
 <li>Set <strong>Contact Image Scanners</strong> to <strong>ScanIfMissing</strong></li>
 </ul>
 </li>
-<li>Under <strong>Per Node Settings</strong> -&gt; <strong>Collector Settings</strong> change the value for <strong>Collection</strong> form <code>EBPF</code> to <code>KernelModule</code>. This is a workaround for a known issue.</li>
+</ul>
+<!-- - Under **Per Node Settings** -> **Collector Settings** change the value for **Collection** form `EBPF` to `KernelModule`. This is a workaround for a known issue. -->
+<ul>
 <li>Click <strong>Create</strong></li>
 </ul>
 <p>Now go to your <strong>ACS Portal</strong> again, after a couple of minutes you should see you secured cluster under <strong>Platform Configuration-&gt;Clusters</strong>. Wait until all <strong>Cluster Status</strong> indicators become green.</p>
+<h2 id="configure-quay-integrations-in-acs">Configure Quay Integrations in ACS</h2>
+<p>For ACS to be able to access images in your local Quay registry, one additional step has to be taken.</p>
+<p>Access the ACS Portal and go to <strong>Platform Configuration -&gt; Integrations -&gt; Generic Docker Registry</strong>. You should see a number of autogenerated (from existing pull-secrets) entries.</p>
+<p>You have to change the entry pointing to the local Quay registry, it should look like:</p>
+<p><code>Autogenerated https://quay-quay-quay.apps.&lt;DOMAIN&gt; ....</code></p>
+<p>Open and edit the integration using the three dots at the right:</p>
+<ul>
+<li><strong>Username</strong>: quayadmin</li>
+<li><strong>Password</strong>: the password you entered when creating the quayadmin user</li>
+<li>Make sure <strong>Update stored credentials</strong> is checked</li>
+<li>Press the Test button to validate the connection</li>
+<li>Press Save when the test is successful.</li>
+</ul>
 <h2 id="architecture-recap">Architecture recap</h2>
 <figure>
     <img src="../images/workshop_architecture_stackrox.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
@@ -894,19 +910,19 @@ secret/admission-control-tls created
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664296304"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664296304"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664202596"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664296304"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

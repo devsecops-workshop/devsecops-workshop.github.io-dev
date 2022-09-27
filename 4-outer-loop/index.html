@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664202596" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664202596" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664296304" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664296304" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664202596" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664296304" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664296304"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664202596"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664202596"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664296304"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664296304"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664202596"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664296304"></script>
 
     
   </div>
@@ -675,20 +675,28 @@
 <p>The current Pipeline deploys to the internal Registry by default so the image that was created by the first (automatic) run was pushed there.</p>
 <p>To leverage our brand new Quay registry we need to modify the Pipeline so it pushes images to the Quay registry. In addition the ImageStream must be modified to point to the Quay registry, too.</p>
 <h3 id="create-a-new-s2i-java-clustertask">Create a new <code>s2i-java</code> ClusterTask</h3>
-<p>The first thing is to create a new source-to-image Task by copying and modifying the default <code>s2i-java</code> task to automatically update the <strong>ImageStream</strong> to point to Quay:</p>
+<p>The first thing is to create a new source-to-image Task to automatically update the <strong>ImageStream</strong> to point to Quay. You could of course copy and modify the default <code>s2i-java</code> task using the build-in YAML editor of the web console. But to make this as painless as possible we have prepared the needed YAML object definition for you already.</p>
+<ul>
+<li>Login to your bastion host via SSH, from here you can run <code>oc</code> commands</li>
+<li>Clone the Git repo with the YAML files you&rsquo;ll need: <code>git clone https://github.com/devsecops-workshop/yaml.git</code></li>
+<li>Change into the <code>yaml</code> directory</li>
+<li>Apply the first YAML: <code>oc create -f s2i-java-workshop.yml</code></li>
+</ul>
+
+<div class="notices tip" ><p>You can do the above steps from any Linux system where you set up the <code>oc</code> command.</p>
+</div>
+
+<p>You should now have a new <strong>ClusterTask</strong> named <code>s2i-java-workshop</code>, go to the web console and check:</p>
 <ul>
 <li>Switch to the <strong>Administrator</strong> console</li>
 <li>Switch to the <code>workshop-int</code> Project</li>
 <li>Go to <strong>Pipelines</strong>-&gt;<strong>Tasks</strong>-&gt;<strong>ClusterTasks</strong></li>
-<li>Search for the <code>s2i-java</code> ClusterTask and open it</li>
-<li>Switch to the YAML view and copy the content</li>
-<li>Go back to the <strong>Tasks</strong> view, click the <strong>Create</strong> drop-down and choose <strong>Task</strong></li>
-<li>Replace the YAML content with the content you just copied</li>
-<li>Change the <code>name:</code> to <code>s2i-java-workshop</code></li>
+<li>Search for the <code>s2i-java-workshop</code> ClusterTask and open it</li>
+<li>Switch to the YAML view</li>
 </ul>
-<p>Now we have to extend the Task:</p>
+<p>Please take the time to review the additions to the default <code>s2i-java</code> task:</p>
 <ul>
-<li>In the <code>params</code> section add two new parameters (take care of the indentation):</li>
+<li>In the <code>params</code> section are two new parameters:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">default</span>: <span style="color:#e6db74">&#39;&#39;</span>
     <span style="color:#66d9ef">description</span>: The name of the ImageStream which should be updated
@@ -699,7 +707,7 @@
     <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
     <span style="color:#66d9ef">type</span>: string
 </code></pre></div><ul>
-<li>At the end of the <code>steps</code> section before <code>volumes</code> starts, add the following, this will actually do the magic of tagging the image:</li>
+<li>At the end of the <code>steps</code> section is a new step:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">env</span>:
     - <span style="color:#66d9ef">name</span>: HOME
@@ -715,15 +723,29 @@
     <span style="color:#66d9ef">securityContext</span>:
       <span style="color:#66d9ef">runAsNonRoot</span>: <span style="color:#66d9ef">true</span>
       <span style="color:#66d9ef">runAsUser</span>: <span style="color:#ae81ff">65532</span>
-</code></pre></div><ul>
-<li>Click <strong>Create</strong></li>
+</code></pre></div><h3 id="modify-the-pipeline">Modify the Pipeline</h3>
+<p>After adding the new task we need to modify the pipeline to:</p>
+<ul>
+<li>Introduce the new parameters into the Pipeline configuration</li>
+<li>Use the new <code>s2i-java-workshop</code> task</li>
 </ul>
-<h3 id="modify-the-pipeline">Modify the Pipeline</h3>
-<p>The last step is to introduce the new parameters we are using in the new ClusterTask into the Pipeline configuration:</p>
+<p>To make this easier we again provide you with a full YAML definition of the Pipeline. Do the following:</p>
+<ul>
+<li>Bring up the terminal and make sure you are in the <code>yaml</code> directory.</li>
+</ul>
+
+<div class="notices tip" ><p>If you use this lab guide with your domain as query parameter, you are good to go with the command, if not, you have to replace &lt;DOMAIN&gt; manually in the following command.</p>
+</div>
+
+<ul>
+<li>To replace the <code>DOMAIN</code> placeholder with your lab domain, run: <code>sed -i 's/DOMAIN/&lt;DOMAIN&gt;/g' workshop-pipeline-without-git-update.yml</code></li>
+<li>Apply the new definition: <code>oc replace -f workshop-pipeline-without-git-update.yml</code></li>
+</ul>
+<p>Again take the time to review the changes in the web console:</p>
 <ul>
 <li>In the menu go to <strong>Pipelines-&gt;Pipelines</strong></li>
 <li>Click the <code>workshop</code> Pipeline and switch to YAML</li>
-<li>Add the following to the <code>params</code> section:</li>
+<li>These are the new parameters in the pipeline:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">default</span>: workshop
   <span style="color:#66d9ef">name</span>: IMAGESTREAM
@@ -732,15 +754,15 @@
   <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
   <span style="color:#66d9ef">type</span>: string
 </code></pre></div><ul>
-<li>Modify the existing parameter <strong>IMAGE_NAME</strong> to point to your local registry:</li>
+<li>The preexisting parameter <strong>IMAGE_NAME</strong> now points to your local Quay registry:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">   - <span style="color:#66d9ef">default</span>: &gt;<span style="color:#e6db74">-
 </span><span style="color:#e6db74">        quay-quay-quay.apps.&lt;DOMAIN&gt;/openshift_workshop-int/workshop</span>
       <span style="color:#66d9ef">name</span>: IMAGE_NAME
       <span style="color:#66d9ef">type</span>: string
-</code></pre></div><p>And finally modify the <code>build</code> task:</p>
+</code></pre></div><p>And finally the <code>build</code> task was modified:</p>
 <ul>
-<li>Add the parameters below to the <code>params</code> section of the <code>build</code> task (discard the first four lines, they are only shown to make positioning easier):</li>
+<li>The new parameters in the <code>params</code> section of the <code>build</code>:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">tasks</span>:
     - <span style="color:#66d9ef">name</span>: build
@@ -751,15 +773,12 @@
         - <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
           <span style="color:#66d9ef">value</span>: $(params.IMAGESTREAMTAG)
 </code></pre></div><ul>
-<li>Still in the <code>build</code> task change the name of the <code>taskRef</code> to <code>s2i-java-workshop</code>:</li>
+<li>The name of the <code>taskRef</code> was changed to <code>s2i-java-workshop</code>:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">taskRef</span>:
   <span style="color:#66d9ef">kind</span>: ClusterTask
   <span style="color:#66d9ef">name</span>: s2i-java-workshop
-</code></pre></div><ul>
-<li>Click <strong>Save</strong></li>
-</ul>
-<p>You are done with adapting the Pipeline to use the Quay registry! Give it a try:</p>
+</code></pre></div><p>You are done with adapting the Pipeline to use the Quay registry! Give it a try:</p>
 <ul>
 <li>First go to the Quay portal to the <code>openshift_workshop-int</code> organization.</li>
 <li>In the <code>openshift_workshop-int / workshop</code> repository access <strong>Tags</strong> in the menu to the left. There should be no image (yet).</li>
@@ -1111,19 +1130,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664296304"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664202596"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664202596"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664296304"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664296304"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664202596"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664296304"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
