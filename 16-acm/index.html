@@ -12,22 +12,22 @@
     <title>Advanced Cluster Management :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664350118" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664350118" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664374478" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664374478" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664350118" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664374478" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664350118"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664374478"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664350118"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664350118"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664374478"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664374478"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664350118"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664374478"></script>
 
     
   </div>
@@ -455,6 +455,15 @@
     <li><a href="#deploy-single-node-openshift">Deploy Single Node OpenShift</a></li>
     <li><a href="#application-lifecycle-management">Application Lifecycle Management</a></li>
     <li><a href="#creating-a-simple-application-with-acm">Creating a Simple Application with ACM</a></li>
+    <li><a href="#prepost-tasks-with-ansible-automation-platform-2">Pre/Post Tasks with Ansible Automation Platform 2</a>
+      <ul>
+        <li><a href="#install-automation-controller">Install Automation Controller</a></li>
+        <li><a href="#add-auth-token">Add Auth Token</a></li>
+        <li><a href="#configure-template-in-automation-controller">Configure Template in Automation Controller</a></li>
+        <li><a href="#create-aap-credential-in-acm">Create AAP credential in ACM</a></li>
+        <li><a href="#use-the-acm---ansible-integration">Use the ACM - Ansible integration</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -594,7 +603,7 @@
 <li><strong>Cluster name</strong>: aws-sno</li>
 <li><strong>Cluster set</strong>: none</li>
 <li><strong>Base DNS Domain</strong>: Set automatically from the credentials</li>
-<li><strong>Release name</strong>: Use the latest release available</li>
+<li><strong>Release name</strong>: Use the latest <strong>4.10</strong> release available</li>
 <li><strong>Additional Label</strong>: sno=true</li>
 <li>Click <strong>Next</strong></li>
 <li>On the Node pools view leave the <strong>Region</strong> set to <code>us-east-1</code></li>
@@ -690,6 +699,88 @@
 </ul>
 <p>Now edit the application in the ACM console and change the label to <code>environment=prod</code>. What happens?</p>
 <p>In this simple example you have seen how to deploy an application to an OpenShift cluster using ACM. All manifests defining the application where kept in a Git repo, ACM then used the manifests to deploy the required objects into the target cluster.</p>
+<h2 id="prepost-tasks-with-ansible-automation-platform-2">Pre/Post Tasks with Ansible Automation Platform 2</h2>
+<p>You can integrate Ansible Automation Platform and the Automation Controller (formerly known as Ansible Tower) with ACM to perform pre / post tasks within the application lifecycle engine. The prehook and posthook task allows you to trigger an Ansible playbook before and after the application is deployed, respectively.</p>
+<h3 id="install-automation-controller">Install Automation Controller</h3>
+<p>To give this a try you need an Automation Controller instance. So let&rsquo;s deploy one on your cluster using the AAP Operator:</p>
+<ul>
+<li>In OperatorHub search for the <code>Ansible Automation Platform</code> operator and install it using the default settings.</li>
+<li>After installation has finished create an Automation Controller instance using the Operator, name it <code>automationcontroller</code></li>
+<li>When the instance is ready, look up <code>automationcontroller-admin-password</code> instance</li>
+<li>Then look up the <code>automationcontroller</code> route, access it and login as user <code>admin</code> using the password from the secret</li>
+<li>Apply a manifest or use the username/password login to the Red Hat Customer Portal and add a subscription</li>
+</ul>
+<p>You are now set with a shiny new Ansible Automation Platform Controller!</p>
+<h3 id="add-auth-token">Add Auth Token</h3>
+<p>In the Automation Controller web UI, generate a token for the admin user:</p>
+<ul>
+<li>Go to <strong>Users</strong></li>
+<li>Click <code>admin</code> and select <strong>Tokens</strong></li>
+<li>Click the <strong>Add</strong> button</li>
+<li>As description add <code>Token for use by ACM</code></li>
+<li>Update the <strong>Scope</strong> to <code>Write</code></li>
+<li>Click <strong>Save</strong></li>
+</ul>
+<p>Save the token value to a text file, you will need this token later!</p>
+<h3 id="configure-template-in-automation-controller">Configure Template in Automation Controller</h3>
+<p>For Automation Controller to run something we must configure a Project and a Template first.</p>
+<p>Create an Ansible Project:</p>
+<ul>
+<li>Select <strong>Projects</strong> in the left menu</li>
+<li>Click <strong>Add</strong></li>
+<li><strong>Name</strong>: ACM Test</li>
+<li><strong>Organization</strong>: Default</li>
+<li><strong>SCM Type</strong>: Git</li>
+<li><strong>SCM URL</strong>:  <a href="https://github.com/devsecops-workshop/ansible-acm.git">https://github.com/devsecops-workshop/ansible-acm.git</a></li>
+<li>Click <strong>Save</strong></li>
+</ul>
+<p>Create an Ansible Job Template:</p>
+<ul>
+<li>Select <strong>Templates</strong> in the left menu.</li>
+<li>Click <strong>Add</strong> then <strong>Add Job Template</strong></li>
+<li><strong>Name</strong>: acm-test</li>
+<li><strong>Inventory</strong>: Demo Inventory</li>
+<li><strong>Project</strong>: ACM Test</li>
+<li><strong>Playbook</strong>: message.yml</li>
+<li>Click <strong>Save</strong></li>
+<li>Click <strong>Launch</strong></li>
+</ul>
+<p>Verify that the Job run by going to <strong>Jobs</strong> and looking for an <code>acm-test</code> job showing a successful Playbook run.</p>
+<h3 id="create-aap-credential-in-acm">Create AAP credential in ACM</h3>
+<p>Set up the credential which is going to allow ACM to interact with your AAP instance in your ACM Portal:</p>
+<ul>
+<li>Click on <strong>Credentials</strong> on the left menu and select <strong>Add Credential</strong> button.</li>
+<li><strong>Credential type</strong>: Red Hat Ansible Automation Platform</li>
+<li><strong>Credential name</strong>: appaccess</li>
+<li><strong>Namespace</strong>: open-cluster-management</li>
+<li>Click <strong>Next</strong></li>
+<li><strong>Ansible Tower Host</strong>: <Automation Controller instance URL></li>
+<li><strong>Ansible Tower token</strong>: <admin user token you generated earlier></li>
+<li>Click <strong>Next</strong> and <strong>Add</strong></li>
+</ul>
+<h3 id="use-the-acm---ansible-integration">Use the ACM - Ansible integration</h3>
+<p>And now let&rsquo;s configure the ACM integration with Ansible Automation Platform to kick off a job in Automation Controller. In this case the Ansible job will just run our simple playbook that will only output a message.</p>
+<p>In the ACM Portal:</p>
+<ul>
+<li>Go to the <strong>Applications</strong> menu on the left and click <strong>Create application → Subscription</strong></li>
+<li>Enter the following information:
+<ul>
+<li><strong>Name</strong>: book-import2</li>
+<li><strong>Namespace</strong>: book-import2</li>
+</ul>
+</li>
+<li>Under <strong>repository types</strong>, select <strong>GIT repository</strong></li>
+<li><strong>URL</strong>: <a href="https://github.com/devsecops-workshop/book-import.git">https://github.com/devsecops-workshop/book-import.git</a></li>
+<li><strong>Branch</strong>: prehook</li>
+<li><strong>Path</strong>: book-import</li>
+<li>Expand the <strong>Configure automation for prehook and posthook</strong> dropdown menu</li>
+<li><strong>Ansible Automation Platform credential</strong>: appaccess</li>
+<li>Select <strong>Deploy application resources only on clusters matching specified labels</strong></li>
+<li><strong>Label</strong>: environment</li>
+<li><strong>Value</strong>: dev</li>
+<li>Click <strong>Create</strong></li>
+</ul>
+<p>Give this a few minutes. The application will complete and in the application topology view you will see the Ansible prehook. In Automation Controller go to <strong>Jobs</strong> and verify the Automation Job run.</p>
 
 
 
@@ -946,19 +1037,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664350118"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664374478"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664350118"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664350118"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664374478"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664374478"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664350118"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664374478"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
