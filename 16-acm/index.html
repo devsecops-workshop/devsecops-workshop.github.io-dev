@@ -12,22 +12,22 @@
     <title>Advanced Cluster Management :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664448675" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664448675" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1664521779" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1664521779" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664448675" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1664521779" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664448675"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1664521779"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664448675"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664448675"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1664521779"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1664521779"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664448675"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1664521779"></script>
 
     
   </div>
@@ -514,10 +514,6 @@
 </figure>
 
 <p>Click the <strong>Create MultiClusterHub</strong> button and have a look at the available installation parameters, but don&rsquo;t change anything.</p>
-
-<div class="notices tip" ><p>Take note of the <code>Disable Hub Self Management</code> option. Leaving this set to <code>false</code> will add the cluster ACM is installed on as a managed cluster to ACM. You might not want this if you have a dedicated management cluster, for this lab leave as is.</p>
-</div>
-
 <p>Click <strong>Create</strong>.</p>
 <p>At some point you will be asked to refresh the web console. Do this, you&rsquo;ll notice a new drop-down menu at the top of the left menu bar. If left set to <code>local-cluster</code> you get the standard console view, switching to <code>All Clusters</code> takes you to a view provided by ACM covering all your clusters.</p>
 <p>Okay, right now you&rsquo;ll only see one, your <code>local-cluster</code> listend here.</p>
@@ -601,7 +597,7 @@
 <li>As provider choose <strong>Amazon Web Services</strong></li>
 <li><strong>Infrastructure provider credential</strong>: Select the <code>sno</code> credential you created.</li>
 <li><strong>Cluster name</strong>: aws-sno</li>
-<li><strong>Cluster set</strong>: none</li>
+<li><strong>Cluster set</strong>: Leave empty &hellip;</li>
 <li><strong>Base DNS Domain</strong>: Set automatically from the credentials</li>
 <li><strong>Release name</strong>: Use the latest <strong>4.10</strong> release available</li>
 <li><strong>Additional Label</strong>: sno=true</li>
@@ -625,7 +621,7 @@
 <p>Now click <strong>Next</strong> until you arrive at the <strong>Review</strong>. Do the following:</p>
 <ul>
 <li>Set <code>YAML: On</code></li>
-<li>In the <strong>cluster YAML</strong> editor select the <strong>install-config</strong></li>
+<li>In the <strong>cluster YAML</strong> editor select the <strong>install-config</strong> tab</li>
 <li>In the <code>controlPlane</code> section change the <code>replicas</code> field to <code>1</code>.</li>
 </ul>
 <p>It&rsquo;s time to deploy your cluster, click <strong>Create</strong>!</p>
@@ -667,14 +663,14 @@
 <p>Now it&rsquo;s time to actually deploy the application. But first have a look at the manifest definitions ACM will use as deployables at <a href="https://github.com/devsecops-workshop/book-import/tree/master/book-import">https://github.com/devsecops-workshop/book-import/tree/master/book-import</a>.</p>
 <p>Then in the ACM console navigate to <strong>Applications</strong>:</p>
 <ul>
-<li>Click <strong>Create application</strong>, select  <strong>Subscription</strong></li>
+<li>Click <strong>Create application</strong>, select <strong>Subscription</strong></li>
 <li>Make sure the view is set to YAML</li>
 <li><strong>Name</strong>: book-import</li>
 <li><strong>Namespace</strong>: book-import</li>
 <li>Under <strong>Repository location for resources</strong> -&gt; <strong>Repository types</strong>, select <code>GIT</code></li>
-<li><strong>URL</strong>:  <a href="https://github.com/devsecops-workshop/book-import.git">https://github.com/devsecops-workshop/book-import.git</a></li>
-<li><strong>Branch</strong>:  master</li>
-<li><strong>Path</strong>:  book-import</li>
+<li><strong>URL</strong>: <a href="https://github.com/devsecops-workshop/book-import.git">https://github.com/devsecops-workshop/book-import.git</a></li>
+<li><strong>Branch</strong>: master</li>
+<li><strong>Path</strong>: book-import</li>
 <li>Select <strong>Deploy application resources only on clusters matching specified labels</strong></li>
 <li><strong>Label</strong>: environment</li>
 <li><strong>Value</strong>: dev</li>
@@ -706,7 +702,7 @@
 <ul>
 <li>In OperatorHub search for the <code>Ansible Automation Platform</code> operator and install it using the default settings.</li>
 <li>After installation has finished create an Automation Controller instance using the Operator, name it <code>automationcontroller</code></li>
-<li>When the instance is ready, look up <code>automationcontroller-admin-password</code> instance</li>
+<li>When the instance is ready, look up <code>automationcontroller-admin-password</code> secret</li>
 <li>Then look up the <code>automationcontroller</code> route, access it and login as user <code>admin</code> using the password from the secret</li>
 <li>Apply a manifest or use the username/password login to the Red Hat Customer Portal and add a subscription</li>
 </ul>
@@ -731,7 +727,7 @@
 <li><strong>Name</strong>: ACM Test</li>
 <li><strong>Organization</strong>: Default</li>
 <li><strong>SCM Type</strong>: Git</li>
-<li><strong>SCM URL</strong>:  <a href="https://github.com/devsecops-workshop/ansible-acm.git">https://github.com/devsecops-workshop/ansible-acm.git</a></li>
+<li><strong>SCM URL</strong>: <a href="https://github.com/devsecops-workshop/ansible-acm.git">https://github.com/devsecops-workshop/ansible-acm.git</a></li>
 <li>Click <strong>Save</strong></li>
 </ul>
 <p>Create an Ansible Job Template:</p>
@@ -1038,19 +1034,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664448675"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1664521779"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664448675"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664448675"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1664521779"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1664521779"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664448675"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1664521779"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
