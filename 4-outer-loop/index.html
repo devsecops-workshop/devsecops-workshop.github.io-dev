@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1677592421" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1677592421" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1677611203" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1677611203" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1677592421" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1677611203" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1677592421"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1677611203"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1677592421"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1677592421"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1677611203"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1677611203"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1677592421"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1677611203"></script>
 
     
   </div>
@@ -514,7 +514,7 @@
 <li>In the main menu left, click on <strong>Pipelines</strong> and observe how the Tekton Pipeline is created and run.</li>
 </ul>
 <h2 id="install-red-hat-quay-container-registry">Install Red Hat Quay Container Registry</h2>
-<p>The image that we have just deployed was pushed to the internal OpenShift Registry which is a great starting point for your cloud native journey. But if you require more control over you image repos, a graphical GUI, scalability, internal security scanning and the like you may want to upgrade to Red Hat Quay. So as a next step we want to replace the internal registry with Quay.</p>
+<p>The image that we have just deployed was pushed to the internal OpenShift Registry which is a great starting point for your cloud native journey. But if you require more control over you image repos, a graphical GUI, scalability, internal security scanning and the like you may want to upgrade to <strong>Red Hat Quay</strong>. So as a next step we want to replace the internal registry with Quay.</p>
 <p>Quay installation is done through an operator, too:</p>
 <ul>
 <li>In <strong>Operators-&gt;OperatorHub</strong> filter for <code>Quay</code></li>
@@ -569,11 +569,14 @@
 <h2 id="integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</h2>
 <p>To synchronize the internal default OpenShift Registry with the Quay Registry, <strong>Quay Bridge</strong> is used.</p>
 <ul>
-<li>In the OperatorHub of your cluster, search for the <strong>Quay Bridge</strong> Operator</li>
-<li>Install it with default settings</li>
-<li>While the Operator is installing, create a new Organization in Quay:
+<li>In the OperatorHub of your cluster, search for the <strong>Quay Bridge</strong> Operator
 <ul>
-<li>Access the Quay Portal</li>
+<li>Install it with default settings</li>
+</ul>
+</li>
+<li>While the Operator is installing, create a new Organization in <strong>Quay</strong>:
+<ul>
+<li>Access the <strong>Quay</strong> Portal</li>
 <li>In the top <em>+</em> menu click <strong>Create New Organization</strong>
 <ul>
 <li>Name it <code>openshift_integration</code></li>
@@ -585,10 +588,10 @@
 </ul>
 <p>We need an OAuth Application in Quay for the integration:</p>
 <ul>
-<li>In the Quay Portal, click the <strong>Applications</strong> icon in the menubar to the left</li>
+<li>Again In the <strong>Quay</strong> Portal, click the <strong>Applications</strong> icon in the menubar to the left</li>
 <li>Click <strong>Create New Application</strong> at the upper right
 <ul>
-<li>Name it <code>openshift</code> and select it by clicking it</li>
+<li>Name it <code>openshift</code>, press Enter and click on the new <code>openshift</code> item by clicking it</li>
 </ul>
 </li>
 <li>In the menubar to the left click the <strong>Generate Token</strong> icon
@@ -605,7 +608,7 @@
 </ul>
 </li>
 </ul>
-<p>Now we finally create an Quay Bridge instance. In the OpenShift web console make sure you are in the <code>quay</code> Project. Then:</p>
+<p>Now we finally create an <strong>Quay Bridge</strong> instance. In the OpenShift web console make sure you are in the <code>quay</code> Project. Then:</p>
 <ul>
 <li>
 <p>Create a new Secret</p>
@@ -621,7 +624,7 @@
 </ul>
 </li>
 <li>
-<p>Go to the Red Hat Quay Bridge Operator overview (make sure you are in the <code>quay</code> namespace)</p>
+<p>Go to the Red Hat <strong>Quay Bridge</strong> Operator overview (make sure you are in the <code>quay</code> namespace)</p>
 </li>
 <li>
 <p>On the <strong>Quay Integration</strong> tile click <strong>Create Instance</strong></p>
@@ -1086,19 +1089,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1677592421"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1677611203"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1677592421"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1677592421"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1677611203"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1677611203"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1677592421"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1677611203"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
