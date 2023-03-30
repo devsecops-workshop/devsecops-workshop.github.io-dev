@@ -12,22 +12,22 @@
     <title>Configure GitOps :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1679582863" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1679582863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680187236" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1679582863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680187236" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1679582863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680187236"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1679582863"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1679582863"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680187236"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680187236"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1679582863"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680187236"></script>
 
     
   </div>
@@ -507,14 +507,8 @@
 <p><strong>app</strong> - contains yamls for the deployment, service and route resources needed by our application. These will be applied to the cluster. There is also a <code>kustomization.yaml</code> defining that kustomize layers will be applied to all yamls</p>
 <p><strong>environments/dev</strong> - contains the <code>kustomization.yaml</code> which will be modified by our builds with new Image versions. ArgoCD will pick up these changes and trigger new deployments.</p>
 <h2 id="setup-gitops-project">Setup GitOps Project</h2>
-<p>Let&rsquo;s setup the project that tells ArgoCD to watch our config repo and updated resources in the <code>workshop-prod</code> project accordingly.</p>
+<p>Let&rsquo;s setup the project that tells ArgoCD to watch our config repo and updated resources in the <code>workshop-prod</code> project accordingly.```</p>
 <ul>
-<li>Give namespace <code>workshop-prod</code> permissions to pull images from <code>workshop-int</code></li>
-</ul>
-<pre><code>oc policy add-role-to-user \
-    system:image-puller system:serviceaccount:workshop-prod:default \
-    --namespace=workshop-int
-</code></pre><ul>
 <li>Find the local <strong>ArgoCD URL</strong> (not the global instance) by going to <strong>Networking &gt; Routes</strong> in namespace <code>workshop-prod</code></li>
 <li>Open the ArgoCD website ignoring the certificate warning</li>
 <li>Don&rsquo;t login with OpenShift but with username and password</li>
@@ -540,6 +534,10 @@
 </li>
 </ul>
 <p>Watch the resources (<code>Deployment</code>, <code>Service</code>, <code>Route</code>) get rolled out to the namespace <code>workshop-prod</code>. Notice we have also scaled our app to 2 pods in the prod stage as we want some HA.</p>
+
+<div class="notices info" ><p>Since we have not published our image to the Quay <code>workshop-int</code> repository the initial Deployment will roll out a defined dummy image from the public quay.io Registry. This is just to ensure a initial succesful sync in ArgoCD. Once the fist pipeline runs, our actual built image will be rolled out.</p>
+</div>
+
 <p>Our complete prod stage is now configured and controlled though GitOps. But how do we tell ArgoCD that there is a new version of our app to deploy? Well, we will add a step to our build pipeline updating the config repo.</p>
 <p>As we do not want to modify our original repo file we will use a tool called <a href="https://kustomize.io/">Kustomize</a> that can add incremental change layers to YAML files. Since ArgoCD permanently watches this repo it will pick up these Kustomize changes.</p>
 
@@ -723,29 +721,29 @@
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: skopeo-copy
-      <span style="color:#66d9ef">params</span>:
-        - <span style="color:#66d9ef">name</span>: srcImageURL
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;docker://$(params.QUAY_URL)/openshift_workshop-int/workshop:latest&#39;</span>
-        - <span style="color:#66d9ef">name</span>: destImageURL
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;docker://$(params.QUAY_URL)/openshift_workshop-prod/workshop:latest&#39;</span>
-        - <span style="color:#66d9ef">name</span>: srcTLSverify
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;false&#39;</span>
-        - <span style="color:#66d9ef">name</span>: destTLSverify
-          <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;false&#39;</span>
-      <span style="color:#66d9ef">runAfter</span>:
-        - build
-      <span style="color:#66d9ef">taskRef</span>:
-        <span style="color:#66d9ef">kind</span>: ClusterTask
-        <span style="color:#66d9ef">name</span>: skopeo-copy-updated
-      <span style="color:#66d9ef">workspaces</span>:
-        - <span style="color:#66d9ef">name</span>: images-url
-          <span style="color:#66d9ef">workspace</span>: workspace
+  <span style="color:#66d9ef">params</span>:
+    - <span style="color:#66d9ef">name</span>: srcImageURL
+      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;docker://$(params.QUAY_URL)/openshift_workshop-int/workshop:latest&#34;</span>
+    - <span style="color:#66d9ef">name</span>: destImageURL
+      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;docker://$(params.QUAY_URL)/openshift_workshop-prod/workshop:latest&#34;</span>
+    - <span style="color:#66d9ef">name</span>: srcTLSverify
+      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;false&#34;</span>
+    - <span style="color:#66d9ef">name</span>: destTLSverify
+      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;false&#34;</span>
+  <span style="color:#66d9ef">runAfter</span>:
+    - build
+  <span style="color:#66d9ef">taskRef</span>:
+    <span style="color:#66d9ef">kind</span>: ClusterTask
+    <span style="color:#66d9ef">name</span>: skopeo-copy-updated
+  <span style="color:#66d9ef">workspaces</span>:
+    - <span style="color:#66d9ef">name</span>: images-url
+      <span style="color:#66d9ef">workspace</span>: workspace
 - <span style="color:#66d9ef">name</span>: git-update-deployment
   <span style="color:#66d9ef">params</span>:
     - <span style="color:#66d9ef">name</span>: GIT_REPOSITORY
       <span style="color:#66d9ef">value</span>: $(params.GIT_CONFIG_REPO)
     - <span style="color:#66d9ef">name</span>: CURRENT_IMAGE
-      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#39;quay.io/nexus6/hello-microshift:1.0.0-SNAPSHOT&#39;</span>
+      <span style="color:#66d9ef">value</span>: <span style="color:#e6db74">&#34;quay.io/nexus6/hello-microshift:1.0.0-SNAPSHOT&#34;</span>
     - <span style="color:#66d9ef">name</span>: NEW_IMAGE
       <span style="color:#66d9ef">value</span>: $(params.QUAY_URL)/openshift_workshop-prod/workshop
     - <span style="color:#66d9ef">name</span>: NEW_DIGEST
@@ -1076,19 +1074,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1679582863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680187236"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1679582863"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1679582863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680187236"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1679582863"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680187236"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
