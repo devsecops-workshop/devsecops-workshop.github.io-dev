@@ -12,22 +12,22 @@
     <title>Configure GitOps :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680187236" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680277682" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680187236" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680277682" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680277682"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680187236"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680187236"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680277682"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680277682"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680187236"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680277682"></script>
 
     
   </div>
@@ -446,6 +446,7 @@
     <li><a href="#install-openshift-gitops">Install OpenShift GitOps</a></li>
     <li><a href="#prepare-the-gitops-config-repository">Prepare the GitOps Config Repository</a></li>
     <li><a href="#setup-gitops-project">Setup GitOps Project</a></li>
+    <li><a href="#initialize-the-workshop-prodworshop-repo-in-quay">Initialize the workshop-prod/worshop repo in Quay</a></li>
     <li><a href="#add-kustomize-and-git-push-tekton-task">Add Kustomize and Git Push Tekton Task</a></li>
     <li><a href="#add-tekton-tasks-to-your-pipeline-to-promote-your-image-to-workshop-prod">Add Tekton Tasks to your Pipeline to Promote your Image to workshop-prod</a></li>
     <li><a href="#update-our-prod-stage-via-pipeline-and-gitops">Update our Prod Stage via Pipeline and GitOps</a></li>
@@ -544,6 +545,28 @@
 <div class="notices tip" ><p>It is also possible to update the repo with a Pull request. Then you have an approval process for your prod deployment.</p>
 </div>
 
+<h2 id="initialize-the-workshop-prodworshop-repo-in-quay">Initialize the workshop-prod/worshop repo in Quay</h2>
+<p>We will need to initialize the <code>workshop-prod/workshop</code> in Quay so the robo user will be able to to push images there later on.</p>
+<ul>
+<li>In Quay select the organization <code>openshift_workshop-prod</code> on the right</li>
+<li>Click on <strong>+ Create New Repository</strong> on the top left
+<figure>
+    <img src="../images/quay-create-repo.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+</li>
+<li>Make sure to select <code>openehsift_workshop-prod</code> as Organization</li>
+<li>Enter <code>workshop</code>as repo name</li>
+<li>Set the repo to <strong>Public</strong></li>
+<li>Click <strong>Create Public Repository</strong>
+<figure>
+    <img src="../images/quay-create-repo2.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+</li>
+</ul>
 <h2 id="add-kustomize-and-git-push-tekton-task">Add Kustomize and Git Push Tekton Task</h2>
 <p>Let&rsquo;s add a new custom Tekton task that can update the Image <code>tag</code> via Kustomize after the build an then push the change to out git config repo.</p>
 <ul>
@@ -780,7 +803,7 @@
 <li><strong>Authentication type:</strong> Basic Authentication</li>
 <li><strong>Server URL:</strong> quay-quay-quay.apps.&lt;DOMAIN&gt;/openshift_workshop-prod</li>
 <li><strong>Username:</strong> openshift_workshop-prod+builder</li>
-<li><strong>Password</strong> : (Retrieve this from the Quay org openshift_workshop-int as before)</li>
+<li><strong>Password</strong> : (Retrieve this from the Quay organization openshift_workshop-prod robo account <code>openshift_workshop-prod+builder</code> as before)</li>
 <li>Click the checkmark</li>
 </ul>
 </li>
@@ -798,7 +821,7 @@
 </ul>
 </li>
 <li>
-<p>Run the pipeline by clicking <strong>Start</strong> and see that in your Gitea repo <code>/environment/dev/kustomize.yaml</code> is updated with the new image version
+<p>Run the pipeline by clicking <strong>Start</strong> and see that in your Gitea config repo the file <code>/environment/dev/kustomize.yaml</code> is updated with the new image version
 
 <div class="notices tip" ><p>Notice that the <code>deploy</code> and the <code>git-update</code> steps now run in parallel. This is one of the powers of Tekton. It can scale natively with pods on OpenShift.</p>
 </div>
@@ -1074,19 +1097,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680277682"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680187236"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680187236"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680277682"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680187236"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680277682"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
