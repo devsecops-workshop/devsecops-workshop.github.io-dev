@@ -12,22 +12,22 @@
     <title>Configure GitOps :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680535115" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680535115" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680536863" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680536863" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680535115" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680536863" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680535115"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680536863"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680535115"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680535115"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680536863"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680536863"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680535115"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680536863"></script>
 
     
   </div>
@@ -569,154 +569,13 @@
 </ul>
 <h2 id="add-kustomize-and-git-push-tekton-task">Add Kustomize and Git Push Tekton Task</h2>
 <p>Let&rsquo;s add a new custom Tekton task that can update the Image <code>tag</code> via Kustomize after the build and then push the change to our git config repo.</p>
+<p>We could add this through the OpenShift Web Console as well but to save time we will apply the file directly via the <code>oc</code> command.</p>
 <ul>
-<li>In the namespace <code>workshop-int</code> switch to the <strong>Administrator</strong> Perspective and go to <strong>Pipelines &gt; Tasks &gt; Create Task</strong></li>
-<li>Replace the YAML definition with the following and click <strong>Create</strong>:</li>
+<li>Reconnnect to your bastion host via ssh if necessary and make sure you are in the <code>yaml</code> directory</li>
+<li>Apply the task via YAML: <code>oc create -f tekton-kustomize.yml</code></li>
+<li>In the OpenShift Webconsole go to <strong>Pipelines &gt; Tasks &gt; ClusterTasks</strong> and have a look at the just imported task <code>git-update-deployment</code>. You should see the git commands how the config repo will be cloned, patched by <strong>Kustomize</strong> and the pushed again.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: tekton.dev/v1beta1
-<span style="color:#66d9ef">kind</span>: Task
-<span style="color:#66d9ef">metadata</span>:
-  <span style="color:#66d9ef">annotations</span>:
-    <span style="color:#66d9ef">tekton.dev/pipelines.minVersion</span>: <span style="color:#ae81ff">0.12.1</span>
-    <span style="color:#66d9ef">tekton.dev/tags</span>: git
-  <span style="color:#66d9ef">name</span>: git-update-deployment
-  <span style="color:#66d9ef">namespace</span>: workshop-int
-  <span style="color:#66d9ef">labels</span>:
-    <span style="color:#66d9ef">app.kubernetes.io/version</span>: <span style="color:#e6db74">&#34;0.1&#34;</span>
-    <span style="color:#66d9ef">operator.tekton.dev/provider-type</span>: community
-<span style="color:#66d9ef">spec</span>:
-  <span style="color:#66d9ef">description</span>: This Task can be used to update image digest in a Git repo using kustomize
-  <span style="color:#66d9ef">params</span>:
-    - <span style="color:#66d9ef">name</span>: GIT_REPOSITORY
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">name</span>: CURRENT_IMAGE
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">name</span>: NEW_IMAGE
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">name</span>: NEW_DIGEST
-      <span style="color:#66d9ef">type</span>: string
-    - <span style="color:#66d9ef">name</span>: KUSTOMIZATION_PATH
-      <span style="color:#66d9ef">type</span>: string
-  <span style="color:#66d9ef">results</span>:
-    - <span style="color:#66d9ef">description</span>: The commit SHA
-      <span style="color:#66d9ef">name</span>: commit
-  <span style="color:#66d9ef">steps</span>:
-    - <span style="color:#66d9ef">image</span>: <span style="color:#e6db74">&#34;docker.io/alpine/git:v2.26.2&#34;</span>
-      <span style="color:#66d9ef">name</span>: git-clone
-      <span style="color:#66d9ef">resources</span>: {}
-      <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">        rm -rf git-update-digest-workdir</span>
-        git clone $(params.GIT_REPOSITORY) git-update-digest-workdir
-      <span style="color:#66d9ef">workingDir</span>: $(workspaces.workspace.path)
-    - <span style="color:#66d9ef">image</span>: <span style="color:#e6db74">&#34;quay.io/wpernath/kustomize-ubi:latest&#34;</span>
-      <span style="color:#66d9ef">name</span>: update-digest
-      <span style="color:#66d9ef">resources</span>: {}
-      <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">        #!/usr/bin/env bash</span>
-
-        echo <span style="color:#e6db74">&#34;Start&#34;</span>
-
-        pwd
-
-        cd git-update-digest-workdir/$(params.KUSTOMIZATION_PATH)
-
-        pwd
-
-
-        <span style="color:#75715e">#echo &#34;kustomize edit set image</span>
-        <span style="color:#75715e">#$(params.CURRENT_IMAGE)=$(params.NEW_IMAGE)@$(params.NEW_DIGEST)&#34;</span>
-
-
-        kustomize version
-
-
-        kustomize edit set image
-        $(params.CURRENT_IMAGE)=$(params.NEW_IMAGE)@$(params.NEW_DIGEST)
-
-
-        echo <span style="color:#e6db74">&#34;##########################&#34;</span>
-
-
-
-        echo <span style="color:#e6db74">&#34;### kustomization.yaml ###&#34;</span>
-
-
-
-        echo <span style="color:#e6db74">&#34;##########################&#34;</span>
-
-
-        ls
-
-
-        cat kustomization.yaml
-      <span style="color:#66d9ef">workingDir</span>: $(workspaces.workspace.path)
-    - <span style="color:#66d9ef">image</span>: <span style="color:#e6db74">&#34;docker.io/alpine/git:v2.26.2&#34;</span>
-      <span style="color:#66d9ef">name</span>: git-commit
-      <span style="color:#66d9ef">resources</span>: {}
-      <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">        pwd</span>
-
-
-        cd git-update-digest-workdir
-
-
-
-        git config user.email <span style="color:#e6db74">&#34;tekton-pipelines-ci@redhat.com&#34;</span>
-
-
-
-        git config user.name <span style="color:#e6db74">&#34;tekton-pipelines-ci&#34;</span>
-
-
-
-        git status
-
-
-
-        git add $(params.KUSTOMIZATION_PATH)/kustomization.yaml
-
-
-        <span style="color:#75715e"># git commit -m &#34;[$(context.pipelineRun.name)] Image digest updated&#34;</span>
-
-
-        git status
-
-
-        git commit -m <span style="color:#e6db74">&#34;[ci] Image digest updated&#34;</span>
-
-
-        git status
-
-        git push
-
-
-
-        RESULT_SHA=<span style="color:#e6db74">&#34;$(git rev-parse HEAD | tr -d &#39;\n&#39;)&#34;</span>
-
-
-
-        EXIT_CODE=<span style="color:#e6db74">&#34;$?&#34;</span>
-
-
-
-        if [ <span style="color:#e6db74">&#34;$EXIT_CODE&#34;</span> != <span style="color:#ae81ff">0</span> ]
-
-
-
-        then
-          exit $EXIT_CODE
-        fi
-
-
-        <span style="color:#75715e"># Make sure we don&#39;t add a trailing newline to the result!</span>
-
-
-        echo -n <span style="color:#e6db74">&#34;$RESULT_SHA&#34;</span> &gt; $(results.commit.path)
-      <span style="color:#66d9ef">workingDir</span>: $(workspaces.workspace.path)
-  <span style="color:#66d9ef">workspaces</span>:
-    - <span style="color:#66d9ef">description</span>: The workspace consisting of maven project.
-      <span style="color:#66d9ef">name</span>: workspace
-</code></pre></div><h2 id="add-tekton-tasks-to-your-pipeline-to-promote-your-image-to-workshop-prod">Add Tekton Tasks to your Pipeline to Promote your Image to workshop-prod</h2>
+<h2 id="add-tekton-tasks-to-your-pipeline-to-promote-your-image-to-workshop-prod">Add Tekton Tasks to your Pipeline to Promote your Image to workshop-prod</h2>
 <p>So now we have a new Tekton Task in our task catalog to update a Gitops Git repo, but we still need to pomote the actual Image from out <code>workshop-int</code> to <code>workshop-prod</code> project. Otherwise the image will not be available for our Deployment.</p>
 <ul>
 <li>Go to <strong>Pipelines &gt; Pipelines &gt; workshop</strong> and then YAML</li>
@@ -1097,19 +956,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680535115"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680536863"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680535115"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680535115"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680536863"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680536863"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680535115"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680536863"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
