@@ -12,22 +12,22 @@
     <title>The DevSecOps Workshop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680277682" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680534652" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680534652" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680277682" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680534652" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680534652"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680277682"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680277682"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680534652"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680534652"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680277682"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680534652"></script>
 
     
   </div>
@@ -453,6 +453,8 @@
     </li>
     <li><a href="#workshop-flow">Workshop Flow</a></li>
     <li><a href="#and-finally-a-sprinkle-of-javascript-magic">And finally a sprinkle of JavaScript magic</a></li>
+    <li><a href="#url-generator-for-custom-lab-guide">URL Generator for Custom Lab Guide</a></li>
+    <li><a href="#current-domain-replacement">Current Domain replacement</a></li>
   </ul>
 </nav>
     </div>
@@ -514,6 +516,8 @@
 <p>You&rsquo;ll get all access details for your lab cluster from the facilitators. This includes the URL to the OpenShift console and information about how to SSH into your bastion host to run <code>oc</code> if asked to.</p>
 <h3 id="on-your-own">On Your Own</h3>
 <p>As there is not special setup for the OpenShift cluster you should be able to run the workshop with any 4.10 cluster of you own. Just make sure you have cluster admin privileges.</p>
+<p><strong>Warning</strong>
+Currently on OpenShift 4.10.x is supported !</p>
 <p>This workshop was tested with these versions :</p>
 <ul>
 <li>Red Hat OpenShift : 4.10.26</li>
@@ -539,9 +543,52 @@
 <li>Use a query parameter in the URL of this lab guide to have all occurences replaced automagically, e.g.:
 <ul>
 <li><a href="http://devsecops-workshop.github.io/?domain=cluster-t50z9.t50z9.sandbox4711.opentlc.com">http://devsecops-workshop.github.io/?domain=cluster-t50z9.t50z9.sandbox4711.opentlc.com</a></li>
+<li>You can use the Link Generator in the next chapter to create the URL for you</li>
 </ul>
 </li>
 </ul>
+<h2 id="url-generator-for-custom-lab-guide">URL Generator for Custom Lab Guide</h2>
+<p>Enter you Openshift url after the <code>apps</code> part (e.g. <code>console-openshift-console.apps.cluster-t50z9.t50z9.sandbox4711.opentlc.com</code> ) and click th butoon to generate a link that will customize your lab guide.</p>
+<p>Click the generated link once to apply it the the current guide.</p>
+
+
+
+<script>
+  function get_domain() {
+  var domain = document.getElementById("domain").value;
+  var url = window.location.href + "?domain=" +  domain;
+  var a = document.createElement('a');
+  var linkText = document.createTextNode(url);
+      a.appendChild(linkText);
+      a.title = "Custom Lab Guide";
+      a.href = url;
+      a.id = "dynamicUrl"
+
+  var parentElem = document.getElementById("dynamicLink");
+  var elem = parentElem.childNodes.item("dynamicUrl");
+  if (elem != null)
+  {
+    console.log("Replacing in -> " + parentElem + " " + elem);
+    
+    parentElem.replaceChild(a, elem);
+  }
+  else
+  {
+   
+    parentElem.appendChild(a);
+
+  }  
+
+
+  }
+</script>
+<input type="text" id="domain" name="domain">
+<a class="btn btn-default" type = "submit" onclick = "get_domain();" id="skip"  > Generate URL </a>
+<p id="dynamicLink"></p>
+
+
+<h2 id="current-domain-replacement">Current Domain replacement</h2>
+<p>Check to see if replacement is active -&gt; <code>&lt;DOMAIN&gt;</code></p>
 
 
 
@@ -795,19 +842,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680534652"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680277682"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680277682"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680534652"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680534652"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680277682"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680534652"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
