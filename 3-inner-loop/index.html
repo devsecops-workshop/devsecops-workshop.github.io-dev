@@ -12,22 +12,22 @@
     <title>Inner Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680627484" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680627484" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1680688064" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1680688064" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680627484" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1680688064" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680627484"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1680688064"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680627484"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680627484"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1680688064"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1680688064"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680627484"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1680688064"></script>
 
     
   </div>
@@ -542,8 +542,10 @@
 <pre><code>oc new-project workshop-dev
 </code></pre><h2 id="use-odo-to-deploy-and-update-our-application">Use odo to Deploy and Update our Application</h2>
 <p><strong>odo</strong> or &lsquo;OpenShift do&rsquo; is a cli that enables developers to get started quickly with cloud native app development without being a Kubernetes expert. It offers support for multiple runtimes and you can easily setup microservice components, push code changes into running containers and debug remotely with just a few simple commands. To find out more, have look <a href="https://odo.dev/">here</a></p>
-<p><code>odo</code> is smart enough to figure out what programming language and frameworks you are using. So let&rsquo;s let initialize our project</p>
-<pre><code class="language-DevWorkspace" data-lang="DevWorkspace">odo init
+<p>First we need to switch into the folder of your cloned project</p>
+<pre><code>cd quarkus-build-options
+</code></pre><p><code>odo</code> is smart enough to figure out what programming language and frameworks you are using. So let&rsquo;s let initialize our project</p>
+<pre><code>odo init
 </code></pre><ul>
 <li>You can then opt-into telemetry <strong>(Y/n)</strong></li>
 <li>A matching Quarkus DevFile is found in the odo repository. Choose <strong>Y</strong> to download</li>
@@ -838,19 +840,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680627484"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1680688064"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680627484"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680627484"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1680688064"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1680688064"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680627484"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1680688064"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
