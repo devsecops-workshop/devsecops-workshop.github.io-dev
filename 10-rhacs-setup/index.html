@@ -12,22 +12,22 @@
     <title>Install and Configure ACS :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681289133" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681314697" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681289133" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681314697" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681314697"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681289133"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681289133"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681314697"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681314697"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681289133"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681314697"></script>
 
     
   </div>
@@ -560,27 +560,28 @@ RHACS setup:</p>
 </ul>
 <h3 id="prepare-to-add-secured-clusters">Prepare to add Secured Clusters</h3>
 <p>First you have to generate an init bundle which contains certificates and is used to authenticate a <strong>SecuredCluster</strong> to the <strong>Central</strong> instance, again regardless if it&rsquo;s the same cluster as the Central instance or a remote/other cluster.</p>
-<p>In the <strong>ACS Portal</strong>:</p>
-<ul>
-<li>Navigate to <strong>Platform Configuration → Integrations</strong>.</li>
-<li>Under the <strong>Authentication Tokens</strong> section, click on <strong>Cluster Init Bundle</strong>.</li>
-<li>Click <strong>Generate bundle</strong></li>
-<li>Enter a name for the cluster init bundle and click <strong>Generate</strong>.</li>
-<li>Click <strong>Download Kubernetes Secret File</strong> to download the generated bundle.</li>
-</ul>
-<p>The init bundle needs to be applied on all OpenShift clusters you want to secure &amp; monitor.</p>
+<p>We are using the API to create the init bundle in this workshop. For the steps to create the init bundle in the ACS Portal see the appendix.</p>
+<p>Creating the init bundle using the <strong>API</strong> on the commandline:</p>
+<p>TODO: explain</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#Export ACS central instance endpoint</span>
+export ROX_ENDPOINT<span style="color:#f92672">=</span>&lt;central_url:443&gt;
+<span style="color:#75715e"># Export bundle-name</span>
+export DATA<span style="color:#f92672">={</span><span style="color:#ae81ff">\&#34;</span>name<span style="color:#ae81ff">\&#34;</span>:<span style="color:#ae81ff">\&#34;</span>&lt;bundle name&gt;<span style="color:#ae81ff">\&#34;</span><span style="color:#f92672">}</span>
+<span style="color:#75715e"># Export ACS admin password</span>
+export PASSWORD<span style="color:#f92672">=</span>&lt;password&gt;
+
+curl -k -o bundle.json -X POST -u <span style="color:#e6db74">&#34;admin:</span>$PASSWORD<span style="color:#e6db74">&#34;</span> -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> --data $DATA https://<span style="color:#e6db74">${</span>ROX_ENDPOINT<span style="color:#e6db74">}</span>/v1/cluster-init/init-bundles
+
+cat bundle.json | jq -r <span style="color:#e6db74">&#39;.kubectlBundle&#39;</span>  | base64 -d &gt; kube-secrets.bundle
+</code></pre></div><p>The init bundle needs to be applied on all OpenShift clusters you want to secure &amp; monitor.</p>
 <h3 id="prepare-the-secured-cluster">Prepare the Secured Cluster</h3>
 <p>For this workshop we run <strong>Central</strong> and <strong>SecuredCluster</strong> on one OpenShift cluster. E.g. we monitor and secure the same cluster the central services live on.</p>
 <p><strong>Apply the init bundle</strong></p>
 <ul>
-<li>Use the <code>oc</code> command to log in to the OpenShift cluster as <code>cluster-admin</code>.
-<ul>
-<li>The easiest way might be to use the <strong>Copy login command</strong> link from the UI</li>
-</ul>
-</li>
-<li>Switch to the <strong>Project</strong> you installed <strong>ACS Central</strong> in, it should be <code>stackrox</code>.</li>
-<li>Run <code>oc create -f &lt;init_bundle&gt;.yaml -n stackrox</code> pointing to the init bundle you downloaded from the Central instance and the Project you created.</li>
-<li>This will create a number of secrets:</li>
+<li>Open a web terminal</li>
+<li>Use the <code>oc</code> command to switch to the <strong>Project</strong> you installed <strong>ACS Central</strong> in, it should be <code>stackrox</code>.</li>
+<li>Run <code>oc create -f &gt; kube-secrets.bundle -n stackrox</code> pointing to the init bundle you downloaded from the Central instance or created via the API as above.</li>
+<li>This will create a number of secrets, the output should be:</li>
 </ul>
 <pre><code>secret/collector-tls created
 secret/sensor-tls created
@@ -884,19 +885,19 @@ secret/admission-control-tls created
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681314697"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681314697"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681289133"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681314697"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

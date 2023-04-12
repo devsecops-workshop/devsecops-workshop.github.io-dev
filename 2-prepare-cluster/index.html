@@ -12,22 +12,22 @@
     <title>Prepare Cluster :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681289133" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681289133" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681314697" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681289133" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681314697" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681314697"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681289133"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681289133"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681314697"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681314697"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681289133"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681314697"></script>
 
     
   </div>
@@ -445,6 +445,11 @@
   <ul>
     <li><a href="#cluster-preparation">Cluster Preparation</a></li>
     <li><a href="#install-openshift-data-foundation">Install OpenShift Data Foundation</a></li>
+    <li><a href="#prepare-to-run-oc-commands">Prepare to run oc commands</a>
+      <ul>
+        <li><a href="#install-openshift-web-terminal">Install OpenShift Web Terminal</a></li>
+      </ul>
+    </li>
     <li><a href="#install-and-prepare-gitea">Install and Prepare Gitea</a></li>
     <li><a href="#check-openshift-data-foundation-odf-storage-deployment">Check OpenShift Data Foundation (ODF) Storage Deployment</a></li>
     <li><a href="#architecture-recap">Architecture recap</a></li>
@@ -500,7 +505,7 @@
 </ul>
 <p>You&rsquo;ll see a review of your settings, hit <code>Create StorageSystem</code></p>
 
-<div class="notices tip" ><p>Don&rsquo;t worry if you see a <em>404 Page</em>. The ODF Operator has just extended the OpenShift Console which may no be availabe in your current view. Just relead the browser page once and your will see the System Overview</p>
+<div class="notices tip" ><p>Don&rsquo;t worry if you see a <em>404 Page</em>. The ODF Operator has just extended the OpenShift Console which may no be availabe in your current view. Just reload the browser page once and your will see the System Overview</p>
 </div>
 
 <figure>
@@ -510,6 +515,33 @@
 </figure>
 
 <p>As mentioned already this takes some time so go ahead and install the other prerequisites. We&rsquo;ll come back later.</p>
+<h2 id="prepare-to-run-oc-commands">Prepare to run oc commands</h2>
+<p>You will be asked to run <code>oc</code> (the OpenShift commandline tool) commands a couple of times. We will do this by using the <strong>OpenShift Web Terminal</strong>. This is the easiest way because you don&rsquo;t have to install <code>oc</code> or an SSH client.</p>
+<h3 id="install-openshift-web-terminal">Install OpenShift Web Terminal</h3>
+<p>To extend OpenShift with the Web Terminal option, install the <strong>Web Terminal</strong> operator:</p>
+<ul>
+<li>Login to the OpenShift Webconsole with you cluster admin credentials</li>
+<li>In the Web Console, go to <strong>Operators &gt; OperatorHub</strong> and search for the <strong>Web Terminal</strong> operator</li>
+<li>Install the operator with default settings</li>
+</ul>
+<p>This will take some time and installs another operator as dependency.</p>
+<p>After the operator has installed, reload the OCP Web Console browser window. You will now have a new button (**&gt;_**) in the upper right. Click it to start a new web terminal. From here you can run the <code>oc</code> commands when the lab guide requests it (copy/paste might depend on your laptop OS and browser settings, e.g. try <code>Ctrl-Shift-V</code> for pasting).</p>
+<figure>
+    <img src="../images/web-terminal.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
+
+<div class="notices warning" ><p>The terminal is not persistent, so if it was closed for any reason anything you did in the terminal is gone after re-opening.</p>
+</div>
+
+<p>If for any reason you can&rsquo;t use the webterminal, your options are:</p>
+<ul>
+<li>Install and run <code>oc</code> on your laptop</li>
+<li>SSH into the bastion host, if running on a Red Hat RHDP lab environment. From here you can just run <code>oc</code> without login.</li>
+</ul>
+<p>TODO: Change yaml applies to direct git download</p>
 <h2 id="install-and-prepare-gitea">Install and Prepare Gitea</h2>
 <p>We&rsquo;ll need Git repository services to keep our app and infrastructure source code, so let&rsquo;s just install trusted <code>Gitea</code> using an operator:</p>
 
@@ -883,19 +915,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681314697"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681289133"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681289133"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681314697"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681289133"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681314697"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
