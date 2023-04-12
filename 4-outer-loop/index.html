@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681314697" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681314970" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681314697" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681314970" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681314970"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681314697"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681314697"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681314970"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681314970"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681314697"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681314970"></script>
 
     
   </div>
@@ -445,8 +445,6 @@
   <ul>
     <li><a href="#install-openshift-pipelines">Install OpenShift Pipelines</a></li>
     <li><a href="#create-app-deployment-and-build-pipeline">Create App Deployment and Build Pipeline</a></li>
-    <li><a href="#install-red-hat-quay-container-registry">Install Red Hat Quay Container Registry</a></li>
-    <li><a href="#integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</a></li>
     <li><a href="#adjust-the-pipeline-to-deploy-to-quay">Adjust the Pipeline to Deploy to Quay</a>
       <ul>
         <li><a href="#create-a-new-s2i-java-clustertask">Create a new <code>s2i-java</code> ClusterTask</a></li>
@@ -512,143 +510,6 @@
 <ul>
 <li>Click <strong>Create</strong></li>
 <li>In the main menu left, click on <strong>Pipelines</strong> and observe how the Tekton Pipeline is created and run.</li>
-</ul>
-<h2 id="install-red-hat-quay-container-registry">Install Red Hat Quay Container Registry</h2>
-<p>The image that we have just deployed was pushed to the internal OpenShift Registry which is a great starting point for your cloud native journey. But if you require more control over you image repos, a graphical GUI, scalability, internal security scanning and the like you may want to upgrade to <strong>Red Hat Quay</strong>. So as a next step we want to replace the internal registry with Quay.</p>
-<p>Quay installation is done through an operator, too:</p>
-<ul>
-<li>In <strong>Operators-&gt;OperatorHub</strong> filter for <code>Quay</code></li>
-<li>Install the <strong>Red Hat Quay</strong> operator with default settings</li>
-<li>Create a new namespace <code>quay</code></li>
-<li>In the namespace go to <strong>Administration-&gt;LimitRanges</strong> and delete the <code>quay-core-resource-limits</code>
-<figure>
-    <img src="../images/delete-limit-range.png?width=45pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-</li>
-<li>In the operator overview of the Quay Operator on the <strong>Quay Registry</strong> tile click <strong>Create instance</strong></li>
-<li>If the <em>YAML view</em> is shown sitch to <em>Form view</em></li>
-<li>Make sure you are in the <code>quay</code> project</li>
-<li>Change the name to <code>quay</code></li>
-<li>Click <strong>Create</strong></li>
-<li>Click the new Quayregistry, scroll down to <strong>Conditions</strong> and wait until the <strong>Available</strong> type changes to <code>True</code>
-<figure>
-    <img src="../images/quay-available.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-</li>
-</ul>
-<p>Now that the Registry is installed you have to configure a superuser:</p>
-<ul>
-<li>Make sure you are in the <code>quay</code> Project</li>
-<li>Go to <strong>Networking-&gt;Routes</strong>, access the Quay portal using the URL of the first route (<code>quay-quay</code>)</li>
-<li>Click <strong>Create Account</strong>
-<ul>
-<li>As username put in <code>quayadmin</code>, a (fake) email address and and <code>quayadmin</code> as password.</li>
-</ul>
-</li>
-<li>Click <strong>Create Account</strong> again</li>
-<li>In the OpenShift web console open <strong>Workloads-&gt;Secrets</strong></li>
-<li>Search for <code>quay-config-editor-credentials-...</code>, open the secret and copy the values, you&rsquo;ll need them in a second.</li>
-<li>Go back to the <strong>Routes</strong> and open the <code>quay-quay-config-editor</code> route</li>
-<li>Login with the values of the secret from above</li>
-<li>Click <strong>Sign in</strong></li>
-<li>Scroll down to <strong>Access Settings</strong></li>
-<li>As <strong>Super User</strong> put in <code>quayadmin</code></li>
-<li>click <strong>Validate Configuration Changes</strong> and after the validation click <strong>Reconfigure Quay</strong></li>
-</ul>
-<p>Reconfiguring Quay takes some time. The easiest way to determine if it&rsquo;s been finished is to open the Quay portal (using the <code>quay-quay</code> Route). At the upper right you&rsquo;ll see the username (<code>quayadmin</code>), if you click the username the drop-down should show a link <strong>Super User Admin Panel</strong>. When it shows up you can proceed.</p>
-<figure>
-    <img src="../images/quay-superuser.png?width=15pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-
-<h2 id="integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</h2>
-<p>To synchronize the internal default OpenShift Registry with the Quay Registry, <strong>Quay Bridge</strong> is used.</p>
-<ul>
-<li>In the OperatorHub of your cluster, search for the <strong>Quay Bridge</strong> Operator
-<ul>
-<li>Install it with default settings</li>
-</ul>
-</li>
-<li>While the Operator is installing, create a new Organization in <strong>Quay</strong>:
-<ul>
-<li>Access the <strong>Quay</strong> Portal</li>
-<li>In the top <em>+</em> menu click <strong>Create New Organization</strong>
-<ul>
-<li>Name it <code>openshift_integration</code></li>
-</ul>
-</li>
-<li>Click <strong>Create Organization</strong></li>
-</ul>
-</li>
-</ul>
-<p>We need an OAuth Application in Quay for the integration:</p>
-<ul>
-<li>Again In the <strong>Quay</strong> Portal, click the <strong>Applications</strong> icon in the menubar to the left</li>
-<li>Click <strong>Create New Application</strong> at the upper right
-<ul>
-<li>Name it <code>openshift</code>, press Enter and click on the new <code>openshift</code> item by clicking it</li>
-</ul>
-</li>
-<li>In the menubar to the left click the <strong>Generate Token</strong> icon
-<ul>
-<li>Check all boxes and click <strong>Generate Access token</strong>
-<figure>
-    <img src="../images/quay-access-token.png?width=45pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-</li>
-<li>In the next view click <strong>Authorize Application</strong> and confirm</li>
-<li>In the next view copy the <strong>Access Token</strong> and save it somewhere, we&rsquo;ll need it again</li>
-</ul>
-</li>
-</ul>
-<p>Now we finally create an <strong>Quay Bridge</strong> instance. In the OpenShift web console make sure you are in the <code>quay</code> Project. Then:</p>
-<ul>
-<li>
-<p>Create a new Secret</p>
-<ul>
-<li>Go to <strong>Workloads-&gt;Secrets</strong> and click <strong>Create-&gt;Key/value secret</strong>
-<ul>
-<li><strong>Secret name</strong>: quay-credentials</li>
-<li><strong>Key</strong>: token</li>
-<li><strong>Value</strong>: paste the Access Token you generated in the Quay Portal before</li>
-<li>Click <strong>Create</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Go to the Red Hat <strong>Quay Bridge</strong> Operator overview (make sure you are in the <code>quay</code> namespace)</p>
-</li>
-<li>
-<p>On the <strong>Quay Integration</strong> tile click <strong>Create Instance</strong></p>
-<ul>
-<li>Open <strong>Credentials secret</strong>
-<ul>
-<li><strong>Namespace containing the secret</strong>: <code>quay</code></li>
-<li><strong>Key within the secret</strong>: <code>token</code></li>
-</ul>
-</li>
-<li>Copy the Quay Portal hostname (including <code>https://</code>) and paste it into the <strong>Quay Hostname</strong> field</li>
-<li>Set <strong>Insecure registry</strong> to <code>true</code></li>
-<li>Click <strong>Create</strong></li>
-</ul>
-</li>
-</ul>
-<p>And you are done with the installation and integration of Quay as your registry! Test if the integration works:</p>
-<ul>
-<li>In the Quay Portal you should see your Openshift Projects are synced and represented as Quay Organizations, prefixed with <code>openshift_</code> (you might have to reload the browser).
-<ul>
-<li>E.g. there should be a <code>openshift_git</code> Quay Organization.</li>
-</ul>
-</li>
-<li>In the OpenShift web console create a new test Project, make sure it&rsquo;s synced to Quay as an Organization and delete it again.</li>
 </ul>
 <h2 id="adjust-the-pipeline-to-deploy-to-quay">Adjust the Pipeline to Deploy to Quay</h2>
 <p>The current Pipeline deploys to the internal Registry by default so the image that was created by the first (automatic) run was pushed there.</p>
@@ -1094,19 +955,19 @@ Apply the YAML: <code>oc create -f skopeo-update.yml</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681314970"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681314697"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681314697"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681314970"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681314697"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681314970"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
