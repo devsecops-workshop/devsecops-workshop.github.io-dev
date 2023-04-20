@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1681314970" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1682001764" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1682001764" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1681314970" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1682001764" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1682001764"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1681314970"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1681314970"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1682001764"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1682001764"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1681314970"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1682001764"></script>
 
     
   </div>
@@ -517,18 +517,22 @@
 <h3 id="create-a-new-s2i-java-clustertask">Create a new <code>s2i-java</code> ClusterTask</h3>
 <p>The first thing is to create a new source-to-image Task to automatically update the <strong>ImageStream</strong> to point to Quay. You could of course copy and modify the default <code>s2i-java</code> task using the build-in YAML editor of the web console. But to make this as painless as possible we have prepared the needed YAML object definition for you already.</p>
 <ul>
-<li>Login to your bastion host via SSH, from here you can run <code>oc</code> commands</li>
-<li>Clone the Git repo with the YAML files you&rsquo;ll need: <code>git clone https://github.com/devsecops-workshop/yaml.git</code></li>
-<li>Change into the <code>yaml</code> directory</li>
-<li>Apply the first YAML: <code>oc create -f s2i-java-workshop.yml</code></li>
+<li>Open a Web Terminal by clicking the **&gt;_** in the upper right of the web console, from here you can run <code>oc</code> commands</li>
+<li>The YAML object definitions for this lab are in the repo <code>https://github.com/devsecops-workshop/yaml.git</code>, go there and review the YAML definition.</li>
+<li>Apply the YAML for the new ClusterTask: <code>oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/s2i-java-workshop.yml</code></li>
 </ul>
+<figure>
+    <img src="../images/web-terminal2.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
 
-<div class="notices warning" ><p>There is an issue with the delivered version of the Skopeo Clustertask, so we will also import an updated version. This may not be necessary in the future
-Apply the YAML: <code>oc create -f skopeo-update.yml</code></p>
+
+<div class="notices warning" ><p>There is an issue with the delivered version of the Skopeo Clustertask, so we will also import an updated version. This may not be necessary in the future, but for now run apply the YAML: <code>oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/skopeo-update.yml</code></p>
 </div>
 
 
-<div class="notices tip" ><p>You can do the above steps from any Linux system where you set up the <code>oc</code> command.</p>
+<div class="notices tip" ><p>To make this lab pretty much self-contained, we run <code>oc</code> commands from the OCP Web Terminal. But of course you can do the above steps from any Linux system where you set up the <code>oc</code> command.</p>
 </div>
 
 <p>You should now have a new <strong>ClusterTask</strong> named <code>s2i-java-workshop</code>, go to the web console and check:</p>
@@ -576,14 +580,17 @@ Apply the YAML: <code>oc create -f skopeo-update.yml</code></p>
 </ul>
 <p>To make this easier we again provide you with a full YAML definition of the Pipeline. Do the following:</p>
 <ul>
-<li>Bring up the terminal and make sure you are in the <code>yaml</code> directory.</li>
+<li>Go to your Web Terminal (if it timed out just start it again)</li>
 </ul>
 
-<div class="notices tip" ><p>If you use this lab guide with your domain as query parameter, you are good to go with the command, if not, you have to replace &lt;DOMAIN&gt; manually in the following command.</p>
+<div class="notices tip" ><p>If you use this lab guide with your domain as query parameter (see <a href="https://devsecops-workshop.github.io/1-intro/#and-finally-a-sprinkle-of-javascript-magic">here</a>), you are good to go with the command below because your domain was already inserted into the command.
+If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 </div>
 
 <ul>
-<li>To replace the <code>DOMAIN</code> placeholder with your lab domain, run: <code>sed -i 's/DOMAIN/&lt;DOMAIN&gt;/g' workshop-pipeline-without-git-update.yml</code></li>
+<li>First get the YAML file: <code>curl https://raw.githubusercontent.com/devsecops-workshop/yaml/main/workshop-pipeline-without-git-update.yml -o workshop-pipeline-without-git-update.yml</code></li>
+<li>Now we have to replace the <code>REPLACEME</code> placeholders in the YAML file with your lab domain.</li>
+<li>Run: <code>sed -i 's/REPLACEME/&lt;DOMAIN&gt;/g' workshop-pipeline-without-git-update.yml</code> (Insert your domain if not done automatically).</li>
 <li>Apply the new definition: <code>oc replace -f workshop-pipeline-without-git-update.yml</code></li>
 </ul>
 <p>Again take the time to review the changes in the web console:</p>
@@ -955,19 +962,19 @@ Apply the YAML: <code>oc create -f skopeo-update.yml</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1682001764"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1681314970"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1681314970"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1682001764"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1682001764"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1681314970"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1682001764"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
