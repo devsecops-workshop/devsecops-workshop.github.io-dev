@@ -7,7 +7,11 @@
   </url>
   
   <url>
-    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2-prepare-cluster/</loc>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2-install-prerequisites/</loc>
+  </url>
+  
+  <url>
+    <loc>https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2.1-prepare-cluster/</loc>
   </url>
   
   <url>

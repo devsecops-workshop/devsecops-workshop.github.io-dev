@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/images/favicon.png" type="image/png">
 
-    <title>Securing Runtime Events :: DRAFT : DevSecOps Workshop</title>
+    <title>Prepare Cluster :: DRAFT : DevSecOps Workshop</title>
 
     
     <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686146603" rel="stylesheet">
@@ -42,7 +42,7 @@
     
 <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/custom.js"></script>
   </head>
-  <body class="" data-url="/15-runtime-security/">
+  <body class="" data-url="/2.1-prepare-cluster/">
     <nav id="sidebar" class="">
 
 
@@ -145,7 +145,7 @@
     
     <li data-nav-id="/2.1-prepare-cluster/" title="Prepare Cluster" class="dd-item
         
-        
+        active
         
         ">
       <a href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2.1-prepare-cluster/">
@@ -337,7 +337,7 @@
     
     <li data-nav-id="/15-runtime-security/" title="Securing Runtime Events" class="dd-item
         
-        active
+        
         
         ">
       <a href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/15-runtime-security/">
@@ -454,7 +454,7 @@
             
           
           
-            <a href='https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/'></a> > Securing Runtime Events
+            <a href='https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/'></a> > Prepare Cluster
           
         
           
@@ -467,9 +467,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#handling-security-issues-at-runtime">Handling Security Issues at Runtime</a></li>
-    <li><a href="#test-the-runtime-policy">Test the Runtime Policy</a></li>
-    <li><a href="#enforce-runtime-protection">Enforce Runtime Protection</a></li>
+    <li><a href="#prepare-cluster">Prepare Cluster</a></li>
+    <li><a href="#integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</a></li>
     <li><a href="#architecture-recap">Architecture recap</a></li>
   </ul>
 </nav>
@@ -488,7 +487,7 @@
           
             <h1>
               
-              Securing Runtime Events
+              Prepare Cluster
             </h1>
           
 
@@ -496,63 +495,70 @@
 
 
 
-	<p>So far you&rsquo;ve seen how ACS can handle security issues concerning <strong>Build</strong> and <strong>Deploy</strong> stages. But ACS is also able to detect and secure container runtime behaviour. Let&rsquo;s have a look&hellip;</p>
-<h2 id="handling-security-issues-at-runtime">Handling Security Issues at Runtime</h2>
-<p>As a scenario let&rsquo;s assume you want to protect container workloads against attackers who are trying to install software. ACS comes with pre-configured policies for Ubuntu and Red Hat-based containers to detect if a package management tool is installed, this can be used in the <strong>Build</strong> and <strong>Deploy</strong> stages:</p>
+	<h2 id="prepare-cluster">Prepare Cluster</h2>
+<h2 id="integrate-quay-as-registry-into-openshift">Integrate Quay as Registry into OpenShift</h2>
+<p>To synchronize the internal default OpenShift Registry with the Quay Registry, <strong>Quay Bridge</strong> is used. Now we need to create a new Organization in <strong>Quay</strong>:</p>
 <ul>
-<li><strong>Red Hat Package Manager in Image</strong></li>
+<li>To access the <strong>Quay</strong> Portal make sure you are in the <code>quay</code> Project</li>
+<li>Go to <strong>Networking-&gt;Routes</strong>, access the Quay portal using the URL of the first route (<code>quay-quay</code>)</li>
+<li>Login with
+<ul>
+<li><strong>User</strong>: quayadmin</li>
+<li><strong>Password</strong>: quayadmin</li>
 </ul>
-<p>And, more important for this section about runtime security, a policy to detect the execution of a package manager as a runtime violation, using Kernel instrumentation:</p>
+</li>
+<li>In the top <em>+</em> menu click <strong>Create New Organization</strong>
 <ul>
-<li><strong>Red Hat Package Manager Execution</strong></li>
+<li>Name it <code>openshift_integration</code></li>
 </ul>
-<p>In the <strong>ACS Portal</strong>, go to <strong>Platform Configuration-&gt;Policy Management</strong>, search for the policies by e.g. typing <code>policy</code> and then <code>red hat</code> into the filter. Open the policy detail view by clicking it and have a look at what they do.</p>
-
-<div class="notices tip" ><p>You can use the included policies as they are but you can always e.g. clone and adapt them to your needs or write completely new ones.</p>
-</div>
-
-<p>As you can see the <strong>Red Hat Package Manager Execution</strong> policy will alert as soon as a process <strong>rpm or dnf or yum</strong> is executed.</p>
-
-<div class="notices tip" ><p>Like with most included policies it is not set to enforce!</p>
-</div>
-
-<h2 id="test-the-runtime-policy">Test the Runtime Policy</h2>
-<p>To see how the alert would look like, we have to trigger the condition:</p>
+</li>
+<li>Click <strong>Create Organization</strong></li>
+</ul>
+<p>We need an OAuth Application in Quay for the integration:</p>
 <ul>
-<li>You should have a namespace with your Quarkus application runnning</li>
-<li>In the <strong>OpenShift Web Console</strong> navigate to the pod and open a terminal into the container</li>
-<li>Run <code>yum search test</code></li>
-<li>Go to the <strong>Violations</strong> view in the <strong>ACS Portal</strong>.</li>
-<li>You should see a violation of the policy, if you click it, you&rsquo;ll get the details.</li>
-<li>Run several <code>yum</code> commands in the terminal and check back with the <strong>Violations</strong> view:
+<li>Again In the <strong>Quay</strong> Portal, click the <strong>Applications</strong> icon in the menubar to the left</li>
+<li>Click <strong>Create New Application</strong> at the upper right
 <ul>
-<li>As long as you stay in the same <strong>deployment</strong>, there won&rsquo;t be a new violation</li>
-<li>but you will see the details for every new violation of the same type in the details.</li>
+<li>Name it <code>openshift</code>, press Enter and click on the new <code>openshift</code> item by clicking it</li>
+</ul>
+</li>
+<li>In the menubar to the left click the <strong>Generate Token</strong> icon
+<ul>
+<li>Check all boxes and click <strong>Generate Access token</strong>
+<figure>
+    <img src="../images/quay-access-token.png?width=45pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+</li>
+<li>In the next view click <strong>Authorize Application</strong> and confirm</li>
+<li>In the next view copy the <strong>Access Token</strong> and save it somewhere, we&rsquo;ll need it again</li>
 </ul>
 </li>
 </ul>
-<h2 id="enforce-runtime-protection">Enforce Runtime Protection</h2>
-<p>But the real fun starts when you enforce the policy. Using the included policy, it&rsquo;s easy to just &ldquo;switch it on&rdquo;:</p>
+<p>Now create a new secret for Quay Bridge to access Quay. In the OpenShift web console make sure you are in the <code>quay</code> Project. Then:</p>
 <ul>
-<li>In the <strong>ACS Portal</strong> bring up the <strong>Red Hat Package Manager Execution</strong> Policy again.</li>
-<li>Click the <strong>Edit Policy</strong> button in the <strong>Actions</strong> drop-down to the upper right.</li>
-<li>Click <strong>Next</strong> until you arrive at the <strong>Policy behaviour</strong> page.</li>
-<li>Under <strong>Response Method</strong> select <strong>Inform and enforce</strong></li>
-<li>Set <strong>Configure enforcement behaviour</strong> for <strong>Runtime</strong> to <strong>Enforce on Runtime</strong></li>
-<li>Click <strong>Next</strong> until you arrive at the last page and click <strong>Save</strong></li>
-</ul>
-<p>Now trigger the policy again by opening a terminal into the pod in the <strong>OpenShift Web Console</strong> and executing <code>yum</code>. See what happens:</p>
+<li>Go to <strong>Workloads-&gt;Secrets</strong> and click <strong>Create-&gt;Key/value secret</strong>
 <ul>
-<li>Runtime enforcement will kill the pod immediately (via k8s).</li>
-<li>OpenShift will scale it up again automatically
-<ul>
-<li>This is to be expected and allows to contain a potential compromise while not causing a production outage.</li>
+<li><strong>Secret name</strong>: quay-credentials</li>
+<li><strong>Key</strong>: token</li>
+<li><strong>Value</strong>: paste the Access Token you generated in the Quay Portal in the shite text field below the grey <em>Value</em> field</li>
+<li>Click <strong>Create</strong></li>
 </ul>
 </li>
+</ul>
+<p>And you are done with the installation and integration of Quay as your registry! Test if the integration works:</p>
+<ul>
+<li>In the Quay Portal you should see your Openshift Projects are synced and represented as Quay Organizations, prefixed with <code>openshift_</code> (you might have to reload the browser).
+<ul>
+<li>E.g. there should be a <code>openshift_git</code> Quay Organization.</li>
+</ul>
+</li>
+<li>In the OpenShift web console create a new test Project, make sure it&rsquo;s synced to Quay as an Organization and delete it again.</li>
 </ul>
 <h2 id="architecture-recap">Architecture recap</h2>
 <figure>
-    <img src="../images/workshop_architecture_full.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+    <img src="../images/workshop_architecture_prepare.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
         </figcaption>
 </figure>
@@ -632,6 +638,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -759,26 +785,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -816,10 +822,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/13-rhacs-pipeline/" title="Integrating ACS into the Pipeline"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/2-install-prerequisites/" title="Install Prerequisites"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/16-acm/" title="Advanced Cluster Management" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/3-inner-loop/" title="Inner Loop" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
