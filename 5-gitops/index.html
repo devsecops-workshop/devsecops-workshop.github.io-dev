@@ -12,22 +12,22 @@
     <title>Configure GitOps :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686146603" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686240040" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686146603" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686240040" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686240040"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686146603"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686146603"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686240040"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686240040"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686146603"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686240040"></script>
 
     
   </div>
@@ -468,9 +468,9 @@
 <nav id="TableOfContents">
   <ul>
     <li><a href="#install-openshift-gitops">Install OpenShift GitOps</a></li>
-    <li><a href="#prepare-the-gitops-config-repository">Prepare the GitOps Config Repository</a></li>
-    <li><a href="#setup-gitops-project">Setup GitOps Project</a></li>
-    <li><a href="#initialize-the-workshop-prodworkshop-repo-in-quay">Initialize the workshop-prod/workshop repo in Quay</a></li>
+    <li><a href="#check-the-gitops-config-repository">Check the GitOps Config Repository</a></li>
+    <li><a href="#setup-the-gitops-project-in-argocd">Setup the GitOps Project in ArgoCD</a></li>
+    <li><a href="#initialize-the-workshop-prodworkshop-repository-in-quay">Initialize the workshop-prod/workshop Repository in Quay</a></li>
     <li><a href="#add-kustomize-and-git-push-tekton-task">Add Kustomize and Git Push Tekton Task</a></li>
     <li><a href="#add-tekton-tasks-to-your-pipeline-to-promote-your-image-to-workshop-prod">Add Tekton Tasks to your Pipeline to Promote your Image to workshop-prod</a></li>
     <li><a href="#update-our-prod-stage-via-pipeline-and-gitops">Update our Prod Stage via Pipeline and GitOps</a></li>
@@ -510,7 +510,7 @@
 </div>
 </li>
 <li>You should already have created an OpenShift <strong>Project</strong> <code>workshop-prod</code></li>
-<li>In the project <code>workshop-prod</code> click on <strong>Installed Operators</strong> and then <strong>Red Hat OpenShift GitOps</strong>.</li>
+<li>With the project <code>workshop-prod</code> selected in the top menu click on <strong>Installed Operators</strong> and then <strong>Red Hat OpenShift GitOps</strong>.</li>
 <li>On the <strong>ArgoCD</strong> &ldquo;tile&rdquo; click on <strong>Create instance</strong> to create an ArgoCD instance in the <code>workshop-prod</code> project.</li>
 </ul>
 <!-- ![ArgoCD](../images/argo.png) -->
@@ -523,23 +523,23 @@
 <ul>
 <li>Keep the settings as they are and click <strong>Create</strong></li>
 </ul>
-<h2 id="prepare-the-gitops-config-repository">Prepare the GitOps Config Repository</h2>
-<ul>
-<li>In <code>Gitea</code> create a <strong>New Migration</strong> and clone the Config GitOps Repo which will be the repository that contains our GitOps infrastructure components and state</li>
-<li>The URL is <a href="https://github.com/devsecops-workshop/openshift-gitops-getting-started.git">https://github.com/devsecops-workshop/openshift-gitops-getting-started.git</a></li>
-</ul>
+<h2 id="check-the-gitops-config-repository">Check the GitOps Config Repository</h2>
+<p>We already have a second repo in Gitea that holds the required Gitops yaml resources. We will use this repo to push changes to our <code>workshop-dev</code> enivronment.</p>
 <p>Have quick look at the structure of this project :</p>
 <p><strong>app</strong> - contains yamls for the deployment, service and route resources needed by our application. These will be applied to the cluster. There is also a <code>kustomization.yaml</code> defining that kustomize layers will be applied to all yamls</p>
 <p><strong>environments/dev</strong> - contains the <code>kustomization.yaml</code> which will be modified by our builds with new Image versions. ArgoCD will pick up these changes and trigger new deployments.</p>
-<h2 id="setup-gitops-project">Setup GitOps Project</h2>
+<h2 id="setup-the-gitops-project-in-argocd">Setup the GitOps Project in ArgoCD</h2>
 <p>Let&rsquo;s setup the project that tells ArgoCD to watch our config repo and updated resources in the <code>workshop-prod</code> project accordingly.</p>
 <ul>
 <li>Find the local <strong>ArgoCD URL</strong> (not the global instance) by going to <strong>Networking &gt; Routes</strong> in namespace <code>workshop-prod</code></li>
-<li>Open the ArgoCD website ignoring the certificate warning</li>
-<li>Don&rsquo;t login with OpenShift but with username and password</li>
-<li>User is <code>admin</code> and password will be in Secret <code>argocd-cluster</code></li>
+<li>Open the ArgoCD website, ignoring the certificate warning</li>
+<li>Don&rsquo;t login with OpenShift but with username and password
+<ul>
+<li>User is <code>admin</code> and password will be in <strong>Secret</strong> <code>argocd-cluster</code> in the <strong>Project</strong> <code>workspace-prod</code></li>
 </ul>
-<p>ArgoCD works with the concept of <strong>Apps</strong>. We will create an App and point it to the Config Git Repo. ArgoCD will look for k8s yaml files in the repo and path and deploy them to the defined namespace. Additionally ArgoCD will also react to changes to the repo and reflect these to the namespace. You can also enable self-healing to prevent configuration drift. If you want find out more about OpenShift GitOps have look <a href="https://docs.openshift.com/container-platform/4.10/cicd/gitops/understanding-openshift-gitops.html">here</a>.</p>
+</li>
+</ul>
+<p>ArgoCD works with the concept of <strong>Applications</strong>. We will create an App and point it to the Config Git Repo. ArgoCD will look for k8s yaml files in the repo and path and deploy them to the defined namespace. Additionally ArgoCD will also react to changes to the repo and reflect these to the namespace. You can also enable self-healing to prevent configuration drift. If you want find out more about OpenShift GitOps have look <a href="https://docs.openshift.com/container-platform/4.10/cicd/gitops/understanding-openshift-gitops.html">here</a>.</p>
 <ul>
 <li>Create App
 <ul>
@@ -560,7 +560,7 @@
 </ul>
 <p>Watch the resources (<code>Deployment</code>, <code>Service</code>, <code>Route</code>) get rolled out to the namespace <code>workshop-prod</code>. Notice we have also scaled our app to 2 pods in the prod stage as we want some HA.</p>
 
-<div class="notices info" ><p>Since we have not published our image to the Quay <code>workshop-int</code> repository the initial Deployment will roll out a defined dummy image from the public quay.io Registry. This is just to ensure a initial succesful sync in ArgoCD. Once the fist pipeline runs, our actual built image will be rolled out.</p>
+<div class="notices info" ><p>Since we have not published our image to the Quay <code>workshop-prod</code> repository the initial Deployment will roll out a defined dummy image from the public quay.io Registry. This is just to ensure a initial succesful sync in ArgoCD for the woorkshop. Once the fist pipeline runs, our actual built image will be rolled out.</p>
 </div>
 
 <p>Our complete prod stage is now configured and controlled though GitOps. But how do we tell ArgoCD that there is a new version of our app to deploy? Well, we will add a step to our build pipeline updating the config repo.</p>
@@ -569,7 +569,7 @@
 <div class="notices tip" ><p>It is also possible to update the repo with a Pull request. Then you have an approval process for your prod deployment.</p>
 </div>
 
-<h2 id="initialize-the-workshop-prodworkshop-repo-in-quay">Initialize the workshop-prod/workshop repo in Quay</h2>
+<h2 id="initialize-the-workshop-prodworkshop-repository-in-quay">Initialize the workshop-prod/workshop Repository in Quay</h2>
 <p>We will need to initialize the <code>workshop-prod/workshop</code> in Quay so the robo user will be able to to push images there later on.</p>
 <ul>
 <li>In Quay select the organization <code>openshift_workshop-prod</code> on the right</li>
@@ -596,7 +596,10 @@
 <p>We could add this through the OpenShift Web Console as well but to save time we will apply the file directly via the <code>oc</code> command.</p>
 <ul>
 <li>Go to your Web Terminal or open a new one.</li>
-<li>Apply the task via YAML: <code>oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/tekton-kustomize.yml</code></li>
+<li>Apply the task via YAML:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/tekton-kustomize.yml
+</code></pre></div><ul>
 <li>In the OpenShift Webconsole go to <strong>Pipelines &gt; Tasks &gt; Tasks</strong> and have a look at the just imported task <code>git-update-deployment</code>. You should see the git commands how the config repo will be cloned, patched by <strong>Kustomize</strong> and the pushed again.</li>
 </ul>
 <h2 id="add-tekton-tasks-to-your-pipeline-to-promote-your-image-to-workshop-prod">Add Tekton Tasks to your Pipeline to Promote your Image to workshop-prod</h2>
@@ -664,7 +667,7 @@
   <span style="color:#66d9ef">workspaces</span>:
     - <span style="color:#66d9ef">name</span>: workspace
       <span style="color:#66d9ef">workspace</span>: workspace
-</code></pre></div><p>The <code>Pipeline</code> should now look like this. Notice that the new <code>tasks</code> runs in parallel to the <code>deploy</code> task</p>
+</code></pre></div><p>The <code>Pipeline</code> should now look like this. Notice that the new <strong>tasks</strong> runs in parallel to the <code>deploy</code> task</p>
 <!-- ![workshop Pipeline](../images/tekton.png) -->
 <figure>
     <img src="../images/pipeline1.png?width=40pc&amp;classes=border,shadow"/> <figcaption>
@@ -672,7 +675,7 @@
         </figcaption>
 </figure>
 
-<p>Now the pipeline is set. The last thing we need is authentication against the Gitea repo and the workshop-prod Quay org. We will add those from the <code>start pipeline</code> form next. Make sure to replace the <DOMAIN> placeholder if required.</p>
+<p>Now the pipeline is set. The last thing we need is authentication against the Gitea repo and the workshop-prod Quay org. We will add those from the <strong><em>start pipeline</em></strong> form next. Make sure to replace the <DOMAIN> placeholder if required.</p>
 <h2 id="update-our-prod-stage-via-pipeline-and-gitops">Update our Prod Stage via Pipeline and GitOps</h2>
 <ul>
 <li>
@@ -695,7 +698,7 @@
 <li><strong>Secret name :</strong> gitea-secret</li>
 <li><strong>Access to:</strong> Git Server</li>
 <li><strong>Authentication type:</strong> Basic Authentication</li>
-<li><strong>Server URL:</strong> <a href="https://repository-git.apps">https://repository-git.apps</a>.&lt;DOMAIN&gt;/gitea/openshift-gitops-getting-started.git</li>
+<li><strong>Server URL:</strong> <a href="https://repository-git.apps">https://repository-git.apps</a>.&lt;DOMAIN&gt;/gitea/openshift-gitops-getting-started.git (replace url if necassary)</li>
 <li><strong>Username:</strong> gitea</li>
 <li><strong>Password</strong> : gitea</li>
 <li>Click the checkmark</li>
@@ -711,7 +714,7 @@
 </p>
 </li>
 <li>
-<p>This will tell ArgoCD to update the <code>Deployment</code> with this new image version</p>
+<p>This will tell ArgoCD to update the <strong>Deployment</strong> with this new image version</p>
 </li>
 <li>
 <p>Check that the new image is rolled out (you may need to sync manually in ArgoCD to speed things up)</p>
@@ -996,19 +999,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686240040"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686240040"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686146603"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686240040"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

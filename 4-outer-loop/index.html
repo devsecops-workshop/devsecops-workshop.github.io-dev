@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686146603" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686146603" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686240040" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686240040" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686146603" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686240040" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686240040"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686146603"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686146603"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686240040"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686240040"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686146603"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686240040"></script>
 
     
   </div>
@@ -510,7 +510,7 @@
 <li>Install the <code>Red hat OpenShift Pipelines</code> Operator
 <ul>
 <li>In the <strong>OpenShift Web Console</strong> select <strong>Operators &gt; OperatorHub</strong></li>
-<li>Find and install and install the <code>Red hat OpenShift Pipelines</code> Operator with default settings
+<li>Find the <code>Red hat OpenShift Pipelines</code> Operator and install it with default settings
 
 <div class="notices warning" ><pre><code>Since the Piplines assets are installed asynchronously it is possible that the `Pipeline Templates` are not yet setup when proceeding immedately to the next step. So now is good time to grab a coffee.
 </code></pre>
@@ -522,12 +522,12 @@
 <h2 id="create-app-deployment-and-build-pipeline">Create App Deployment and Build Pipeline</h2>
 <p>After installing the Operator create a new deployment of your game-changing application:</p>
 <ul>
-<li>Create a new OpenShift project <code>workshop-int</code> (e.g. using the <strong>Projects</strong> menu item )</li>
+<li>Create a new OpenShift project called <code>workshop-int</code> (e.g. using the <strong>Projects</strong> menu item at the top)</li>
 <li>In the left menu at the top switch to the <strong>OpenShift Developer Console</strong> by clicking on <strong>Administrator &gt; Developer</strong></li>
 <li>Close the welcome pop up</li>
 <li>Make sure you are still in the <code>workshop-int</code> project by verifying in the top <strong>Project</strong> menu</li>
 <li>Click the <strong>+Add</strong> menu entry to the left and choose the <strong>Import from Git</strong> card</li>
-<li>As <strong>Git Repo URL</strong> enter the clone URL for the <code>quarkus-build-options</code> repo in your your <code>Gitea</code> instance
+<li>As <strong>Git Repo URL</strong> enter the clone URL for the <code>quarkus-build-options</code> repo in your <code>Gitea</code> instance
 <ul>
 <li>There might be a warning about the repo url that you can ignore</li>
 <li>Leave <strong>Git type</strong> set to <code>other</code></li>
@@ -535,7 +535,11 @@
 </li>
 <li>Click <strong>Show advanced Git options</strong> and for <strong>Git reference</strong> enter <code>master</code></li>
 <li>As <strong>Import Strategy</strong> select <code>Builder Image</code></li>
-<li>As <strong>Builder Image</strong> select <code>Java</code> and <code>openjdk-11-el7 / Red Hat OpenJDK 11 (RHEL 7)</code></li>
+<li>As <strong>Builder Image</strong> select <code>Java</code> and <code>openjdk-11-el7 / Red Hat OpenJDK 11 (RHEL 7)</code>
+<ul>
+<li>We are choosing this image as we have prepared some CVEs in a later chapter based on this image</li>
+</ul>
+</li>
 <li>As <strong>Application Name</strong> enter <code>workshop-app</code></li>
 <li>As <strong>Name</strong> enter <code>workshop</code></li>
 <li>Check <strong>Add pipeline</strong></li>
@@ -562,9 +566,10 @@
 <ul>
 <li>Open a Web Terminal by clicking the <strong>&gt;_</strong> in the upper right of the web console, from here you can run <code>oc</code> commands</li>
 <li>The YAML object definitions for this lab are in the repo <code>https://github.com/devsecops-workshop/yaml.git</code>, go there and review the YAML definition.</li>
-<li>Apply the YAML for the new ClusterTask: <code>oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/s2i-java-workshop.yml</code></li>
+<li>Apply the YAML for the new ClusterTask:</li>
 </ul>
-<figure>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/s2i-java-workshop.yml
+</code></pre></div><figure>
     <img src="../images/web-terminal2.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
         </figcaption>
@@ -572,9 +577,10 @@
 
 <p>There is an issue with the delivered version of the <strong>Skopeo Pipeline Task</strong>, so we will also import an updated version. This may not be necessary in the future</p>
 <ul>
-<li>Apply the YAML to import it: <code>oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/skopeo-update.yml</code></li>
+<li>Apply the YAML to import it:</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/skopeo-update.yml
+</code></pre></div>
 <div class="notices tip" ><p>To make this lab pretty much self-contained, we run <code>oc</code> commands from the OCP Web Terminal. But of course you can do the above steps from any Linux system where you set up the <code>oc</code> command.</p>
 </div>
 
@@ -612,9 +618,9 @@
       <span style="color:#66d9ef">runAsNonRoot</span>: <span style="color:#66d9ef">true</span>
       <span style="color:#66d9ef">runAsUser</span>: <span style="color:#ae81ff">65532</span>
 </code></pre></div><h3 id="modify-the-pipeline">Modify the Pipeline</h3>
-<p>After adding the new <strong>Pipeline Task</strong> we need to modify the pipeline to:</p>
+<p>Now that we have our new build tasks we need to modify the pipeline to:</p>
 <ul>
-<li>Introduce the new parameters into the Pipeline configuration</li>
+<li>Introduce the new parameters into the <strong>Pipeline</strong> configuration</li>
 <li>Use the new <code>s2i-java-workshop</code> task</li>
 </ul>
 <p>To make this easier we again provide you with a full YAML definition of the Pipeline.</p>
@@ -628,12 +634,19 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 </div>
 
 <ul>
-<li>First get the YAML file: <code>curl https://raw.githubusercontent.com/devsecops-workshop/yaml/main/workshop-pipeline-without-git-update.yml -o workshop-pipeline-without-git-update.yml</code></li>
-<li>Now we have to replace the <code>REPLACEME</code> placeholders in the YAML file with your lab domain.</li>
-<li>Run: <code>sed -i 's/REPLACEME/&lt;DOMAIN&gt;/g' workshop-pipeline-without-git-update.yml</code> (Insert your domain if not done automatically).</li>
-<li>Apply the new definition: <code>oc replace -f workshop-pipeline-without-git-update.yml</code></li>
+<li>First get the YAML file:</li>
 </ul>
-<p>Again take the time to review the changes in the web console:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://raw.githubusercontent.com/devsecops-workshop/yaml/main/workshop-pipeline-without-git-update.yml -o workshop-pipeline-without-git-update.yml
+</code></pre></div><ul>
+<li>Now we have to replace the <code>REPLACEME</code> placeholders in the YAML file with your lab domain.</li>
+<li>Run (Insert your domain if not done automatically):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s/REPLACEME/&lt;DOMAIN&gt;/g&#39;</span> workshop-pipeline-without-git-update.yml
+</code></pre></div><ul>
+<li>Apply the new definition:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc replace -f workshop-pipeline-without-git-update.yml
+</code></pre></div><p>Again take the time to review the changes in the web console:</p>
 <ul>
 <li>In the <strong>OpenShift Web Console</strong> menu go to <strong>Pipelines-&gt;Pipelines</strong></li>
 <li>Click the <code>workshop</code> Pipeline and switch to YAML</li>
@@ -1033,19 +1046,19 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686240040"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686146603"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686146603"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686240040"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686240040"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686146603"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686240040"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
