@@ -12,22 +12,22 @@
     <title>Install and Configure ACS :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686242368" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686242368" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1686571097" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1686571097" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686242368" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1686571097" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686242368"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1686571097"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686242368"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686242368"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1686571097"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1686571097"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686242368"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1686571097"></script>
 
     
   </div>
@@ -471,13 +471,16 @@
       <ul>
         <li><a href="#install-the-operator">Install the Operator</a></li>
         <li><a href="#install-the-main-component-central">Install the main component <strong>Central</strong></a></li>
-        <li><a href="#create-an-integration-to-scan-the-quay-registry">Create an integration to scan the Quay registry</a></li>
         <li><a href="#prepare-to-add-secured-clusters">Prepare to add Secured Clusters</a></li>
         <li><a href="#prepare-the-secured-cluster">Prepare the Secured Cluster</a></li>
         <li><a href="#add-the-cluster-as-securedcluster-to-acs-central">Add the Cluster as <strong>SecuredCluster</strong> to <strong>ACS Central</strong></a></li>
       </ul>
     </li>
-    <li><a href="#configure-quay-integrations-in-acs">Configure Quay Integrations in ACS</a></li>
+    <li><a href="#configure-quay-integrations-in-acs">Configure Quay Integrations in ACS</a>
+      <ul>
+        <li><a href="#create-an-integration-to-scan-the-quay-registry">Create an integration to scan the Quay registry</a></li>
+      </ul>
+    </li>
     <li><a href="#architecture-recap">Architecture recap</a></li>
   </ul>
 </nav>
@@ -505,7 +508,7 @@
 
 
 	<p>During the workshop you went through the OpenShift developer experience starting from software development using Quarkus and <code>odo</code>, moving on to automating build and deployment using Tekton pipelines and finally using GitOps for production deployments.</p>
-<p>Now it&rsquo;s time to add another extremely important piece to the setup; enhancing application security in a containerized world. Using a recent addition to the OpenShift portfolio: <strong>Red Hat Advanced Cluster Security for Kubernetes</strong>!</p>
+<p>Now it&rsquo;s time to add another extremely important piece to the setup; enhancing application security in a containerized world. Using <strong>Red Hat Advanced Cluster Security for Kubernetes</strong>, of course!</p>
 <h2 id="install-rhacs">Install RHACS</h2>
 <h3 id="install-the-operator">Install the Operator</h3>
 <p>Install the &ldquo;Advanced Cluster Security for Kubernetes&rdquo; operator from OperatorHub:</p>
@@ -533,8 +536,50 @@
 </ul>
 </li>
 <li>In the Operator view under <strong>Provided APIs</strong> on the tile <strong>Central</strong> click <strong>Create Instance</strong></li>
-<li>Accept the name <strong>stackrox-central-services</strong></li>
-<li>Adjust the memory limit of the central instance to <code>6Gi</code> (<strong>Central Component Settings-&gt;Resources-&gt;Limits&gt;Memory</strong>).</li>
+<li>Switch to the YAMl View.</li>
+<li>Replace the YAML content with the following:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: platform.stackrox.io/v1alpha1
+<span style="color:#66d9ef">kind</span>: Central
+<span style="color:#66d9ef">metadata</span>:
+  <span style="color:#66d9ef">name</span>: stackrox-central-services
+  <span style="color:#66d9ef">namespace</span>: stackrox
+<span style="color:#66d9ef">spec</span>:
+  <span style="color:#66d9ef">central</span>:
+    <span style="color:#66d9ef">db</span>:
+      <span style="color:#66d9ef">isEnabled</span>: Default
+      <span style="color:#66d9ef">persistence</span>:
+        <span style="color:#66d9ef">persistentVolumeClaim</span>:
+          <span style="color:#66d9ef">claimName</span>: central-db
+      <span style="color:#66d9ef">resources</span>:
+        <span style="color:#66d9ef">limits</span>:
+          <span style="color:#66d9ef">cpu</span>: <span style="color:#ae81ff">2</span>
+          <span style="color:#66d9ef">memory</span>: 6Gi
+        <span style="color:#66d9ef">requests</span>:
+          <span style="color:#66d9ef">cpu</span>: 500m
+          <span style="color:#66d9ef">memory</span>: 1Gi
+    <span style="color:#66d9ef">exposure</span>:
+      <span style="color:#66d9ef">loadBalancer</span>:
+        <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">false</span>
+        <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">443</span>
+      <span style="color:#66d9ef">nodePort</span>:
+        <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">false</span>
+      <span style="color:#66d9ef">route</span>:
+        <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">persistence</span>:
+      <span style="color:#66d9ef">persistentVolumeClaim</span>:
+        <span style="color:#66d9ef">claimName</span>: stackrox-db
+  <span style="color:#66d9ef">egress</span>:
+    <span style="color:#66d9ef">connectivityPolicy</span>: Online
+  <span style="color:#66d9ef">scanner</span>:
+    <span style="color:#66d9ef">analyzer</span>:
+      <span style="color:#66d9ef">scaling</span>:
+        <span style="color:#66d9ef">autoScaling</span>: Disabled
+        <span style="color:#66d9ef">maxReplicas</span>: <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">minReplicas</span>: <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">replicas</span>: <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">scannerComponent</span>: Enabled
+</code></pre></div><ul>
 <li>Click <strong>Create</strong></li>
 </ul>
 <p>After deployment has finished (<strong>Status</strong> <code>Conditions: Deployed, Initialized</code> in the Operator view on the tab <strong>Central</strong>) it can take some time until the application is completely up and running. One easy way to check the state is to switch to the <strong>Developer</strong> console view at the upper left. Then make sure you are in the <strong>stackrox</strong> project and open the <strong>Topology</strong> map. You&rsquo;ll see the three deployments of an <strong>Central</strong> instance:</p>
@@ -569,42 +614,44 @@ RHACS setup:</p>
 </ul>
 <p>To actually do and see anything you need to add a <strong>SecuredCluster</strong> (be it the same or another OpenShift cluster). For effect go to the <strong>ACS Portal</strong>, the Dashboard should by pretty empty, click on the <strong>Compliance</strong> link in the menu to the left, lots of zero&rsquo;s and empty panels, too.</p>
 <p>This is because you don&rsquo;t have a monitored and secured OpenShift cluster yet.</p>
-<h3 id="create-an-integration-to-scan-the-quay-registry">Create an integration to scan the Quay registry</h3>
-<p>So to enable scanning of images in Quay, you&rsquo;ll have to configure an <strong>Integration</strong> with valid credentials, so this is what you&rsquo;ll do.</p>
-<p>Now create a new Integration:</p>
-<ul>
-<li>Access the <strong>RHACS Portal</strong> and configure the already existing integrations of type <strong>Generic Docker Registry</strong>.</li>
-<li>Go to <strong>Platform Configuration -&gt; Integrations -&gt; Generic Docker Registry</strong>.</li>
-<li>Click the <strong>New integration</strong> button</li>
-<li><strong>Integration name</strong>: Quay local</li>
-<li><strong>Endpoint</strong>: <code>https://quay-quay-quay.apps.&lt;DOMAIN&gt;</code> (replace domain if required)</li>
-<li><strong>Username</strong>: quayadmin</li>
-<li><strong>Password</strong>: quayadmin</li>
-<li>Press the <strong>Test</strong> button to validate the connection and press <strong>Save</strong> when the test is successful.</li>
-</ul>
 <h3 id="prepare-to-add-secured-clusters">Prepare to add Secured Clusters</h3>
-<p>First you have to generate an init bundle which contains certificates and is used to authenticate a <strong>SecuredCluster</strong> to the <strong>Central</strong> instance, again regardless if it&rsquo;s the same cluster as the Central instance or a remote/other cluster.</p>
-<p>We are using the API to create the init bundle in this workshop. For the steps to create the init bundle in the ACS Portal see the appendix.</p>
-<p>Creating the init bundle using the <strong>API</strong> on the commandline:</p>
-<p>TODO: explain</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#Export ACS central instance endpoint</span>
-export ROX_ENDPOINT<span style="color:#f92672">=</span>&lt;central_url:443&gt;
-<span style="color:#75715e"># Export bundle-name</span>
-export DATA<span style="color:#f92672">={</span><span style="color:#ae81ff">\&#34;</span>name<span style="color:#ae81ff">\&#34;</span>:<span style="color:#ae81ff">\&#34;</span>&lt;bundle name&gt;<span style="color:#ae81ff">\&#34;</span><span style="color:#f92672">}</span>
-<span style="color:#75715e"># Export ACS admin password</span>
-export PASSWORD<span style="color:#f92672">=</span>&lt;password&gt;
+<p>Now we&rsquo;ll add your OpenShift cluster as <strong>Secured Cluster</strong> to ACS.</p>
+<p>First you have to generate an init bundle which contains certificates and is used to authenticate a <strong>SecuredCluster</strong> to the <strong>Central</strong> instance, regardless if it&rsquo;s the same cluster as the Central instance or a remote/other cluster.</p>
+<p>We are using the API to create the init bundle in this workshop because we use the Web Terminal and can&rsquo;t upload a downloaded file to it. For the steps to create the init bundle in the ACS Portal see the appendix.</p>
+<p>Let&rsquo;s create the init bundle using the ACS <strong>API</strong> on the commandline:</p>
+<p>Go to your Web Terminal (if it timed out just start it again), then paste, edit and execute the following lines:</p>
+<ul>
+<li>Set the ACS API endpoint, replace <code>&lt;central_url&gt;</code> with the URL of your ACS portal</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export ROX_ENDPOINT<span style="color:#f92672">=</span>&lt;central_url&gt;:443
+</code></pre></div><ul>
+<li>Set the admin password (same as for the portal, look up the secrets again)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PASSWORD<span style="color:#f92672">=</span>&lt;password&gt;
+</code></pre></div><ul>
+<li>Give the init bundle a name</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export DATA<span style="color:#f92672">={</span><span style="color:#ae81ff">\&#34;</span>name<span style="color:#ae81ff">\&#34;</span>:<span style="color:#ae81ff">\&#34;</span>my-init-bundle<span style="color:#ae81ff">\&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>Finally run the <code>curl</code> command against the API to create the init bundle using the variables set above</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -k -o bundle.json -X POST -u <span style="color:#e6db74">&#34;admin:</span>$PASSWORD<span style="color:#e6db74">&#34;</span> -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> --data $DATA https://<span style="color:#e6db74">${</span>ROX_ENDPOINT<span style="color:#e6db74">}</span>/v1/cluster-init/init-bundles
+</code></pre></div><ul>
+<li>Convert it to the needed format</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat bundle.json | jq -r <span style="color:#e6db74">&#39;.kubectlBundle&#39;</span>  | base64 -d &gt; kube-secrets.bundle
+</code></pre></div><p>You should now have two files in your Web Terminal session: <code>bundle.json</code> and <code>kube-secrets.bundle</code>.</p>
+<p>The init bundle needs to be applied on all OpenShift clusters you want to secure &amp; monitor.</p>
 
-curl -k -o bundle.json -X POST -u <span style="color:#e6db74">&#34;admin:</span>$PASSWORD<span style="color:#e6db74">&#34;</span> -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> --data $DATA https://<span style="color:#e6db74">${</span>ROX_ENDPOINT<span style="color:#e6db74">}</span>/v1/cluster-init/init-bundles
+<div class="notices info" ><p>As said, you can create an init bundle in the ACS Portal, download it and apply it from any terminal where you can run <code>oc</code> against your cluster. We did it the API way to show you how to do it and to enable you to use the Web Terminal.</p>
+</div>
 
-cat bundle.json | jq -r <span style="color:#e6db74">&#39;.kubectlBundle&#39;</span>  | base64 -d &gt; kube-secrets.bundle
-</code></pre></div><p>The init bundle needs to be applied on all OpenShift clusters you want to secure &amp; monitor.</p>
 <h3 id="prepare-the-secured-cluster">Prepare the Secured Cluster</h3>
 <p>For this workshop we run <strong>Central</strong> and <strong>SecuredCluster</strong> on one OpenShift cluster. E.g. we monitor and secure the same cluster the central services live on.</p>
 <p><strong>Apply the init bundle</strong></p>
+<p>Again in the web terminal:</p>
 <ul>
-<li>Open a web terminal</li>
-<li>Use the <code>oc</code> command to switch to the <strong>Project</strong> you installed <strong>ACS Central</strong> in, it should be <code>stackrox</code>.</li>
-<li>Run <code>oc create -f &gt; kube-secrets.bundle -n stackrox</code> pointing to the init bundle you downloaded from the Central instance or created via the API as above.</li>
+<li>Run <code>oc create -f kube-secrets.bundle -n stackrox</code> pointing to the init bundle you downloaded from the Central instance or created via the API as above.</li>
 <li>This will create a number of secrets, the output should be:</li>
 </ul>
 <pre><code>secret/collector-tls created
@@ -634,17 +681,18 @@ secret/admission-control-tls created
 </ul>
 <p>Now go to your <strong>ACS Portal</strong> again, after a couple of minutes you should see you secured cluster under <strong>Platform Configuration-&gt;Clusters</strong>. Wait until all <strong>Cluster Status</strong> indicators become green.</p>
 <h2 id="configure-quay-integrations-in-acs">Configure Quay Integrations in ACS</h2>
-<p>For ACS to be able to access images in your local Quay registry, one additional step has to be taken.</p>
-<p>Access the ACS Portal and go to <strong>Platform Configuration -&gt; Integrations -&gt; Generic Docker Registry</strong>. You should see a number of autogenerated (from existing pull-secrets) entries.</p>
-<p>You have to change the entry pointing to the local Quay registry, it should look like:</p>
-<p><code>Autogenerated https://quay-quay-quay.apps.&lt;DOMAIN&gt; ....</code></p>
-<p>Open and edit the integration using the three dots at the right:</p>
+<h3 id="create-an-integration-to-scan-the-quay-registry">Create an integration to scan the Quay registry</h3>
+<p>To enable scanning of images in your Quay registry, you&rsquo;ll have to configure an <strong>Integration</strong> with valid credentials, so this is what you&rsquo;ll do.</p>
+<p>Now create a new Integration:</p>
 <ul>
+<li>Access the <strong>RHACS Portal</strong> and configure the already existing integrations of type <strong>Generic Docker Registry</strong>.</li>
+<li>Go to <strong>Platform Configuration -&gt; Integrations -&gt; Generic Docker Registry</strong>.</li>
+<li>Click the <strong>New integration</strong> button</li>
+<li><strong>Integration name</strong>: Quay local</li>
+<li><strong>Endpoint</strong>: <code>https://quay-quay-quay.apps.&lt;DOMAIN&gt;</code> (replace domain if required)</li>
 <li><strong>Username</strong>: quayadmin</li>
-<li><strong>Password</strong>: the password you entered when creating the quayadmin user</li>
-<li>Make sure <strong>Update stored credentials</strong> is checked</li>
-<li>Press the Test button to validate the connection</li>
-<li>Press Save when the test is successful.</li>
+<li><strong>Password</strong>: quayadmin</li>
+<li>Press the <strong>Test</strong> button to validate the connection and press <strong>Save</strong> when the test is successful.</li>
 </ul>
 <h2 id="architecture-recap">Architecture recap</h2>
 <figure>
@@ -925,19 +973,19 @@ secret/admission-control-tls created
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686242368"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1686571097"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686242368"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686242368"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1686571097"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1686571097"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686242368"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1686571097"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
