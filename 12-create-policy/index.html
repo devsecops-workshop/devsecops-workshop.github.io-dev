@@ -12,22 +12,22 @@
     <title>Create a Custom Security Policy :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712591578" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712591578" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712591578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1701098096"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712591578"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712591578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712591578"></script>
 
     
   </div>
@@ -499,14 +499,14 @@
 	<h2 id="objective">Objective</h2>
 <p>You should have one or more pipelines to build your application from the first workshop part, now we want to secure the build and deployment of it. For the sake of this workshop we&rsquo;ll take a somewhat simplified use case:</p>
 <p><strong>We want to scan our application image for the Red Hat Security Advisory RHSA-2021:4904 concerning openssl-lib.</strong></p>
-<p>If this RHSA is found in an image we don&rsquo;t want to deploy the application using it.</p>
+<p>If this RHSA is found in an image we don&rsquo;t want to deploy the application.</p>
 <p>These are the steps you will go through:</p>
 <ul>
 <li>Create a custom <strong>Security Policy</strong> to check for the advisory</li>
 <li>Test if the policy is triggered in non-enforcing mode
 <ul>
 <li>with an older image version that contains the issue</li>
-<li>and then with a newer version with the issue fixed.</li>
+<li>and then with a newer version with the issue fixed</li>
 </ul>
 </li>
 <li>The final goal is to integrate the policy into the build pipeline</li>
@@ -538,7 +538,7 @@
 </li>
 <li><strong>Policy Criteria</strong>
 <ul>
-<li>Find the <strong>CVE</strong> policy criterium under <strong>Drag out policy fields</strong> in <strong>Image contents</strong></li>
+<li>Find the <strong>CVE</strong> policy criteria under <strong>Drag out policy fields</strong> in <strong>Image contents</strong></li>
 <li>Drag &amp; drop it on the drop zone of Policy Section 1</li>
 <li>Put <code>RHSA-2021:4904</code> into the <strong>CVE identifier</strong> field</li>
 <li>Click <strong>Next</strong></li>
@@ -546,12 +546,12 @@
 </li>
 <li><strong>Policy Scope</strong>
 <ul>
-<li>You could limit the scope the policy is applied in, do nothing for now.</li>
+<li>You could limit the scope the policy is applied in, do nothing for now</li>
 </ul>
 </li>
 <li><strong>Review Policy</strong>
 <ul>
-<li>Have a quick look around, if the policy would create a violation you get a preview here.</li>
+<li>Have a quick look around, if the policy would create a violation you get a preview here</li>
 <li>Click <strong>Save</strong></li>
 </ul>
 </li>
@@ -562,7 +562,9 @@
         </figcaption>
 </figure>
 
-<h2 id="test-the-policy">Test the Policy</h2>
+<p>Currently there is an issue with persisting the group change to the central instance. As a workaround run this in your Web Terminal zu restart the central instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc delete pod -n stackrox -l app<span style="color:#f92672">=</span>central
+</code></pre></div><h2 id="test-the-policy">Test the Policy</h2>
 <p>Start the pipeline with the affected image version:</p>
 <ul>
 <li>In the <strong>OpenShift Web Console</strong> go to the Pipeline in your <code>workshop-int</code> project, start it and set <strong>Version</strong> to <code>java-old-image</code> (Remember how we set up this <code>ImageStream</code> <code>tag</code> to point to an old and vulnerable version of the image?)</li>
@@ -591,7 +593,7 @@
 <li>Expected result:
 <ul>
 <li>You&rsquo;ll see the build deployments come up and go</li>
-<li>When the final build is deployed you&rsquo;ll see the policy violation for <code>Workshop RHSA-2021:4904</code> for your deployment is gone because the image no longer contains it.</li>
+<li>When the final build is deployed you&rsquo;ll see the policy violation for <code>Workshop RHSA-2021:4904</code> for your deployment is gone because the image no longer contains it</li>
 </ul>
 </li>
 </ul>
@@ -875,19 +877,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712591578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712591578"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1701098096"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712591578"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

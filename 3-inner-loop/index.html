@@ -12,22 +12,22 @@
     <title>Inner Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712591578" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712591578" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712591578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1701098096"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712591578"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712591578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712591578"></script>
 
     
   </div>
@@ -500,23 +500,37 @@
 	<p>In this part of the workshop you&rsquo;ll experience how modern software development using the OpenShift tooling can be done in a fast, iterative way. <strong>Inner loop</strong> here means <strong>this is the way</strong>, sorry, <strong>process</strong>, for developers to try out new things and quickly change and test their code on OpenShift without having to build new images all the time or being a Kubernetes expert.
 <img src="../images/loop.png" alt="Inner Loop"></p>
 <h2 id="install-and-prepare-red-hat-openshift-dev-spaces">Install and Prepare Red Hat OpenShift Dev Spaces</h2>
-<p><strong>OpenShift Dev Spaces</strong> is a browser-based IDE for Cloud Native Development. All the heavy lifting is done though a container running your workspace on OpenShift. All you really need is a laptop. You can easily switch and setup customized environment, plugin, build tools and runtimes. So switching from one project context to another is as easy a switching a website. No more endless installation and configuration marathons on your dev laptop. It is already part of your OpenShift subscription. If you want to find out more have a look <a href="https://developers.redhat.com/products/openshift-dev-spaces/overview">here</a></p>
+<p><strong>OpenShift Dev Spaces</strong> is a browser-based IDE for Cloud Native Development. All the heavy lifting is done through a container running your workspace on OpenShift. All you really need is a laptop. You can easily switch and setup a customized environment, plugin, build tools and runtimes. So switching from one project context to another is as easy a switching a website. No more endless installation and configuration marathons on your dev laptop. It is already part of your OpenShift subscription. If you want to find out more have a look <a href="https://developers.redhat.com/products/openshift-dev-spaces/overview">here</a></p>
 <ul>
-<li>Install the <strong>Red Hat OpenShift Dev Spaces</strong> Operator from OperatorHub (not the previous Codeready Workspaces versions!) with default settings</li>
+<li>Install the <strong>Red Hat OpenShift Dev Spaces</strong> Operator from OperatorHub with default settings</li>
 <li>Go to <strong>Installed Operators -&gt; Red Hat OpenShift Dev Spaces</strong> and create a new instance (<strong>Red Hat OpenShift Dev Spaces instance Specification</strong>) using the default settings in the project <code>openshift-operators</code></li>
 <li>Wait until deployment has finished. This may take a couple of minutes as several components will be deployed.</li>
 <li>Once the instance status is ready (You can check the YAML of the instance: <code>status &gt; chePhase: Active</code>), look up the <code>devspaces</code> Route in the <code>openshift-workspaces</code> project (If you can see the <code>openshift-workspaces</code>, you may need to toggle the <strong>Show default project</strong> button).</li>
-<li>Open the link in a new browser tab, click on <strong>Log in with OpenShift</strong> and log in with your OCP credentials</li>
+<li>Open the link in a new browser tab, click on <strong>Log in with OpenShift</strong> and log in with your OpenShift credentials</li>
 <li>Allow selected permissions</li>
 </ul>
 
-<div class="notices tip" ><p>We could create a workspace from one of the templates that come with DevSpaces, but we want to use a customized workspace with some additionally defined plugins in a <a href="https://devfile.io/">v2 devfile</a> in our git repo. With devfiles you can share a complete workspace setup and with the click of a link and you will end up in a fully configured project in your browser.</p>
+<div class="notices tip" ><p>We could create a workspace from one of the templates that come with Dev Spaces, but we want to use a customized workspace with some additionally defined plugins in a <a href="https://devfile.io/">v2 devfile</a> in our git repo. With devfiles you can share a complete workspace setup and with the click of a link and you will end up in a fully configured project in your browser.</p>
 </div>
 
+<p>You will now need to access the Gitea repository where your Quarkus app resides and specifically get the path to the devfile.</p>
+<ul>
+<li>Find the Gitea URL by selecting the <code>git</code> project in openshift and then <strong>Networking &gt; Routes</strong></li>
+<li>Click on the URL and login to Gitea with
+<ul>
+<li>username : gitea</li>
+<li>password : gitea</li>
+</ul>
+</li>
+<li>On the right side click on the repository <code>gitea/quarkus-build-options</code></li>
+<li>Then click on the devfile <code>devspaces_devfile.yml</code></li>
+<li>Now click on button <strong>Raw</strong> (or <strong>Originalversion</strong> in German) and copy this URL</li>
+</ul>
+<p>It is important that you have the URL to the Raw version, otherwise DevSpace will recieve a website that it cannot parse.</p>
+<p>Now back in your DevSpaces Workspace :</p>
 <ul>
 <li>In the left menu click on <strong>Create Workspace</strong></li>
-<li>Copy the <strong>raw URL</strong> of the <code>devfile.yaml</code> file in your <code>Gitea</code> repository by clicking on the file and then on the <strong>Raw</strong> button (or <strong>Originalversion</strong> in German).</li>
-<li>Paste the full URL into the <strong>Git Repo URL</strong> field and click <strong>Create &amp; Open</strong></li>
+<li>Paste the full URL of the devfile that you just copied into the <strong>Git Repo URL</strong> field and click <strong>Create &amp; Open</strong></li>
 </ul>
 <figure>
     <img src="../images/crw.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
@@ -526,28 +540,28 @@
 
 <ul>
 <li>You&rsquo;ll get into the <strong>Creating a workspace &hellip;</strong> view, give the workspace containers some time to spin up.</li>
+<li>If a popup appears asking you to &ldquo;trust the authors of the files&rdquo; click <code>Yes, I trust the authors</code> <figure>
+    <img src="../images/trust.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+</li>
 </ul>
 <p>When your workspace has finally started, have a good look around in the UI. It should look familiar if you have ever worked with VSCode or similar IDEs.</p>
 
-<div class="notices tip" ><p>While working with Dev Spaces make sure you have AdBlockers disabled, you are not on a VPN and a have good internet connection to ensure a stable setup. If you are facing any issues try to reload the Browser window. If that doesn&rsquo;t help restart the workspace in the main Dev Spaces site under <strong>Workspaces</strong> and then menu <strong>Restart Workspace</strong></p>
+<div class="notices tip" ><p>While working with Dev Spaces make sure you have AdBlockers disabled, you are not on a VPN and a have good internet connection to ensure a stable setup. If you are facing any issues try to reload the Browser window. If that doesn&rsquo;t help restart the workspace in the main DevSpaces Web Console under <strong>Workspaces</strong> and then menu <strong>Restart Workspace</strong></p>
 </div>
 
 <h2 id="clone-the-quarkus-application-code">Clone the Quarkus Application Code</h2>
 <p>As an example you&rsquo;ll create a new Java application. You don&rsquo;t need to have prior experience programming in Java as this will be kept really simple.</p>
 
-<div class="notices tip" ><p>We will use a Java application based on the <a href="https://quarkus.io/">Quarkus</a> stack. Quarkus enables you to create much smaller and faster containerized Java applications than ever before. You can even transcompile these apps to native Linux binaries that start blazingly fast. The app that we will use is just a starter sample created with the <a href="https://code.quarkus.io/">Quarkus Generator</a> with a simple RESTful API that answers to http Requests. But at the end of the day this setup will work with any Java application. <strong>Fun fact:</strong> Every OpenShift Subscription already comes with a Quarkus Subscription.</p>
+<div class="notices tip" ><p>We will use a Java application based on the <a href="https://quarkus.io/">Quarkus</a> stack. Quarkus enables you to create much smaller and faster containerized Java applications than ever before. You can even transcompile these apps to native Linux binaries that start blazingly fast. The app that we will use is just a basic example created with the <a href="https://code.quarkus.io/">Quarkus Generator</a> with a simple RESTful API that answers to http requests. But at the end of the day this setup will work with any Java application.<br>
+<strong>Fun fact:</strong> Every OpenShift Subscription already provides a Quarkus Subscription.</p>
 </div>
 
 <p>Let&rsquo;s clone our project into our workspace :</p>
 <ul>
 <li>Bring up your <code>OpenShift DevSpaces</code> in your browser</li>
-<li>If a popup appears asking you to wether you &ldquo;Do you truste the authors &hellip;&quot;, check <strong>Trust the authors of all files &hellip;</strong> and click on <strong>Yes, I trust the authors</strong>
-<figure>
-    <img src="../images/vscode_trust.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-</li>
 <li>Click on the the &ldquo;Hamburger&rdquo; menu in the top left, then <strong>View &gt; Command Palette</strong>
 <ul>
 <li>In the <strong>Command Palette</strong> prompt that appears on the top, start typing <code>git clone</code> until you can select the <strong>Git: Clone</strong> item
@@ -566,19 +580,7 @@
 </li>
 </ul>
 </li>
-<li>In the following dialog <strong>Choose a folder to clone &hellip;</strong>
-<ul>
-<li>Navigate up 2 directories by clicking <code>..</code> twice</li>
-<li>Select the folder <strong>projects</strong>
-<figure>
-    <img src="../images/vscode_git_folder.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
-            <h4>Click image to enlarge</h4>
-        </figcaption>
-</figure>
-</li>
-<li>Click the button <strong>OK</strong></li>
-</ul>
-</li>
+<li>In the following dialog <strong>Choose a folder to clone &hellip;</strong> Click the button <strong>OK</strong></li>
 <li>In the following dialog when asked how to open the code, click on <strong>Open</strong>
 <figure>
     <img src="../images/vscode_open_folder.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
@@ -587,6 +589,13 @@
 </figure>
 </li>
 <li>The windows will briefly reload and then you will be in the cloned project folder</li>
+<li>You may have to check &ldquo;Trust the authors &hellip;&rdquo; and click <code>Yes, I trust the authors</code> again. Last time, promise :)
+<figure>
+    <img src="../images/vscode_trust.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+</li>
 </ul>
 <h2 id="access-openshift-and-create-the-development-stage-project">Access OpenShift and Create the Development Stage Project</h2>
 <p>Now we want to create a new OpenShift project for our app:</p>
@@ -601,11 +610,11 @@
 </ul>
 <pre><code>oc new-project workshop-dev
 </code></pre><h2 id="use-odo-to-deploy-and-update-our-application">Use odo to Deploy and Update our Application</h2>
-<p><strong>odo</strong> or &lsquo;OpenShift do&rsquo; is a cli that enables developers to get started quickly with cloud native app development without being a Kubernetes expert. It offers support for multiple runtimes and you can easily setup microservice components, push code changes into running containers and debug remotely with just a few simple commands. To find out more, have look <a href="https://odo.dev/">here</a></p>
-<p>First we need to make sure we are folder of the cloned project.</p>
-<p>Enter</p>
+<p><strong>odo</strong> or &lsquo;OpenShift do&rsquo; is a cli that enables developers to quickly get started with cloud native app development without being a Kubernetes expert. It offers support for multiple runtimes and you can easily setup microservice components, push code changes into running containers and debug remotely with just a few simple commands. To find out more, have look <a href="https://odo.dev/">here</a></p>
+<p>First we need to make sure we are in the folder of the cloned project.</p>
+<p>Enter the following command in the terminal:</p>
 <pre><code>pwd
-</code></pre><p>if you are not in the <code>/projects/quarkus-build-options</code> folder, change into with the cd command</p>
+</code></pre><p>if you are not in the <code>/projects/quarkus-build-options</code> folder, change into with the <code>cd</code> command</p>
 <p><strong>odo</strong> is smart enough to figure out what programming language and frameworks you are using. So let&rsquo;s let initialize our project</p>
 <pre><code>odo init
 </code></pre><ul>
@@ -614,7 +623,7 @@
 <li>You can select a container in which odo will be started. Hit <strong>Enter</strong> (None)</li>
 <li>As componenten name keep the suggestion. Hit <strong>Enter</strong></li>
 </ul>
-<p><strong>odo</strong> is not intialized for your app. Let&rsquo;s deploy the app to openshift in odo dev mode</p>
+<p><strong>odo</strong> is now intialized for your app. Let&rsquo;s deploy the app to openshift in odo dev mode</p>
 <pre><code>odo dev
 </code></pre><p>This will compile the app, start a pod in the OpenShift project and inject the app.</p>
 <p>There will be a couple of popups in the bottom right corner</p>
@@ -622,15 +631,16 @@
 <ul>
 <li>&ldquo;A new process is listening &hellip;&rdquo; -&gt; Choose <strong>Yes</strong></li>
 <li>&ldquo;Redirect is not enabled &hellip;&rdquo; &ndash;&gt; Click on <strong>Open in New Tab</strong></li>
-<li>&ldquo;Do you want VS Code - Open SOurce to open an external website&rdquo; &ndash;&gt; Choose <strong>Open</strong></li>
+<li>&ldquo;Do you want VS Code - Open Source to open an external website&rdquo; &ndash;&gt; Choose <strong>Open</strong></li>
 </ul>
 <p>A new tab will open and show the webpage of your app. You may have to wait a reload in a few seconds.</p>
 <p>To test the app:</p>
-<p>Your app should show up as a simple web page. In the <code>RESTEasy JAX-RS</code> section click the <code>@Path</code> endpoint <code>/hello</code> to see the result.</p>
-<p>Now for the fun part: Using <code>odo</code> you can just dynamically change your code and push it out again without doing a new image build! No dev magic involved:</p>
+<p>Your app should be displayed as a simple web page. In the <code>RESTEasy JAX-RS</code> section click the <code>@Path</code> endpoint <code>/hello</code> to see the result.</p>
+<p>Now for the fun part:<br>
+Using <code>odo</code> you can dynamically change your code and push it again without the need t o build a new container image! No dev magic involved:</p>
 <ul>
 <li>
-<p>In your DevWorkspace on the left, expand the file tree to open file <code>src/main/java/org/acme/GreetingRessource.java</code> and change the string &ldquo;Hello RESTEasy&rdquo; to &ldquo;Hello Workshop&rdquo; (DevSpaces saves every edit directly. No need to save)</p>
+<p>In your DevWorkspace on the left, expand the file tree to open file <code>src/main/java/org/acme/GreetingRessource.java</code> and change the string &ldquo;Hello RESTEasy&rdquo; to &ldquo;Hello Workshop&rdquo; (DevSpaces auto saves every edit directly. No need to save the file manually.)</p>
 </li>
 <li>
 <p>And reload the app webpage.</p>
@@ -918,19 +928,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712591578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712591578"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1701098096"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712591578"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

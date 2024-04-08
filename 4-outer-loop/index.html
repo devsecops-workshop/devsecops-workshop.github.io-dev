@@ -12,22 +12,22 @@
     <title>Outer Loop :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712591578" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712591578" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712591578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1701098096"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712591578"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712591578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712591578"></script>
 
     
   </div>
@@ -503,24 +503,23 @@
 
 
 
-	<p>Now that you have seen how a developer can quickly start to code using modern cloud native tooling, it&rsquo;s time to learn how to proceed with the application towards production. The first step is to implement a CI/CD pipeline to automate new builds. Let&rsquo;s call this stage <code>int</code> for integration.</p>
+	<p>Now that you have seen how a developer can quickly start to code using modern cloud native tooling, it&rsquo;s time to learn how to push the application towards a production environment. The first step is to implement a CI/CD pipeline to automate new builds. Let&rsquo;s call this stage <code>int</code> for integration.</p>
 <h2 id="install-openshift-pipelines">Install OpenShift Pipelines</h2>
-<p>To create and run the build pipeline you&rsquo;ll use OpenShift Pipelines based on project Tekton. The first step is to install it:</p>
+<p>To create and run the build pipeline you&rsquo;ll use OpenShift Pipelines based on project <a href="https://https://tekton.dev">Tekton</a>. The first step is to install it:</p>
 <ul>
-<li>Install the <code>Red hat OpenShift Pipelines</code> Operator
+<li>Install the <code>Red Hat OpenShift Pipelines</code> Operator
 <ul>
 <li>In the <strong>OpenShift Web Console</strong> select <strong>Operators &gt; OperatorHub</strong></li>
-<li>Find the <code>Red hat OpenShift Pipelines</code> Operator and install it with default settings
+<li>Find the <code>Red Hat OpenShift Pipelines</code> Operator and install it with the default settings</li>
+</ul>
+</li>
+</ul>
 
-<div class="notices warning" ><pre><code>Since the Piplines assets are installed asynchronously it is possible that the `Pipeline Templates` are not yet setup when proceeding immedately to the next step. So now is good time to grab a coffee.
-</code></pre>
+<div class="notices warning" ><p>Since the Piplines assets are installed asynchronously it is possible that the <code>Pipeline Templates</code> are not yet setup when proceeding immedately to the next step. So now is good time to grab a coffee.</p>
 </div>
-</li>
-</ul>
-</li>
-</ul>
+
 <h2 id="create-app-deployment-and-build-pipeline">Create App Deployment and Build Pipeline</h2>
-<p>After installing the Operator create a new deployment of your game-changing application:</p>
+<p>After installing the Operator, create a new deployment of your game-changing application:</p>
 <ul>
 <li>Create a new OpenShift project called <code>workshop-int</code> (e.g. using the <strong>Projects</strong> menu item at the top)</li>
 <li>In the left menu at the top switch to the <strong>OpenShift Developer Console</strong> by clicking on <strong>Administrator &gt; Developer</strong></li>
@@ -528,6 +527,12 @@
 <li>Make sure you are still in the <code>workshop-int</code> project by verifying in the top <strong>Project</strong> menu</li>
 <li>Click the <strong>+Add</strong> menu entry to the left and choose the <strong>Import from Git</strong> card</li>
 <li>As <strong>Git Repo URL</strong> enter the clone URL for the <code>quarkus-build-options</code> repo in your <code>Gitea</code> instance
+<figure>
+    <img src="../images/gitea_clone_icon.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
+            <h4>Click image to enlarge</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>There might be a warning about the repo url that you can ignore</li>
 <li>Leave <strong>Git type</strong> set to <code>other</code></li>
@@ -550,7 +555,7 @@
 
 <ul>
 <li>Click <strong>Create</strong></li>
-<li>In the main menu left, click on <strong>Pipelines</strong> and then the instance in column <strong>Last run</strong> and observe how the Pipeline is run
+<li>In the main menu left, click on <strong>Pipelines</strong> and then the instance in column <strong>Last run</strong> and observe how the Pipeline is executed
 <figure>
     <img src="../images/pipeline_initial.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
@@ -559,12 +564,14 @@
 </li>
 </ul>
 <h2 id="adjust-the-pipeline-to-deploy-to-quay">Adjust the Pipeline to Deploy to Quay</h2>
-<p>The current Pipeline deploys to the Internal Registry by default, so the image that was created by the first run was pushed there.</p>
-<p>To leverage our brand new <strong>Quay</strong> registry we need to modify the Pipeline so it pushes images to the <strong>Quay</strong> registry. In addition the *<em>OpenShift ImageStream</em> must be modified to point to the Quay registry, too.</p>
+<p>The current Pipeline deploys to the Internal Registry by default. The image that was just created by the first run was pushed there.</p>
+<p>To leverage our brand new <strong>Quay</strong> registry we need to modify the Pipeline in order to push the images to the <strong>Quay</strong> registry. In addition the <strong>OpenShift ImageStream</strong> must be modified to point to the <strong>Quay</strong> registry, too.</p>
 <h3 id="create-a-new-s2i-java-clustertask">Create a new <code>s2i-java</code> ClusterTask</h3>
 <p>The first thing is to create a new <strong>Source-To-Image Pipeline Task</strong> to automatically update the <strong>ImageStream</strong> to point to <strong>Quay</strong>. You could of course copy and modify the default <code>s2i-java</code> task using the built-in YAML editor of the <strong>OpenShift Web Console</strong>. But to make this as painless as possible we have prepared the needed YAML object definition for you already.</p>
 <ul>
-<li>Open a Web Terminal by clicking the <strong>&gt;_</strong> in the upper right of the web console, from here you can run <code>oc</code> commands</li>
+<li>Open a Web Terminal by clicking the <strong>&gt;_</strong> in the upper right of the web console,</li>
+<li>Click <strong>Start</strong> and wait for the terminal to initialize</li>
+<li>From here you can run <code>oc</code> commands</li>
 <li>The YAML object definitions for this lab are in the repo <code>https://github.com/devsecops-workshop/yaml.git</code>, go there and review the YAML definition.</li>
 <li>Apply the YAML for the new ClusterTask:</li>
 </ul>
@@ -575,12 +582,7 @@
         </figcaption>
 </figure>
 
-<p>There is an issue with the delivered version of the <strong>Skopeo Pipeline Task</strong>, so we will also import an updated version. This may not be necessary in the future</p>
-<ul>
-<li>Apply the YAML to import it:</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://raw.githubusercontent.com/devsecops-workshop/yaml/main/skopeo-update.yml
-</code></pre></div>
+
 <div class="notices tip" ><p>To make this lab pretty much self-contained, we run <code>oc</code> commands from the OCP Web Terminal. But of course you can do the above steps from any Linux system where you set up the <code>oc</code> command.</p>
 </div>
 
@@ -623,10 +625,10 @@
 <li>Introduce the new parameters into the <strong>Pipeline</strong> configuration</li>
 <li>Use the new <code>s2i-java-workshop</code> task</li>
 </ul>
-<p>To make this easier we again provide you with a full YAML definition of the Pipeline.</p>
+<p>To make this easier we again provide you with a full YAML definition for the Pipeline.</p>
 <p>Do the following:</p>
 <ul>
-<li>Go to your Web Terminal (if it timed out just start it again)</li>
+<li>Go to your <strong>Web Terminal</strong> (if it timed out just start it again)</li>
 </ul>
 
 <div class="notices tip" ><p>If you use this lab guide with your domain as query parameter (see <a href="https://devsecops-workshop.github.io/1-intro/#and-finally-a-sprinkle-of-javascript-magic">here</a>), you are good to go with the command below because your domain was already inserted into the command.
@@ -663,7 +665,7 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 </span><span style="color:#e6db74">        quay-quay-quay.apps.&lt;DOMAIN&gt;/openshift_workshop-int/workshop</span>
       <span style="color:#66d9ef">name</span>: IMAGE_NAME
       <span style="color:#66d9ef">type</span>: string
-</code></pre></div><p>And finally the <code>build</code> task was modified work with the two new parameters:</p>
+</code></pre></div><p>And finally the <code>build</code> task was modified to work with the two new parameters:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">tasks</span>:
     - <span style="color:#66d9ef">name</span>: build
       <span style="color:#66d9ef">params</span>:
@@ -673,7 +675,7 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
         - <span style="color:#66d9ef">name</span>: IMAGESTREAMTAG
           <span style="color:#66d9ef">value</span>: $(params.IMAGESTREAMTAG)
 </code></pre></div><ul>
-<li>The name of the <code>taskRef</code> was changed to <code>s2i-java-workshop</code>, so we are using our custom <strong>Pipeline Task</strong>:</li>
+<li>The name of the <code>taskRef</code> was changed to <code>s2i-java-workshop</code>, in order to use our custom <strong>Pipeline Task</strong>:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">taskRef</span>:
   <span style="color:#66d9ef">kind</span>: ClusterTask
@@ -683,7 +685,7 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 <ul>
 <li>Go to the <strong>Quay</strong> portal and there to the <code>openshift_workshop-int</code> organization.</li>
 <li>In the <code>openshift_workshop-int / workshop</code> repository access the <strong>Tags</strong> in the menu to the left.</li>
-<li>There should be no image (yet)
+<li>There should be no container image (yet)
 <figure>
     <img src="../images/quay_empty_repo.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
@@ -697,11 +699,11 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 <li>Open the <code>workshop</code> Pipeline</li>
 <li>Go to the top right menu and choose <strong>Actions -&gt; Start</strong></li>
 </ul>
-<p>In the <strong>Start Pipeline</strong> window that opens, but <strong>before (!)</strong> starting the actual pipeline, we need to add a <strong>Secret</strong> so the pipeline can authenticate and push against the <strong>Quay</strong> repo:</p>
+<p>In the <strong>Start Pipeline</strong> window that opens, but <strong>before (!)</strong> starting the actual pipeline, we need to add a <strong>Secret</strong> so the pipeline can authenticate and push to the <strong>Quay</strong> repository:</p>
 <ul>
 <li>Switch to the <strong>Quay Web Portal</strong> and click on the <code>openshift_workshop-int / workshop</code> repository</li>
 <li>On the left click on <strong>Settings</strong></li>
-<li>Click on the <code>openshift_workshop-int+builder</code> <strong>Robot Account</strong> and copy the username and token
+<li>Click on the <code>openshift_workshop-int+builder</code> <strong>Robot Account</strong> and copy the token
 <figure>
     <img src="../images/quay_robot_account.png?width=50pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
@@ -727,8 +729,9 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
 </li>
 <li>Hit <strong>Start</strong></li>
 </ul>
+<p>If the pipeline fails you may have to recheck the Secret <code>quay-workshop-int-token</code> directly if the username and password are set correctly.</p>
 <p>Once the Pipeline run has finished, go to the <strong>Quay Portal</strong> and check the <strong>Repository</strong> <code>openshift_workshop-int/workshop</code> again. Under <strong>Tags</strong> you should now see a new <code>workshop</code> Image version that was just pushed by the pipeline.</p>
-<p>Congratulations : <strong>Quay</strong> is now a first level citizen of your pipeline build strategy.</p>
+<p>Congratulations: <strong>Quay</strong> is now a first level citizen of your pipeline build strategy.</p>
 <h2 id="create-an-imagestream-tag-with-an-old-image-version">Create an ImageStream Tag with an Old Image Version</h2>
 <p>Now that your build pipeline has been set up and is ready. There is one more step in preparation of the security part of this workshop. We need a way to build and deploy from an older image with some security issues in it. For this we will add another <strong>ImageStream</strong> Tag in the default <code>Java</code> ImageStream that points to an older version with a known CVE issue in it.</p>
 <ul>
@@ -1046,19 +1049,19 @@ If not, you have to replace &lt;DOMAIN&gt; manually.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712591578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712591578"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1701098096"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712591578"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

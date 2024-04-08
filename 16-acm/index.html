@@ -12,22 +12,22 @@
     <title>Advanced Cluster Management :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712591578" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712591578" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712591578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1701098096"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712591578"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712591578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712591578"></script>
 
     
   </div>
@@ -479,7 +479,7 @@
     <li><a href="#deploy-single-node-openshift">Deploy Single Node OpenShift</a></li>
     <li><a href="#application-lifecycle-management">Application Lifecycle Management</a></li>
     <li><a href="#creating-a-simple-application-with-acm">Creating a Simple Application with ACM</a></li>
-    <li><a href="#prepost-tasks-with-ansible-automation-platform-2">Pre/Post Tasks with Ansible Automation Platform 2</a>
+    <li><a href="#bonus-chapter--prepost-tasks-with-ansible-automation-platform-2">Bonus Chapter : Pre/Post Tasks with Ansible Automation Platform 2</a>
       <ul>
         <li><a href="#install-automation-controller">Install Automation Controller</a></li>
         <li><a href="#add-auth-token">Add Auth Token</a></li>
@@ -525,9 +525,9 @@
 <h2 id="install-advanced-cluster-managagement">Install Advanced Cluster Managagement</h2>
 <p>Before you can start using ACM, you have to install it using an Operator on your OpenShift cluster.</p>
 <ul>
-<li>Login to the OpenShift Webconsole with you cluster admin credentials</li>
+<li>Login to the OpenShift Web Console with you cluster admin credentials</li>
 <li>In the Web Console, go to <strong>Operators &gt; OperatorHub</strong> and search for the <code>Advanced Cluster Management for Kubernetes</code> operator.</li>
-<li>Install the operator with default settings</li>
+<li>Install the operator with the default settings</li>
 <li>It will install into a new <strong>Project</strong> <code>open-cluster-management</code> by default.</li>
 </ul>
 <p>After the operator has been installed it will inform you to create a <code>MultiClusterHub</code>, the central component of ACM.</p>
@@ -540,7 +540,7 @@
 <p>Click the <strong>Create MultiClusterHub</strong> button and have a look at the available installation parameters, but don&rsquo;t change anything.</p>
 <p>Click <strong>Create</strong>.</p>
 <p>At some point you will be asked to refresh the web console. Do this, you&rsquo;ll notice a new drop-down menu at the top of the left menu bar. If left set to <code>local-cluster</code> you get the standard console view, switching to <code>All Clusters</code> takes you to a view provided by ACM covering all your clusters.</p>
-<p>Okay, right now you&rsquo;ll only see one, your <code>local-cluster</code> listend here.</p>
+<p>Okay, right now you&rsquo;ll only see one, your <code>local-cluster</code> listed here.</p>
 <h2 id="a-first-look-at-advanced-cluster-management">A first look at Advanced Cluster Management</h2>
 <p>Now let&rsquo;s change to the full ACM console:</p>
 <ul>
@@ -548,8 +548,7 @@
 <li>Go to <strong>Operators</strong>-&gt;<strong>Installed operators</strong> and click the <strong>Advanced Cluster Management for Kubernetes</strong> operator</li>
 <li>In the operator overview page choose the <strong>MultiClusterHub</strong> tab.</li>
 <li>The <code>multiclusterhub</code> instance you deployed should be in <strong>Status</strong> <code>Running</code> by now.</li>
-<li>Look up the route for the <code>multicloud-console</code> and access it.</li>
-<li>Click the <strong>Log in with OpenShift</strong> button and login with your OpenShift account.</li>
+<li>Switch back to the <code>All Clusters</code></li>
 </ul>
 <p>You are now in your ACM dashboard!</p>
 <figure>
@@ -572,13 +571,13 @@
 <p>One of the main features of Advanced Cluster Management is cluster lifecycle management. ACM can help to:</p>
 <ul>
 <li>manage credentials</li>
-<li>deploy clusters to different cloud providers and on-premise</li>
+<li>deploy clusters to various cloud providers and on-premises</li>
 <li>import existing clusters</li>
 <li>use labels on clusters for management purposes</li>
 </ul>
 <p>Let&rsquo;s give this a try!</p>
 <h2 id="deploy-an-openshift-cluster">Deploy an OpenShift Cluster</h2>
-<p>Okay, to not overstress our cloud ressources and for the fun of it we&rsquo;ll deploy a Single Node OpenShift to the same AWS account your lab cluster is running in.</p>
+<p>Okay, do not overstress our cloud ressources and for the fun of it we&rsquo;ll deploy a Single Node OpenShift (SNO) cluster to the same AWS account your lab cluster is running in.</p>
 <h3 id="create-cloud-credentials">Create Cloud Credentials</h3>
 <p>The first step is to create credentials in ACM to deploy to the Amazon Web Services account.</p>
 
@@ -597,7 +596,7 @@
 <li>Now you need to enter the AWS credentials, enter the <code>Access key ID</code> and <code>Secret access key</code> as provided.</li>
 <li>Click <strong>Next</strong></li>
 <li>Click <strong>Next</strong> again for proxy settings</li>
-<li>Now you need to enter an OpenShift Pull Secret, copy it from your OCP cluster:
+<li>Now you need to enter an OpenShift Pull Secret, copy it from your OpenShift cluster:
 <ul>
 <li>Switch to the project <code>openshift-config</code> and copy the content of the secret <code>pull-secret</code></li>
 </ul>
@@ -620,10 +619,11 @@
 <li>In the ACM console, navigate to <strong>Infrastructure</strong> -&gt; <strong>Clusters</strong> and click <strong>Create cluster</strong>.</li>
 <li>As provider choose <strong>Amazon Web Services</strong></li>
 <li><strong>Infrastructure provider credential</strong>: Select the <code>sno</code> credential you created.</li>
+<li><strong>Control plane type - AWS</strong>: Standalone</li>
 <li><strong>Cluster name</strong>: aws-sno</li>
 <li><strong>Cluster set</strong>: Leave empty &hellip;</li>
 <li><strong>Base DNS Domain</strong>: Set automatically from the credentials</li>
-<li><strong>Release name</strong>: Use the latest <strong>4.10</strong> release available</li>
+<li><strong>Release name</strong>: Use the latest <strong>4.14.19</strong> release available</li>
 <li><strong>Additional Label</strong>: sno=true</li>
 <li>Click <strong>Next</strong></li>
 <li>On the Node pools view leave the <strong>Region</strong> set to <code>us-east-1</code></li>
@@ -651,21 +651,21 @@
 <p>It&rsquo;s time to deploy your cluster, click <strong>Create</strong>!</p>
 <p>ACM monitors the installation of the new cluster and finally imports it. Click <strong>View logs</strong> under <strong>Cluster install</strong> to follow the installation log.</p>
 
-<div class="notices tip" ><p>Installation of a SNO take around 30 minutes in our lab environment.</p>
+<div class="notices tip" ><p>Installation of a SNO takes around 30 minutes in our lab environment.</p>
 </div>
 
-<p>After installation has finished, access the <strong>Clusters</strong> section in the ACM portal again.</p>
+<p>After the installation has finished, access the <strong>Clusters</strong> section in the ACM portal again.</p>
 <figure>
     <img src="../images/acm-clusters.png?width=70pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
         </figcaption>
 </figure>
 
-<p>Explore the information ACM is providing, including the Console URL and the access credentials of your shiny new SNO instance. Use them to login to the SNO console.</p>
+<p>Explore the information ACM is providing, including the Console URL and the access credentials of your shiny new SNO instance. Use them to login to the SNO Web Console.</p>
 <h2 id="application-lifecycle-management">Application Lifecycle Management</h2>
 <p>In the previous lab, you explored the Cluster Lifecycle functionality of RHACM by deploying a new OpenShift single-node instance to AWS. Now let&rsquo;s have a look at another capability, Application Lifecycle management.</p>
 <p>Application Lifecycle management is used to manage applications on your clusters. This allows you to define a single or multi-cluster application using Kubernetes specifications, but with additional automation of the deployment and lifecycle management of resources to individual clusters. An application designed to run on a single cluster is straightforward and something you ought to be familiar with from working with OpenShift fundamentals. A multi-cluster application allows you to orchestrate the deployment of these same resources to multiple clusters, based on a set of rules you define for which clusters run the application components.</p>
-<p>The naming of the different components of the Application Lifecycle model in RHACM is as follows:</p>
+<p>The naming convention of the different components of the Application Lifecycle model in RHACM is as follows:</p>
 <ul>
 <li><strong>Channel</strong>: Defines a place where deployable resources are stored, such as an object store, Kubernetes namespace, Helm repository, or GitHub repository.</li>
 <li><strong>Subscription</strong>: Definitions that identify deployable resources available in a Channel resource that are to be deployed to a target cluster.</li>
@@ -695,17 +695,18 @@
 <li><strong>URL</strong>: <a href="https://github.com/devsecops-workshop/book-import.git">https://github.com/devsecops-workshop/book-import.git</a></li>
 <li><strong>Branch</strong>: master</li>
 <li><strong>Path</strong>: book-import</li>
-<li>Select <strong>Deploy application resources only on clusters matching specified labels</strong></li>
+<li>Select <strong>Deploy application resources only on clusters with all specified labels</strong></li>
+<li><strong>Cluster sets</strong>: default</li>
 <li><strong>Label</strong>: environment</li>
 <li><strong>Value</strong>: dev</li>
 </ul>
 <figure>
-    <img src="../images/acm-application2.png?width=20pc&amp;classes=border,shadow"/> <figcaption>
+    <img src="../images/acm_placement.png?width=40pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
         </figcaption>
 </figure>
 
-<p>Click <strong>Create</strong>, after a few minutes you will see the application available in ACM. Click the application and have a look at the topology view:</p>
+<p>Click <strong>Create</strong> and then the topology tab to view the application being deployed:</p>
 <figure>
     <img src="../images/acm-application3.png?width=20pc&amp;classes=border,shadow"/> <figcaption>
             <h4>Click image to enlarge</h4>
@@ -719,8 +720,9 @@
 </ul>
 <p>Now edit the application in the ACM console and change the label to <code>environment=prod</code>. What happens?</p>
 <p>In this simple example you have seen how to deploy an application to an OpenShift cluster using ACM. All manifests defining the application where kept in a Git repo, ACM then used the manifests to deploy the required objects into the target cluster.</p>
-<h2 id="prepost-tasks-with-ansible-automation-platform-2">Pre/Post Tasks with Ansible Automation Platform 2</h2>
+<h2 id="bonus-chapter--prepost-tasks-with-ansible-automation-platform-2">Bonus Chapter : Pre/Post Tasks with Ansible Automation Platform 2</h2>
 <p>You can integrate Ansible Automation Platform and the Automation Controller (formerly known as Ansible Tower) with ACM to perform pre / post tasks within the application lifecycle engine. The prehook and posthook task allows you to trigger an Ansible playbook before and after the application is deployed, respectively.</p>
+<p>Notice that you will need a Red Hat Account with a valid Ansible subscription for this part.</p>
 <h3 id="install-automation-controller">Install Automation Controller</h3>
 <p>To give this a try you need an Automation Controller instance. So let&rsquo;s deploy one on your cluster using the AAP Operator:</p>
 <ul>
@@ -1074,19 +1076,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712591578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712591578"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1701098096"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712591578"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

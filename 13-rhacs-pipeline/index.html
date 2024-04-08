@@ -12,22 +12,22 @@
     <title>Integrating ACS into the Pipeline :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1701098096" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712591578" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712591578" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1701098096" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712591578" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712591578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1701098096"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712591578"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712591578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1701098096"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712591578"></script>
 
     
   </div>
@@ -512,11 +512,11 @@
 <div class="notices tip" ><p>There are basically two ways to interface with ACS. The UI, which focuses on the needs of the security team, and a separate &ldquo;interface&rdquo; for developers to integrate into their existing toolset (CI/CD pipeline, consoles, ticketing systems etc): The <code>roxctl</code> commandline tool. This way ACS provides a familiar interface to understand and address issues that the security team considers important.</p>
 </div>
 
-<p>ACS policies can act during the CI/CD pipeline to identify security risk in images before they are run as a container.</p>
+<p>ACS policies can act during the CI/CD pipeline to identify security risk in container images before they are started.</p>
 <h2 id="integrate-image-scan-into-the-pipeline">Integrate Image Scan into the Pipeline</h2>
-<p>You should have created and build a custom policy in ACS and tested it for triggering violations. Now you will integrate it into the build pipeline.</p>
+<p>You should have created and build a custom policy in ACS and tested it to trigger violations. Now you will integrate it into the build pipeline.</p>
 <h3 id="lets-go-prepare-roxctl">Let&rsquo;s go: Prepare <code>roxctl</code></h3>
-<p>Build-time policies require the use of the <code>roxctl</code> command-line tool which is available for download from the ACS Central UI, in the upper right corner of the dashboard. <code>Roxctl</code> needs to authenticate to <strong>ACS Central</strong> to do anything. It can use either username and password API tokens to authenticate against Central. It&rsquo;s good practice to use a token so that&rsquo;s what we&rsquo;ll do.</p>
+<p>Build-time policies require the use of the <code>roxctl</code> command-line tool which is available for download from the ACS Central UI, in the upper right corner of the dashboard. <code>Roxctl</code> needs to authenticate to <strong>ACS Central</strong> to do anything. You can use either username and password or API tokens to authenticate against ACS Central. It&rsquo;s good practice to use a token so that&rsquo;s what we&rsquo;ll do.</p>
 <h3 id="create-the-roxctl-token">Create the <code>roxctl</code> token</h3>
 <p>In the <strong>ACS portal</strong>:</p>
 <ul>
@@ -533,7 +533,7 @@
 <li>Create a new key/value <code>Secret</code> named <strong>roxsecrets</strong></li>
 <li>Introduce these key/values into the secret:
 <ul>
-<li><strong>rox_central_endpoint</strong>: &lt;the URL to your <strong>ACS Portal</strong>&gt;
+<li><strong>rox_central_endpoint</strong>: &lt;the URL to your <strong>ACS Portal</strong>&gt; (without https:// but adding the port, e.g. entral-stackrox.apps.cluster-cqtsh.cqtsh.example.com:443)
 <ul>
 <li>If the <code>DOMAIN</code> placeholder was automatically replaced it should be: central-stackrox.apps.&lt;DOMAIN&gt;:443</li>
 <li>If not, replace it manually with your DOMAIN</li>
@@ -556,14 +556,14 @@
 <li>Switch to the YAML view</li>
 <li>Near the top under <strong>annotations</strong> (around lines 11-12) you&rsquo;ll find an annotation <code>image.openshift.io/triggers</code>.</li>
 </ul>
-<p>Remove exactly these two lines and click <strong>Save</strong>:</p>
+<p>Remove exactly this lines and click <strong>Save</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">image.openshift.io/triggers</span>: &gt;<span style="color:#e6db74">-
 </span><span style="color:#e6db74">  [{&#34;from&#34;:{&#34;kind&#34;:&#34;ImageStreamTag&#34;,&#34;name&#34;:&#34;workshop2:latest&#34;,&#34;namespace&#34;:&#34;workshop-int&#34;},&#34;fieldPath&#34;:&#34;spec.template.spec.containers[?(@.name==\&#34;workshop2\&#34;)].image&#34;,&#34;pause&#34;:&#34;false&#34;</span>
-</code></pre></div><p>This way we made sure that a new image won&rsquo;t be deployed automatically right after the <code>build</code> task which also updates the <strong>ImageStream</strong>.</p>
+</code></pre></div><p>This way we make sure that a new image won&rsquo;t be deployed automatically right after the <code>build</code> task which also updates the <strong>ImageStream</strong>.</p>
 <h3 id="create-a-scan-task">Create a Scan Task</h3>
 <p>You are now ready to create a new pipeline task that will use <code>roxctl</code> to scan the image build in your pipeline before the deploy step:</p>
 <ul>
-<li>In the OCP UI, make sure you are still in the project with your pipeline and the secret <code>roxsecrets</code></li>
+<li>In the OpenShift UI, make sure you are still in the project with your pipeline and the secret <code>roxsecrets</code></li>
 <li>Go to <strong>Pipelines-&gt;Tasks</strong></li>
 <li>Click <strong>Create-&gt; ClusterTask</strong></li>
 <li>Replace the YAML displayed with this:</li>
@@ -621,9 +621,9 @@
         --image $(params.image)@$(params.image_digest)
 </code></pre></div><p>Take your time to <strong>understand</strong> the Tekton task definition:</p>
 <ul>
-<li>First some parameters are defined, it&rsquo;s important to understand some of these are taken or depend on the build task that run before.</li>
+<li>First, some parameters are defined, it&rsquo;s important to understand some of these are taken or depend on the build task that run before.</li>
 <li>The script action pulls the <code>roxctl</code> binary into the pipeline workspace so you&rsquo;ll always have a version compatible with your ACS version.</li>
-<li>The most important bit is the <code>roxctl</code> execution, of course.
+<li>The most important bit is the <code>roxctl</code> execution, of course:
 <ul>
 <li>it executes the <code>image check</code> command</li>
 <li>only checks against policies from category <strong>Workshop</strong> that was created above. This way you can check against a subset of policies!</li>
@@ -688,6 +688,7 @@
 <li>Click on <strong>Add Task</strong></li>
 <li>In the search window enter <code>openshift</code>and select the <strong>openshift-client</strong> from Red Hat</li>
 <li>Click on <strong>Add</strong></li>
+<li>Click on the new <code>openshift-client</code> Task</li>
 <li>In Task form on the right enter
 <ul>
 <li>Display name : update-deploy</li>
@@ -722,7 +723,7 @@
 <ul>
 <li>We are sure you know by now what to expect!</li>
 <li>The pipeline should fail with the old image version and succeed with the latest image version!</li>
-<li>Make sure you run the pipeline once, otherwise your application will not have valid image tag when you kill the running pod in the next chapter</li>
+<li>Make sure you run the pipeline once, otherwise your application will not have a valid image tag when you kill the running pod in the next chapter</li>
 </ul>
 </li>
 </ul>
@@ -1011,19 +1012,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712591578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1701098096"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1701098096"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712591578"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712591578"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1701098096"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712591578"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
