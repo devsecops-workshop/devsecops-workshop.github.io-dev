@@ -12,22 +12,22 @@
     <title>Install and Configure ACS :: DRAFT : DevSecOps Workshop</title>
 
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712671107" rel="stylesheet">
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712671107" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/nucleus.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/fontawesome-all.min.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hybrid.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/featherlight.min.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/perfect-scrollbar.min.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/auto-complete.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/atom-one-dark-reasonable.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/tabs.css?1712675345" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/hugo-theme.css?1712675345" rel="stylesheet">
     
-    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712671107" rel="stylesheet">
+    <link href="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/css/theme-red.css?1712675345" rel="stylesheet">
     
     
 
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712671107"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery-3.3.1.min.js?1712675345"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712671107"></script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712671107"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/lunr.min.js?1712675345"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/auto-complete.js?1712675345"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/devsecops-workshop.github.io\/devsecops-workshop.github.io-dev\/";
     
 </script>
-<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712671107"></script>
+<script type="text/javascript" src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/search.js?1712675345"></script>
 
     
   </div>
@@ -664,7 +664,7 @@ RHACS setup:</p>
 <li>Convert it to the needed format</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat bundle.json | jq -r <span style="color:#e6db74">&#39;.kubectlBundle&#39;</span> &gt; bundle64
-base64 -d bundle64 &gt; kube-secrets.bundle
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">base64 -d bundle64 &gt; kube-secrets.bundle
 </code></pre></div><p>You should now have these two files in your Web Terminal session: <code>bundle.json</code> and <code>kube-secrets.bundle</code>.</p>
 <p>The init bundle needs to be applied to all OpenShift clusters you want to secure and monitor.</p>
 
@@ -687,6 +687,7 @@ secret/admission-control-tls created
 <ul>
 <li>In the <strong>OpenShift Web Console</strong> go to the <strong>ACS Operator</strong> in <strong>Operators-&gt;Installed Operators</strong></li>
 <li>Using the Operator create an instance of the <strong>Secured Cluster</strong> type <strong>in the Project you created</strong> (should be stackrox)</li>
+<li>If you are in the <strong>YAML</strong> view switch to the <strong>Form</strong> view</li>
 <li>Change the <strong>Cluster Name</strong> for the cluster if you want, it&rsquo;ll appear under this name in the <strong>ACS Portal</strong></li>
 <li>And most importantly for <strong>Central Endpoint</strong> enter the address and port number of your <strong>Central</strong> instance, this is the same as the <strong>ACS Portal</strong>.
 <ul>
@@ -996,19 +997,19 @@ secret/admission-control-tls created
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712671107"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/clipboard.min.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.min.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/perfect-scrollbar.jquery.min.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/jquery.sticky.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/featherlight.min.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/highlight.pack.js?1712675345"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712671107"></script>
-    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712671107"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/modernizr.custom-3.6.0.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/learn.js?1712675345"></script>
+    <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/js/hugo-learn.js?1712675345"></script>
     
         
-            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712671107"></script>
+            <script src="https://devsecops-workshop.github.io/devsecops-workshop.github.io-dev/mermaid/mermaid.js?1712675345"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
